@@ -30,6 +30,17 @@ class ContactsViewController: UIViewController {
         self.present(showAlert, animated: true, completion: nil)
     }
     
+    private func callNumber(phoneNumber: String) {
+        
+        if let phoneCallURL = URL(string: "tel://\(phoneNumber)") {
+            
+            let application:UIApplication = UIApplication.shared
+            if (application.canOpenURL(phoneCallURL)) {
+                application.open(phoneCallURL, options: [:], completionHandler: nil)
+            }
+        }
+    }
+    
     
     @IBAction func webSiteButton(_ sender: UIButton) {
         let websiteAlertTitle = "Transition to website"
@@ -46,9 +57,13 @@ class ContactsViewController: UIViewController {
         showAlertController()
     }
     @IBAction func phoneButton(_ sender: UIButton) {
-        let phoneAlertTitle = "Phone call"
-        let phoneAlertMessage = "Are you sure, that you want to call to Kids2Kids?"
-        showAlertController(allertTitle: phoneAlertTitle, allertMessage: phoneAlertMessage)
+        func showAlertController() {
+            let showAlert : UIAlertController = UIAlertController(title: "Transition to Phone", message: "Are you sure, that you want to call Kids2Kids?", preferredStyle: UIAlertControllerStyle.alert)
+            showAlert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.cancel, handler: nil))
+            showAlert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: { action in self.callNumber(phoneNumber: "+380504745993")}))
+            self.present(showAlert, animated: true, completion: nil)
+        }
+        showAlertController()
     }
     @IBAction func facebookButton(_ sender: UIButton) {
     }
