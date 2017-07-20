@@ -23,13 +23,7 @@ class ContactsViewController: UIViewController {
         }
     }
     
-    func showAlertController(allertTitle: String, allertMessage: String) {
-        let showAlert : UIAlertController = UIAlertController(title: allertTitle, message: allertMessage, preferredStyle: UIAlertControllerStyle.alert)
-        showAlert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.cancel, handler: nil))
-        showAlert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: nil))
-        self.present(showAlert, animated: true, completion: nil)
-    }
-    
+    // funcs for contacts button with allertController
     private func callNumber(phoneNumber: String) {
         
         if let phoneCallURL = URL(string: "tel://\(phoneNumber)") {
@@ -41,33 +35,56 @@ class ContactsViewController: UIViewController {
         }
     }
     
+    private func openWebsite() {
+        let url = URL(string: "http://www.stackoverflow.com")
+        UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+    }
     
-    @IBAction func webSiteButton(_ sender: UIButton) {
-        let websiteAlertTitle = "Transition to website"
-        let websiteAlertMessage = "Are you sure, that you want to visit this website?"
-        showAlertController(allertTitle: websiteAlertTitle, allertMessage: websiteAlertMessage)
-    }
-    @IBAction func emailButton(_ sender: UIButton) {
-        func showAlertController() {
-            let showAlert : UIAlertController = UIAlertController(title: "Transition to Mail App", message: "Are you sure, that you want to send email?", preferredStyle: UIAlertControllerStyle.alert)
-            showAlert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.cancel, handler: nil))
-            showAlert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: { action in self.sendEmail()}))
-            self.present(showAlert, animated: true, completion: nil)
+    private func openFacebookPage() {
+        let facebookUID = "kids2kidsfund"
+        
+        print(facebookUID)
+        let fbURLWeb: NSURL = NSURL(string: "https://www.facebook.com/\(facebookUID)")!
+        let fbURLID: NSURL = NSURL(string: "fb://profile/\(facebookUID)")!
+        
+        if(UIApplication.shared.canOpenURL(fbURLID as URL)){
+            // FB installed
+            UIApplication.shared.open(fbURLID as URL, options: [:], completionHandler: nil)
+            //(fbURLID as URL)
+        } else {
+            // FB is not installed, open in safari
+            UIApplication.shared.open(fbURLWeb as URL, options: [:], completionHandler: nil)
         }
-        showAlertController()
     }
-    @IBAction func phoneButton(_ sender: UIButton) {
-        func showAlertController() {
-            let showAlert : UIAlertController = UIAlertController(title: "Transition to Phone", message: "Are you sure, that you want to call Kids2Kids?", preferredStyle: UIAlertControllerStyle.alert)
-            showAlert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.cancel, handler: nil))
-            showAlert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: { action in self.callNumber(phoneNumber: "+380504745993")}))
-            self.present(showAlert, animated: true, completion: nil)
-        }
-        showAlertController()
-    }
-    @IBAction func facebookButton(_ sender: UIButton) {
+    
+    private func showAlertController(title: String, message: String, accessTitle: String, completion: @escaping ()->()) {
+        let showAlert : UIAlertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        showAlert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+        showAlert.addAction(UIAlertAction(title: accessTitle, style: UIAlertActionStyle.default, handler: { action in completion()}))
+        self.present(showAlert, animated: true, completion: nil)
     }
 
+    
+    @IBAction func webSiteButton(_ sender: UIButton) {
+        showAlertController(title: "Open Kids2Kids website", message: "Are you sure, that you want to open Safari?", accessTitle: "Open") {
+            self.openWebsite()
+        }
+    }
+    @IBAction func emailButton(_ sender: UIButton) {
+        showAlertController(title: "Sending e-mail to Kids2Kids", message: "Are you sure, that you want to send email?", accessTitle: "Send") {
+            self.sendEmail()
+        }
+    }
+    @IBAction func phoneButton(_ sender: UIButton) {
+        showAlertController(title: "Calling to Kids2Kids", message: "+38 (050) 471-30-30", accessTitle: "Call") {
+            self.callNumber(phoneNumber: "+380504745993")
+        }
+    }
+    @IBAction func facebookButton(_ sender: UIButton) {
+        showAlertController(title: "Open Facebook?", message: "Facebook Page @kids2kidsfund", accessTitle: "Open") {
+            self.openFacebookPage()
+        }
+    }
 }
 
 extension ContactsViewController: MFMailComposeViewControllerDelegate {
@@ -84,8 +101,8 @@ extension ContactsViewController: MFMailComposeViewControllerDelegate {
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController,
-                                        didFinishWith result: MFMailComposeResult,
-                                        error: Error?) {
+                               didFinishWith result: MFMailComposeResult,
+                               error: Error?) {
         // Check the result or perform other tasks.
         // Dismiss the mail compose view controller.
         controller.dismiss(animated: true, completion: nil)

@@ -145,7 +145,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HL9-xA-ORT">
                                 <rect key="frame" x="72" y="404" width="176" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="+38 (066) 123-45-67"/>
+                                <state key="normal" title="+38 (050) 471-30-30"/>
                                 <connections>
                                     <action selector="phoneButton:" destination="n1x-aK-bm0" eventType="touchUpInside" id="LED-42-NEz"/>
                                 </connections>
