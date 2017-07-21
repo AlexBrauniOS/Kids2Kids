@@ -9,11 +9,19 @@
 import UIKit
 
 class ProjectDetailsViewController: UIViewController {
+    @IBOutlet weak var projectInDetailsImageView: UIImageView!
+    @IBOutlet weak var projectInDetailsTextView: UITextView!
 
+    var projects: Project!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setup()
     }
-
+    
+    func setup() {
+        navigationItem.title = projects.projectName
+        projectInDetailsImageView.image = projects.projectImage
+        projectInDetailsTextView.text = projects.projectDescription
+    }
 }
