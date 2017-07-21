@@ -16,7 +16,12 @@ class ProjectTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        setup()
         
+    }
+    
+    func setup() {
+        projectInCellLabel.font = UIFont(name: "Co Text Corp", size: 18.0)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D20562CF1F2253C2001B527B /* Co Text Corp.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D20562CE1F2253C2001B527B /* Co Text Corp.ttf */; };
 		D20F59E61F2210F700A47E8E /* ProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20F59E51F2210F700A47E8E /* ProjectsTableViewController.swift */; };
 		D20F59E81F22113500A47E8E /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20F59E71F22113500A47E8E /* ProjectTableViewCell.swift */; };
 		D20F59EA1F22116900A47E8E /* ProjectDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20F59E91F22116900A47E8E /* ProjectDetailsViewController.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D20562CE1F2253C2001B527B /* Co Text Corp.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Co Text Corp.ttf"; sourceTree = "<group>"; };
 		D20F59E51F2210F700A47E8E /* ProjectsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewController.swift; sourceTree = "<group>"; };
 		D20F59E71F22113500A47E8E /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
 		D20F59E91F22116900A47E8E /* ProjectDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailsViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D20562CD1F2253AE001B527B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D20562CE1F2253C2001B527B /* Co Text Corp.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		D20F59ED1F2212D600A47E8E /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +156,7 @@
 				D25A6CB01F1E927E005FAD33 /* SignupViewController.swift */,
 				D25A6CAE1F1E926F005FAD33 /* LoginViewController.swift */,
 				D25A6C851F1E8FE4005FAD33 /* Assets.xcassets */,
+				D20562CD1F2253AE001B527B /* Fonts */,
 				D25A6C871F1E8FE4005FAD33 /* LaunchScreen.storyboard */,
 				D25A6C8A1F1E8FE4005FAD33 /* Info.plist */,
 			);
@@ -284,6 +295,7 @@
 				D25A6C861F1E8FE4005FAD33 /* Assets.xcassets in Resources */,
 				D25A6C841F1E8FE4005FAD33 /* Main.storyboard in Resources */,
 				D25A6CAD1F1E925C005FAD33 /* LoginStoryboard.storyboard in Resources */,
+				D20562CF1F2253C2001B527B /* Co Text Corp.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

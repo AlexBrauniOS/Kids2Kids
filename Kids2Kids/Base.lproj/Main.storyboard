@@ -8,8 +8,13 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Co Text Corp.ttf">
+            <string>CoTextCorp-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Projects Table View Controller-->
+        <!--Проекты-->
         <scene sceneID="mW6-8q-EqQ">
             <objects>
                 <tableViewController id="9ZN-xd-Wkd" customClass="ProjectsTableViewController" customModule="Kids2Kids" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,27 +27,30 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4W6-1Q-ans" id="HJg-nA-6zS">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="149.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="DorogaVZhizn" translatesAutoresizingMaskIntoConstraints="NO" id="V4X-x3-ils">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="93"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLv-WL-qi8">
-                                            <rect key="frame" x="0.0" y="111" width="320" height="24"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <nil key="textColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дорога в жизнь" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLv-WL-qi8">
+                                            <rect key="frame" x="0.0" y="116" width="320" height="23"/>
+                                            <fontDescription key="fontDescription" name="CoTextCorp-Regular" family="Co Text Corp" pointSize="20"/>
+                                            <color key="textColor" red="0.42703676219999998" green="0.75189828869999997" blue="0.2885013521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="pLv-WL-qi8" firstAttribute="leading" secondItem="HJg-nA-6zS" secondAttribute="leading" id="1sM-gZ-pYx"/>
-                                        <constraint firstAttribute="bottom" secondItem="pLv-WL-qi8" secondAttribute="bottom" constant="14.5" id="Eoo-Hs-KQl"/>
-                                        <constraint firstItem="pLv-WL-qi8" firstAttribute="top" secondItem="V4X-x3-ils" secondAttribute="bottom" constant="18" id="FIt-Za-6VY"/>
-                                        <constraint firstItem="V4X-x3-ils" firstAttribute="leading" secondItem="HJg-nA-6zS" secondAttribute="leading" id="aS8-JH-1d6"/>
-                                        <constraint firstItem="V4X-x3-ils" firstAttribute="top" secondItem="HJg-nA-6zS" secondAttribute="top" id="hBE-Za-Ej3"/>
-                                        <constraint firstAttribute="trailing" secondItem="V4X-x3-ils" secondAttribute="trailing" id="vI1-6b-un7"/>
-                                        <constraint firstAttribute="trailing" secondItem="pLv-WL-qi8" secondAttribute="trailing" id="ypk-ft-ES2"/>
+                                        <constraint firstAttribute="trailing" secondItem="V4X-x3-ils" secondAttribute="trailing" id="07H-D2-akg"/>
+                                        <constraint firstItem="pLv-WL-qi8" firstAttribute="leading" secondItem="HJg-nA-6zS" secondAttribute="leading" id="Cps-e7-8FN"/>
+                                        <constraint firstAttribute="bottom" secondItem="pLv-WL-qi8" secondAttribute="bottom" constant="10.5" id="ELu-hz-ODf"/>
+                                        <constraint firstAttribute="trailing" secondItem="pLv-WL-qi8" secondAttribute="trailing" id="JkB-E6-dHu"/>
+                                        <constraint firstItem="V4X-x3-ils" firstAttribute="top" secondItem="HJg-nA-6zS" secondAttribute="top" id="L6O-db-O9U"/>
+                                        <constraint firstItem="V4X-x3-ils" firstAttribute="top" secondItem="HJg-nA-6zS" secondAttribute="top" id="MtX-mf-Qww"/>
+                                        <constraint firstItem="V4X-x3-ils" firstAttribute="leading" secondItem="HJg-nA-6zS" secondAttribute="leading" id="PJb-8T-2SJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="V4X-x3-ils" secondAttribute="trailing" id="jJD-LH-pI2"/>
+                                        <constraint firstItem="V4X-x3-ils" firstAttribute="leading" secondItem="HJg-nA-6zS" secondAttribute="leading" id="xE5-8P-P5J"/>
+                                        <constraint firstItem="pLv-WL-qi8" firstAttribute="top" secondItem="V4X-x3-ils" secondAttribute="bottom" constant="12" id="zNT-tC-9SG"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -57,7 +65,7 @@
                             <outlet property="delegate" destination="9ZN-xd-Wkd" id="aOc-0Z-OwY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="L6J-k0-RPw"/>
+                    <navigationItem key="navigationItem" title="Проекты" id="L6J-k0-RPw"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQf-nA-utl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
