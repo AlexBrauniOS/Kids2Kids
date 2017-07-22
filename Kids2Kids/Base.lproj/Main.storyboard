@@ -64,7 +64,9 @@
                             <outlet property="delegate" destination="9ZN-xd-Wkd" id="aOc-0Z-OwY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="L6J-k0-RPw"/>
+                    <navigationItem key="navigationItem" id="L6J-k0-RPw">
+                        <barButtonItem key="backBarButtonItem" title=" " id="CDD-w5-h8Y"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="DJK-II-m5o" kind="show" identifier="ProjectDetailsViewController" id="IBQ-Nv-HKA"/>
                     </connections>
