@@ -52,6 +52,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="dateEventLabel" destination="bb8-LK-srH" id="x0W-1w-swv"/>
+                                    <outlet property="imageEventImageView" destination="Ko2-Az-j3d" id="sR4-pb-Kv5"/>
                                     <outlet property="nameEventLAbel" destination="thK-8J-Pm8" id="GbF-Eu-4mp"/>
                                 </connections>
                             </tableViewCell>

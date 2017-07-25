@@ -39,14 +39,22 @@ class EventsTableViewController: UITableViewController {
         return events.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath) as! EventTableViewCell
 
         let event = events[indexPath.row]
         cell.nameEventLAbel.text = event["name"] as? String
         cell.dateEventLabel.text = event["date"] as? String
-
+        let imageEventFile = event["image"] as? PFFile
+        imageEventFile?.getDataInBackground(block: { (imageData, error) in
+            if error == nil {
+                if let imageData = imageData {
+                    let image = UIImage(data: imageData)
+                    cell.imageEventImageView.image = image
+                }
+            }
+        })
+        
         return cell
     }
 

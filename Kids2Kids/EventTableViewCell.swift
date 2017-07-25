@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Parse
 
 class EventTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameEventLAbel: UILabel!
     @IBOutlet weak var dateEventLabel: UILabel!
+    @IBOutlet weak var imageEventImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
