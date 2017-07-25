@@ -7,32 +7,48 @@
 //
 
 import UIKit
+import Parse
 
 class EventsTableViewController: UITableViewController {
 
-    var events: [Event] = [Event(nameOfEvent: "Фотопроект 'Мы живы'", imageOfEvent: <#UIImage#>, dateOfEvent: "29 июля - 8 августа", placeOfEvent: "Киев, ул.Набережно-Луговая, 8", descriptionOfEvent: "Тем временем боевые действия не прекращаются уже четвертый год, а детство этих подростков и других детей расстреливают прицельным огнем из разных видов оружия. «В прифронтовом Марьинском районе очень много талантливых детей и они не могут выехать, так как их родителей никто и нигде не ждет. Вообще, людям трудно покидать свои дома и ехать неизвестно куда» - рассказывает Олег Ткаченко, создатель и руководитель молодежного медиа-центра в Марьинке. Медиа-центр был создан для того, чтобы хоть как-то поддержать детей и дать им возможность самовыражаться посредством фотографии. В течении выставки у посетителей будет возможность предоставить финансовую поддержку медиа центру, которая будет направлена на покупку необходимой фототехники или передать б/у технику в пользование студентам. Таким образом, мы дадим шанс большему количеству детей изучить новый навык, который для некоторых из них может стать делом жизни. На выставке будет представлена инсталляция Киевской Арт Группы CoolArt - размышление на тему нашего восприятия жизни в прифронтовой зоне. Арт-группа CoolArt (Ольга Гурина и Олег Кулай-Кулайчук, Киев) в своих работах художники придают особое значение высказыванию и нарративу, в основе которого лежит сюжетный образ, контекст и субъективность восприятия зрителя. Выставка доступна для свободного посещения: 29 июля с 16:00 - 20:00, 30 июля по 08 августа с 12:00 - 20:00")]
+//    var events: [Event] = [Event(nameOfEvent: "Фотопроект 'Мы живы'", imageOfEvent: #imageLiteral(resourceName: "RozhdestvenskiyAngel"), dateOfEvent: "29 июля - 8 августа", placeOfEvent: "Киев, ул.Набережно-Луговая, 8", descriptionOfEvent: "Тем временем боевые действия не прекращаются уже четвертый год, а детство этих подростков и других детей расстреливают прицельным огнем из разных видов оружия. «В прифронтовом Марьинском районе очень много талантливых детей и они не могут выехать, так как их родителей никто и нигде не ждет. Вообще, людям трудно покидать свои дома и ехать неизвестно куда» - рассказывает Олег Ткаченко, создатель и руководитель молодежного медиа-центра в Марьинке. Медиа-центр был создан для того, чтобы хоть как-то поддержать детей и дать им возможность самовыражаться посредством фотографии. В течении выставки у посетителей будет возможность предоставить финансовую поддержку медиа центру, которая будет направлена на покупку необходимой фототехники или передать б/у технику в пользование студентам. Таким образом, мы дадим шанс большему количеству детей изучить новый навык, который для некоторых из них может стать делом жизни. На выставке будет представлена инсталляция Киевской Арт Группы CoolArt - размышление на тему нашего восприятия жизни в прифронтовой зоне. Арт-группа CoolArt (Ольга Гурина и Олег Кулай-Кулайчук, Киев) в своих работах художники придают особое значение высказыванию и нарративу, в основе которого лежит сюжетный образ, контекст и субъективность восприятия зрителя. Выставка доступна для свободного посещения: 29 июля с 16:00 - 20:00, 30 июля по 08 августа с 12:00 - 20:00")]
+    
+    var events = [PFObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        fetchPost()
+    }
+    
+    func fetchPost() {
+        let query = PFQuery(className: "Event")
+        //        query.whereKey("text", hasSuffix: "t2")
+        query.findObjectsInBackground { (objects, error) in
+            if let objects = objects {
+                self.events = objects
+                
+                print(objects)
+                self.tableView.reloadData()
+            }
+        }
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return events.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath) as! EventTableViewCell
 
-        // Configure the cell...
+        let event = events[indexPath.row]
+        cell.nameEventLAbel.text = event["name"] as? String
+        cell.dateEventLabel.text = event["date"] as? String
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
