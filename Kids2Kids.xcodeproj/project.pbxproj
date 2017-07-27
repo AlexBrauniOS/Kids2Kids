@@ -15,9 +15,10 @@
 		D20F59E81F22113500A47E8E /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20F59E71F22113500A47E8E /* ProjectTableViewCell.swift */; };
 		D20F59EA1F22116900A47E8E /* ProjectDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20F59E91F22116900A47E8E /* ProjectDetailsViewController.swift */; };
 		D20F59EC1F2211D300A47E8E /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20F59EB1F2211D300A47E8E /* Project.swift */; };
-		D22331561F264B0300E90EE6 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22331551F264B0300E90EE6 /* Event.swift */; };
 		D22331581F264D8000E90EE6 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22331571F264D8000E90EE6 /* EventsTableViewController.swift */; };
 		D223315A1F27365A00E90EE6 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22331591F27365A00E90EE6 /* EventTableViewCell.swift */; };
+		D223315C1F27D67600E90EE6 /* EventDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D223315B1F27D67600E90EE6 /* EventDetailsTableViewController.swift */; };
+		D223315E1F28FB0A00E90EE6 /* EDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D223315D1F28FB0A00E90EE6 /* EDViewController.swift */; };
 		D25A6C7F1F1E8FE4005FAD33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25A6C7E1F1E8FE4005FAD33 /* AppDelegate.swift */; };
 		D25A6C841F1E8FE4005FAD33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25A6C821F1E8FE4005FAD33 /* Main.storyboard */; };
 		D25A6C861F1E8FE4005FAD33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D25A6C851F1E8FE4005FAD33 /* Assets.xcassets */; };
@@ -59,9 +60,10 @@
 		D20F59E71F22113500A47E8E /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
 		D20F59E91F22116900A47E8E /* ProjectDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailsViewController.swift; sourceTree = "<group>"; };
 		D20F59EB1F2211D300A47E8E /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
-		D22331551F264B0300E90EE6 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		D22331571F264D8000E90EE6 /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		D22331591F27365A00E90EE6 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		D223315B1F27D67600E90EE6 /* EventDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsTableViewController.swift; sourceTree = "<group>"; };
+		D223315D1F28FB0A00E90EE6 /* EDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EDViewController.swift; sourceTree = "<group>"; };
 		D25A6C7B1F1E8FE4005FAD33 /* Kids2Kids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kids2Kids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25A6C7E1F1E8FE4005FAD33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D25A6C831F1E8FE4005FAD33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -146,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				D20F59EB1F2211D300A47E8E /* Project.swift */,
-				D22331551F264B0300E90EE6 /* Event.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -166,6 +167,8 @@
 				D20F59E51F2210F700A47E8E /* ProjectsTableViewController.swift */,
 				D20F59E91F22116900A47E8E /* ProjectDetailsViewController.swift */,
 				D22331571F264D8000E90EE6 /* EventsTableViewController.swift */,
+				D223315B1F27D67600E90EE6 /* EventDetailsTableViewController.swift */,
+				D223315D1F28FB0A00E90EE6 /* EDViewController.swift */,
 				D25A6CB81F1EA680005FAD33 /* ContactsViewController.swift */,
 			);
 			name = Controllers;
@@ -518,13 +521,14 @@
 			files = (
 				D25A6CAF1F1E926F005FAD33 /* LoginViewController.swift in Sources */,
 				D223315A1F27365A00E90EE6 /* EventTableViewCell.swift in Sources */,
-				D22331561F264B0300E90EE6 /* Event.swift in Sources */,
 				D20F59E61F2210F700A47E8E /* ProjectsTableViewController.swift in Sources */,
 				D20F59EC1F2211D300A47E8E /* Project.swift in Sources */,
 				D25A6CB11F1E927E005FAD33 /* SignupViewController.swift in Sources */,
 				D20F59E81F22113500A47E8E /* ProjectTableViewCell.swift in Sources */,
 				D20F59EA1F22116900A47E8E /* ProjectDetailsViewController.swift in Sources */,
 				D25A6CB91F1EA680005FAD33 /* ContactsViewController.swift in Sources */,
+				D223315C1F27D67600E90EE6 /* EventDetailsTableViewController.swift in Sources */,
+				D223315E1F28FB0A00E90EE6 /* EDViewController.swift in Sources */,
 				D22331581F264D8000E90EE6 /* EventsTableViewController.swift in Sources */,
 				D25A6C7F1F1E8FE4005FAD33 /* AppDelegate.swift in Sources */,
 			);

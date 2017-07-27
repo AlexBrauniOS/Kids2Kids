@@ -10,8 +10,6 @@ import UIKit
 import Parse
 
 class EventsTableViewController: UITableViewController {
-
-//    var events: [Event] = [Event(nameOfEvent: "Фотопроект 'Мы живы'", imageOfEvent: #imageLiteral(resourceName: "RozhdestvenskiyAngel"), dateOfEvent: "29 июля - 8 августа", placeOfEvent: "Киев, ул.Набережно-Луговая, 8", descriptionOfEvent: "Тем временем боевые действия не прекращаются уже четвертый год, а детство этих подростков и других детей расстреливают прицельным огнем из разных видов оружия. «В прифронтовом Марьинском районе очень много талантливых детей и они не могут выехать, так как их родителей никто и нигде не ждет. Вообще, людям трудно покидать свои дома и ехать неизвестно куда» - рассказывает Олег Ткаченко, создатель и руководитель молодежного медиа-центра в Марьинке. Медиа-центр был создан для того, чтобы хоть как-то поддержать детей и дать им возможность самовыражаться посредством фотографии. В течении выставки у посетителей будет возможность предоставить финансовую поддержку медиа центру, которая будет направлена на покупку необходимой фототехники или передать б/у технику в пользование студентам. Таким образом, мы дадим шанс большему количеству детей изучить новый навык, который для некоторых из них может стать делом жизни. На выставке будет представлена инсталляция Киевской Арт Группы CoolArt - размышление на тему нашего восприятия жизни в прифронтовой зоне. Арт-группа CoolArt (Ольга Гурина и Олег Кулай-Кулайчук, Киев) в своих работах художники придают особое значение высказыванию и нарративу, в основе которого лежит сюжетный образ, контекст и субъективность восприятия зрителя. Выставка доступна для свободного посещения: 29 июля с 16:00 - 20:00, 30 июля по 08 августа с 12:00 - 20:00")]
     
     var events = [PFObject]()
     
@@ -22,7 +20,6 @@ class EventsTableViewController: UITableViewController {
     
     func fetchPost() {
         let query = PFQuery(className: "Event")
-        //        query.whereKey("text", hasSuffix: "t2")
         query.findObjectsInBackground { (objects, error) in
             if let objects = objects {
                 self.events = objects
@@ -58,49 +55,21 @@ class EventsTableViewController: UITableViewController {
         return cell
     }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let event = events[indexPath.row]
+        let name = event["name"] as? String
+        performSegue(withIdentifier: "EventDetailsTableViewController", sender: name)
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "EventDetailsTableViewController" {
+            if let controller = segue.destination as? EDViewController,
+                let name = sender as? String {
+                controller.nameEvent = name
+            }
+        }
     }
-    */
-
 }
