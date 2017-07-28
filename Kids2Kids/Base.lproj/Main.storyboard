@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,28 +32,37 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="188"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bo2-7v-sj6" id="9QV-XH-kv6">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="187.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="187"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thK-8J-Pm8">
-                                            <rect key="frame" x="8" y="135" width="304" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thK-8J-Pm8">
+                                            <rect key="frame" x="8" y="137" width="304" height="19.5"/>
                                             <fontDescription key="fontDescription" name="CoTextCorp-Regular" family="Co Text Corp" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ko2-Az-j3d">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="127"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ko2-Az-j3d">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="129"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bb8-LK-srH">
-                                            <rect key="frame" x="8" y="164" width="304" height="16"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bb8-LK-srH">
+                                            <rect key="frame" x="8" y="164.5" width="304" height="14"/>
                                             <fontDescription key="fontDescription" name="CoTextCorp-Regular" family="Co Text Corp" pointSize="12"/>
                                             <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Ko2-Az-j3d" firstAttribute="leading" secondItem="9QV-XH-kv6" secondAttribute="leading" id="6H3-HC-99n"/>
+                                        <constraint firstItem="bb8-LK-srH" firstAttribute="top" secondItem="thK-8J-Pm8" secondAttribute="bottom" constant="8" id="8be-Bq-sm1"/>
+                                        <constraint firstItem="bb8-LK-srH" firstAttribute="trailing" secondItem="9QV-XH-kv6" secondAttribute="trailingMargin" id="8mr-Lf-4bK"/>
+                                        <constraint firstItem="bb8-LK-srH" firstAttribute="leading" secondItem="9QV-XH-kv6" secondAttribute="leadingMargin" id="Byj-bk-aUj"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="bb8-LK-srH" secondAttribute="bottom" constant="1" id="Kuv-2B-yEU"/>
+                                        <constraint firstItem="thK-8J-Pm8" firstAttribute="top" secondItem="Ko2-Az-j3d" secondAttribute="bottom" constant="8" id="Mko-eh-ARG"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ko2-Az-j3d" secondAttribute="trailing" id="N0s-uR-jRc"/>
+                                        <constraint firstItem="Ko2-Az-j3d" firstAttribute="top" secondItem="9QV-XH-kv6" secondAttribute="top" id="OfY-Ye-67H"/>
+                                        <constraint firstItem="thK-8J-Pm8" firstAttribute="trailing" secondItem="9QV-XH-kv6" secondAttribute="trailingMargin" id="Xjz-5x-X9d"/>
+                                        <constraint firstItem="thK-8J-Pm8" firstAttribute="leading" secondItem="9QV-XH-kv6" secondAttribute="leadingMargin" id="dvm-UD-4qE"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="dateEventLabel" destination="bb8-LK-srH" id="x0W-1w-swv"/>
@@ -98,6 +108,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ABa-lU-WZa">
                                 <rect key="frame" x="0.0" y="64" width="320" height="128"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="ABa-lU-WZa" secondAttribute="height" multiplier="5:2" id="2mG-a5-lxb"/>
                                     <constraint firstAttribute="height" constant="128" id="OPh-vl-iHv"/>
                                 </constraints>
                             </imageView>
@@ -236,7 +247,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eqV-Cr-P2h">
                                 <rect key="frame" x="0.0" y="64" width="320" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="3Ey-Uw-ep0"/>
+                                    <constraint firstAttribute="width" secondItem="eqV-Cr-P2h" secondAttribute="height" multiplier="5:2" id="vqw-jA-e9i"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSP-1O-JsS">
@@ -249,13 +260,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="rSP-1O-JsS" firstAttribute="top" secondItem="eqV-Cr-P2h" secondAttribute="bottom" constant="8" id="LpH-dI-TBR"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rSP-1O-JsS" secondAttribute="trailing" id="TPB-Oo-XfW"/>
-                            <constraint firstItem="shU-9a-wf2" firstAttribute="top" secondItem="rSP-1O-JsS" secondAttribute="bottom" id="Z6O-tW-3y2"/>
-                            <constraint firstItem="rSP-1O-JsS" firstAttribute="leading" secondItem="IQx-Lh-qA9" secondAttribute="leadingMargin" id="gJa-cv-b3e"/>
-                            <constraint firstItem="eqV-Cr-P2h" firstAttribute="leading" secondItem="IQx-Lh-qA9" secondAttribute="leading" id="jQl-kM-2o6"/>
-                            <constraint firstItem="eqV-Cr-P2h" firstAttribute="top" secondItem="dIH-yk-K5V" secondAttribute="bottom" id="sTL-Tq-Tlv"/>
-                            <constraint firstAttribute="trailing" secondItem="eqV-Cr-P2h" secondAttribute="trailing" id="u7h-CR-pgm"/>
+                            <constraint firstItem="shU-9a-wf2" firstAttribute="top" secondItem="rSP-1O-JsS" secondAttribute="bottom" id="4Pa-1U-fFS"/>
+                            <constraint firstItem="rSP-1O-JsS" firstAttribute="trailing" secondItem="IQx-Lh-qA9" secondAttribute="trailingMargin" id="DDj-TO-oEZ"/>
+                            <constraint firstItem="eqV-Cr-P2h" firstAttribute="leading" secondItem="IQx-Lh-qA9" secondAttribute="leading" id="TYe-67-qG2"/>
+                            <constraint firstItem="eqV-Cr-P2h" firstAttribute="top" secondItem="dIH-yk-K5V" secondAttribute="bottom" id="gMp-SI-P7I"/>
+                            <constraint firstAttribute="trailing" secondItem="eqV-Cr-P2h" secondAttribute="trailing" id="nOr-7v-Dzb"/>
+                            <constraint firstItem="rSP-1O-JsS" firstAttribute="top" secondItem="eqV-Cr-P2h" secondAttribute="bottom" constant="8" id="sR2-E2-GVe"/>
+                            <constraint firstItem="rSP-1O-JsS" firstAttribute="leading" secondItem="IQx-Lh-qA9" secondAttribute="leadingMargin" id="xv0-e8-0Gj"/>
                         </constraints>
                     </view>
                     <connections>
