@@ -74,15 +74,21 @@ class ProjectsTableViewController: UITableViewController {
         let project = array[indexPath.row]
         cell.projectInCellImage.image = project.projectImage
         cell.projectInCellLabel.text = project.projectName
-        cell.contentView.alpha = 0
+        
+        if (indexPath.row == (self.tableView.numberOfRows(inSection: 0) - 1)) {
+            cell.contentView.alpha = 0
+        }
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        UIView.animate(withDuration: 0.2, animations: {
-            cell.contentView.alpha = 1.0
-        })
+        
+        if (indexPath.row == (self.tableView.numberOfRows(inSection: 0) - 1)) {
+            UIView.animate(withDuration: 0.2, animations: {
+                cell.contentView.alpha = 1.0
+            })
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
