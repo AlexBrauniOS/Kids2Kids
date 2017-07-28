@@ -36,13 +36,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thK-8J-Pm8">
-                                            <rect key="frame" x="8" y="137" width="304" height="19.5"/>
+                                            <rect key="frame" x="8" y="136.5" width="304" height="20"/>
                                             <fontDescription key="fontDescription" name="CoTextCorp-Regular" family="Co Text Corp" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ko2-Az-j3d">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="129"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bb8-LK-srH">
                                             <rect key="frame" x="8" y="164.5" width="304" height="14"/>
@@ -169,39 +169,38 @@
         <scene sceneID="mW6-8q-EqQ">
             <objects>
                 <tableViewController id="9ZN-xd-Wkd" customClass="ProjectsTableViewController" customModule="Kids2Kids" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="ads-qw-cf5">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="171" sectionHeaderHeight="28" sectionFooterHeight="28" id="ads-qw-cf5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="150" id="4W6-1Q-ans" customClass="ProjectTableViewCell" customModule="Kids2Kids" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="150"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="171" id="4W6-1Q-ans" customClass="ProjectTableViewCell" customModule="Kids2Kids" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="171"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4W6-1Q-ans" id="HJg-nA-6zS">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="149.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="171"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="DorogaVZhizn" translatesAutoresizingMaskIntoConstraints="NO" id="V4X-x3-ils">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="171"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дорога в жизнь" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLv-WL-qi8">
-                                            <rect key="frame" x="0.0" y="116" width="320" height="23"/>
+                                            <rect key="frame" x="0.0" y="97" width="320" height="23"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="pLv-WL-qi8" secondAttribute="height" multiplier="320:23" id="yP1-qT-Gnm"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="CoTextCorp-Regular" family="Co Text Corp" pointSize="20"/>
-                                            <color key="textColor" red="0.42703676219999998" green="0.75189828869999997" blue="0.2885013521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="V4X-x3-ils" secondAttribute="trailing" id="07H-D2-akg"/>
-                                        <constraint firstItem="pLv-WL-qi8" firstAttribute="leading" secondItem="HJg-nA-6zS" secondAttribute="leading" id="Cps-e7-8FN"/>
-                                        <constraint firstAttribute="bottom" secondItem="pLv-WL-qi8" secondAttribute="bottom" constant="10.5" id="ELu-hz-ODf"/>
-                                        <constraint firstAttribute="trailing" secondItem="pLv-WL-qi8" secondAttribute="trailing" id="JkB-E6-dHu"/>
-                                        <constraint firstItem="V4X-x3-ils" firstAttribute="top" secondItem="HJg-nA-6zS" secondAttribute="top" id="L6O-db-O9U"/>
-                                        <constraint firstItem="V4X-x3-ils" firstAttribute="top" secondItem="HJg-nA-6zS" secondAttribute="top" id="MtX-mf-Qww"/>
-                                        <constraint firstItem="V4X-x3-ils" firstAttribute="leading" secondItem="HJg-nA-6zS" secondAttribute="leading" id="PJb-8T-2SJ"/>
-                                        <constraint firstAttribute="trailing" secondItem="V4X-x3-ils" secondAttribute="trailing" id="jJD-LH-pI2"/>
-                                        <constraint firstItem="V4X-x3-ils" firstAttribute="leading" secondItem="HJg-nA-6zS" secondAttribute="leading" id="xE5-8P-P5J"/>
-                                        <constraint firstItem="pLv-WL-qi8" firstAttribute="top" secondItem="V4X-x3-ils" secondAttribute="bottom" constant="12" id="zNT-tC-9SG"/>
+                                        <constraint firstAttribute="bottom" secondItem="V4X-x3-ils" secondAttribute="bottom" id="3bb-ob-9cH"/>
+                                        <constraint firstItem="pLv-WL-qi8" firstAttribute="top" secondItem="HJg-nA-6zS" secondAttribute="topMargin" constant="89" id="Ebo-Nn-oJ0"/>
+                                        <constraint firstItem="V4X-x3-ils" firstAttribute="leading" secondItem="HJg-nA-6zS" secondAttribute="leading" id="JC0-Mb-RyX"/>
+                                        <constraint firstItem="V4X-x3-ils" firstAttribute="top" secondItem="HJg-nA-6zS" secondAttribute="top" id="VI9-Sb-Jyz"/>
+                                        <constraint firstItem="pLv-WL-qi8" firstAttribute="centerX" secondItem="HJg-nA-6zS" secondAttribute="centerX" id="mgq-uX-DeW"/>
+                                        <constraint firstAttribute="trailing" secondItem="V4X-x3-ils" secondAttribute="trailing" id="p6d-iE-bSk"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -290,7 +289,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo_en_cmyk" translatesAutoresizingMaskIntoConstraints="NO" id="ghX-wk-v3I">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LogoRuCont" translatesAutoresizingMaskIntoConstraints="NO" id="ghX-wk-v3I">
                                 <rect key="frame" x="0.0" y="35" width="320" height="132"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -487,14 +486,14 @@
     </scenes>
     <resources>
         <image name="DorogaVZhizn" width="2480" height="744"/>
+        <image name="LogoRuCont" width="709" height="709"/>
         <image name="icons8-close_window" width="25" height="25"/>
         <image name="icons8-facebook" width="24" height="24"/>
         <image name="icons8-info" width="25" height="25"/>
         <image name="icons8-instagram_new" width="24" height="24"/>
         <image name="icons8-youtube" width="24" height="24"/>
-        <image name="logo_en_cmyk" width="566" height="330"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pan-La-vq0"/>
+        <segue reference="A5z-kk-Ewz"/>
     </inferredMetricsTieBreakers>
 </document>

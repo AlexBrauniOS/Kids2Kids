@@ -26,7 +26,6 @@ class ProjectDetailsViewController: UIViewController {
         projectInDetailsTextView.text = projects.projectDescription
         self.navigationController!.navigationBar.barTintColor = UIColor.fundYellowColor
         self.navigationController!.navigationItem.backBarButtonItem?.tintColor = UIColor.fundBlueColor
-        self.tabBarController!.tabBar.barTintColor = UIColor.fundYellowColor
         self.tabBarController!.tabBar.tintColor = UIColor.fundBlueColor
     }
     

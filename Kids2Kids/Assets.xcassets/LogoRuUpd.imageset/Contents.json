@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "LogoRuUpd.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "logo_en_cmyk.jpg",
       "scale" : "2x"
     },
     {

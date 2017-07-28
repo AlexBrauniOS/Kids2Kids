@@ -67,7 +67,6 @@ class EventDetailsViewController: UIViewController {
 
         self.navigationController!.navigationBar.barTintColor = UIColor.fundGreenColor
         self.navigationController!.navigationItem.backBarButtonItem?.tintColor = UIColor.fundBlueColor
-        self.tabBarController!.tabBar.barTintColor = UIColor.fundGreenColor
         self.tabBarController!.tabBar.tintColor = UIColor.fundBlueColor
     }
     
