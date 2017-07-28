@@ -23,8 +23,6 @@ class EventsTableViewController: UITableViewController {
         query.findObjectsInBackground { (objects, error) in
             if let objects = objects {
                 self.events = objects
-                
-                print(objects)
                 self.tableView.reloadData()
             }
         }
@@ -60,13 +58,14 @@ class EventsTableViewController: UITableViewController {
         let name = event["name"] as? String
         performSegue(withIdentifier: "EventDetailsTableViewController", sender: name)
     }
+    
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == "EventDetailsTableViewController" {
-            if let controller = segue.destination as? EDViewController,
+            if let controller = segue.destination as? EventDetailsViewController,
                 let name = sender as? String {
                 controller.nameEvent = name
             }

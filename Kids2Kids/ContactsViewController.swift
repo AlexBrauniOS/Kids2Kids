@@ -12,18 +12,14 @@ import MessageUI
 
 class ContactsViewController: UIViewController {
     
-    @IBOutlet weak var logoImageView: UIImageView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if !MFMailComposeViewController.canSendMail() {
-            print("Mail services are not available")
-            return
-        }
+        checkAvailableMailServices()
     }
     
-    // funcs for contacts button with allertController
+    // MARK: Call number
+    
     private func callNumber(phoneNumber: String) {
         
         if let phoneCallURL = URL(string: "tel://\(phoneNumber)") {
@@ -35,15 +31,17 @@ class ContactsViewController: UIViewController {
         }
     }
     
+    // MARK: Website
+    
     private func openWebsite() {
-        let url = URL(string: "http://www.stackoverflow.com")
+        let url = URL(string: "http://www.kids2kids-fund.com")
         UIApplication.shared.open(url!, options: [:], completionHandler: nil)
     }
     
+    // MARK: Facebook
+    
     private func openFacebookPage() {
         let facebookUID = "kids2kidsfund"
-        
-        print(facebookUID)
         let fbURLWeb: NSURL = NSURL(string: "https://www.facebook.com/\(facebookUID)")!
         let fbURLID: NSURL = NSURL(string: "fb://profile/\(facebookUID)")!
         
@@ -57,6 +55,8 @@ class ContactsViewController: UIViewController {
         }
     }
     
+    // MARK: Show alert controller
+    
     private func showAlertController(title: String, message: String, accessTitle: String, completion: @escaping ()->()) {
         let showAlert : UIAlertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
         showAlert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
@@ -64,38 +64,49 @@ class ContactsViewController: UIViewController {
         self.present(showAlert, animated: true, completion: nil)
     }
 
+    // MARK: Contact buttons
     
     @IBAction func webSiteButton(_ sender: UIButton) {
-        showAlertController(title: "Open Kids2Kids website", message: "Are you sure, that you want to open Safari?", accessTitle: "Open") {
-            self.openWebsite()
-        }
+        openWebsite()
     }
     @IBAction func emailButton(_ sender: UIButton) {
-        showAlertController(title: "Sending e-mail to Kids2Kids", message: "Are you sure, that you want to send email?", accessTitle: "Send") {
-            self.sendEmail()
-        }
+            sendEmail()
     }
     @IBAction func phoneButton(_ sender: UIButton) {
-        showAlertController(title: "Calling to Kids2Kids", message: "+38 (050) 471-30-30", accessTitle: "Call") {
-            self.callNumber(phoneNumber: "+380504745993")
+        showAlertController(title: "Calling to Kids2Kids-Fund", message: "+38 (050) 471-30-30", accessTitle: "Call") {
+            self.callNumber(phoneNumber: "+380504713030")
         }
     }
     @IBAction func facebookButton(_ sender: UIButton) {
-        showAlertController(title: "Open Facebook?", message: "Facebook Page @kids2kidsfund", accessTitle: "Open") {
-            self.openFacebookPage()
-        }
+        openFacebookPage()
     }
+    
+    // MARK: Hide controller button
+    
+    @IBAction func hideContactPageButton(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+
 }
 
 extension ContactsViewController: MFMailComposeViewControllerDelegate {
+    
+    // MARK: Mail Services
+    
+    func checkAvailableMailServices() {
+        if !MFMailComposeViewController.canSendMail() {
+            print("Mail services are not available")
+            return
+        }
+    }
     
     func sendEmail() {
         let composeVC = MFMailComposeViewController()
         composeVC.mailComposeDelegate = self
         // Configure the fields of the interface.
-        composeVC.setToRecipients(["lubaretsaa@gmail.com"])
-        composeVC.setSubject("Test")
-        composeVC.setMessageBody("Hello! It's test mail from iOS app 'Kids2Kids'. Sincirely yours, Alex Braun.", isHTML: false)
+        composeVC.setToRecipients(["web@kids2kids-fund.com"])
+//        composeVC.setSubject("")
+//        composeVC.setMessageBody("", isHTML: false)
         // Present the view controller modally.
         self.present(composeVC, animated: true, completion: nil)
     }

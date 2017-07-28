@@ -21,9 +21,9 @@ class ProjectDetailsViewController: UIViewController {
 
     func setup() {
         navigationItem.title = projects.projectName
-        let myBlueColor = UIColor(red: 0.0/255.0, green: 117.0/255.0, blue: 201.0/255.0, alpha: 1.0)
-        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: myBlueColor, NSFontAttributeName: UIFont(name: "Co Text Corp", size: 17)!]
+        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.fundBlueColor, NSFontAttributeName: UIFont(name: "Co Text Corp", size: 17)!]
         projectInDetailsImageView.image = projects.projectImage
         projectInDetailsTextView.text = projects.projectDescription
+        self.navigationController!.navigationItem.backBarButtonItem?.tintColor = UIColor.fundBlueColor
     }
 }
