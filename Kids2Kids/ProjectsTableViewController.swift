@@ -58,12 +58,13 @@ class ProjectsTableViewController: UITableViewController {
         self.navigationController!.navigationItem.backBarButtonItem?.tintColor = UIColor.fundBlueColor
         self.tabBarController!.tabBar.barTintColor = UIColor.fundYellowColor
         self.tabBarController!.tabBar.tintColor = UIColor.fundBlueColor
+        self.tabBarController!.tabBar.unselectedItemTintColor = UIColor.white
     }
     
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        
         return array.count
     }
 

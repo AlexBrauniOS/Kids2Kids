@@ -15,10 +15,10 @@
 		D20F59E81F22113500A47E8E /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20F59E71F22113500A47E8E /* ProjectTableViewCell.swift */; };
 		D20F59EA1F22116900A47E8E /* ProjectDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20F59E91F22116900A47E8E /* ProjectDetailsViewController.swift */; };
 		D20F59EC1F2211D300A47E8E /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20F59EB1F2211D300A47E8E /* Project.swift */; };
+		D21942B01F2B548500A86844 /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D21942AF1F2B548500A86844 /* Roboto.ttf */; };
 		D22331581F264D8000E90EE6 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22331571F264D8000E90EE6 /* EventsTableViewController.swift */; };
 		D223315A1F27365A00E90EE6 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22331591F27365A00E90EE6 /* EventTableViewCell.swift */; };
 		D223315E1F28FB0A00E90EE6 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D223315D1F28FB0A00E90EE6 /* EventDetailsViewController.swift */; };
-		D22331601F2B1B4800E90EE6 /* FundColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D223315F1F2B1B4800E90EE6 /* FundColors.swift */; };
 		D22331621F2B2D2100E90EE6 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22331611F2B2D2100E90EE6 /* CustomColors.swift */; };
 		D25A6C7F1F1E8FE4005FAD33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25A6C7E1F1E8FE4005FAD33 /* AppDelegate.swift */; };
 		D25A6C841F1E8FE4005FAD33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25A6C821F1E8FE4005FAD33 /* Main.storyboard */; };
@@ -61,10 +61,10 @@
 		D20F59E71F22113500A47E8E /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
 		D20F59E91F22116900A47E8E /* ProjectDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailsViewController.swift; sourceTree = "<group>"; };
 		D20F59EB1F2211D300A47E8E /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		D21942AF1F2B548500A86844 /* Roboto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Roboto.ttf; sourceTree = "<group>"; };
 		D22331571F264D8000E90EE6 /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		D22331591F27365A00E90EE6 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		D223315D1F28FB0A00E90EE6 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
-		D223315F1F2B1B4800E90EE6 /* FundColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FundColors.swift; sourceTree = "<group>"; };
 		D22331611F2B2D2100E90EE6 /* CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		D25A6C7B1F1E8FE4005FAD33 /* Kids2Kids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kids2Kids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25A6C7E1F1E8FE4005FAD33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				D20562CE1F2253C2001B527B /* Co Text Corp.ttf */,
+				D21942AF1F2B548500A86844 /* Roboto.ttf */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -202,7 +203,6 @@
 			children = (
 				D25A6C7E1F1E8FE4005FAD33 /* AppDelegate.swift */,
 				D25A6C821F1E8FE4005FAD33 /* Main.storyboard */,
-				D223315F1F2B1B4800E90EE6 /* FundColors.swift */,
 				D22331611F2B2D2100E90EE6 /* CustomColors.swift */,
 				D20F59EF1F22130D00A47E8E /* Controllers */,
 				D20F59EE1F2212EE00A47E8E /* Cells */,
@@ -355,6 +355,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D21942B01F2B548500A86844 /* Roboto.ttf in Resources */,
 				D25A6C891F1E8FE4005FAD33 /* LaunchScreen.storyboard in Resources */,
 				D25A6C861F1E8FE4005FAD33 /* Assets.xcassets in Resources */,
 				D25A6C841F1E8FE4005FAD33 /* Main.storyboard in Resources */,
@@ -529,7 +530,6 @@
 				D20F59EC1F2211D300A47E8E /* Project.swift in Sources */,
 				D25A6CB11F1E927E005FAD33 /* SignupViewController.swift in Sources */,
 				D20F59E81F22113500A47E8E /* ProjectTableViewCell.swift in Sources */,
-				D22331601F2B1B4800E90EE6 /* FundColors.swift in Sources */,
 				D20F59EA1F22116900A47E8E /* ProjectDetailsViewController.swift in Sources */,
 				D25A6CB91F1EA680005FAD33 /* ContactsViewController.swift in Sources */,
 				D223315E1F28FB0A00E90EE6 /* EventDetailsViewController.swift in Sources */,

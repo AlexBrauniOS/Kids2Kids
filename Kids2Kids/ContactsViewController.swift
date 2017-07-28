@@ -42,16 +42,45 @@ class ContactsViewController: UIViewController {
     
     private func openFacebookPage() {
         let facebookUID = "kids2kidsfund"
-        let fbURLWeb: NSURL = NSURL(string: "https://www.facebook.com/\(facebookUID)")!
-        let fbURLID: NSURL = NSURL(string: "fb://profile/\(facebookUID)")!
+        let fbURLWeb = NSURL(string: "https://www.facebook.com/\(facebookUID)")!
+        let fbURLID = NSURL(string: "fb://\(facebookUID)")!
         
-        if(UIApplication.shared.canOpenURL(fbURLID as URL)){
+        if UIApplication.shared.canOpenURL(fbURLID as URL) {
             // FB installed
-            UIApplication.shared.open(fbURLID as URL, options: [:], completionHandler: nil)
+            UIApplication.shared.open(fbURLID as URL)
             //(fbURLID as URL)
         } else {
             // FB is not installed, open in safari
-            UIApplication.shared.open(fbURLWeb as URL, options: [:], completionHandler: nil)
+            UIApplication.shared.open(fbURLWeb as URL)
+        }
+    }
+    
+    // MARK: Instagram
+    
+    private func openInstagram() {
+        let instagramUID = "kids2kidsfund"
+        let instagramUrlWeb = NSURL(string: "http://instagram.com/\(instagramUID)")!
+        let instagramUrlID = NSURL(string: "instagram://user?username=\(instagramUID)")!
+        if UIApplication.shared.canOpenURL(instagramUrlID as URL)
+        {
+            UIApplication.shared.open(instagramUrlID as URL)
+            
+        } else {
+            //redirect to safari because the user doesn't have Instagram
+            UIApplication.shared.open(instagramUrlWeb as URL)
+        }
+    }
+    
+    // MARK: Youtube
+    
+    private func openYoutube() {
+        let youtubeId = "UCPylid7Qx-fxi-DBOoyBOVQ"
+        let youtubeUrlID = NSURL(string:"youtube://\(youtubeId)")!
+        let youtubeUrlWeb = NSURL(string:"https://www.youtube.com/channel/\(youtubeId)/videos")!
+        if !UIApplication.shared.canOpenURL(youtubeUrlID as URL)  {
+            UIApplication.shared.open(youtubeUrlID as URL)
+        } else {
+            UIApplication.shared.open(youtubeUrlWeb as URL)
         }
     }
     
@@ -79,6 +108,12 @@ class ContactsViewController: UIViewController {
     }
     @IBAction func facebookButton(_ sender: UIButton) {
         openFacebookPage()
+    }
+    @IBAction func instagramButton(_ sender: UIButton) {
+        openInstagram()
+    }
+    @IBAction func youtubeButton(_ sender: UIButton) {
+        openYoutube()
     }
     
     // MARK: Hide controller button

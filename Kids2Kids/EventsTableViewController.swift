@@ -16,6 +16,17 @@ class EventsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchPost()
+        setup()
+    }
+    
+    func setup() {
+        navigationItem.title = "Мероприятия"
+        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.fundBlueColor, NSFontAttributeName: UIFont(name: "Co Text Corp", size: 22)!]
+        
+        self.navigationController!.navigationBar.barTintColor = UIColor.fundGreenColor
+        self.navigationController!.navigationItem.backBarButtonItem?.tintColor = UIColor.fundBlueColor
+        self.tabBarController!.tabBar.barTintColor = UIColor.fundGreenColor
+        self.tabBarController!.tabBar.tintColor = UIColor.fundBlueColor
     }
     
     func fetchPost() {

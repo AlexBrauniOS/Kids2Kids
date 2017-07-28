@@ -24,6 +24,10 @@ class ProjectDetailsViewController: UIViewController {
         self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.fundBlueColor, NSFontAttributeName: UIFont(name: "Co Text Corp", size: 17)!]
         projectInDetailsImageView.image = projects.projectImage
         projectInDetailsTextView.text = projects.projectDescription
+        self.navigationController!.navigationBar.barTintColor = UIColor.fundYellowColor
         self.navigationController!.navigationItem.backBarButtonItem?.tintColor = UIColor.fundBlueColor
+        self.tabBarController!.tabBar.barTintColor = UIColor.fundYellowColor
+        self.tabBarController!.tabBar.tintColor = UIColor.fundBlueColor
     }
+    
 }
