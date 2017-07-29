@@ -24,29 +24,27 @@ class ProjectsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        getProjectsArray()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        array.removeAll()
         self.tabBarController!.tabBar.barTintColor = UIColor.fundYellowColor
     }
 
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-            var i = 0.0
-                for project in projects {
-                    delay(i, closure: {
-                        self.array.append(project)
-                    })
-                    i += 0.2
-            }
-    }
-    
     func delay(_ delay:Double, closure:@escaping ()->()) {
         let when = DispatchTime.now() + delay
         DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
+    }
+    
+    func getProjectsArray() {
+        var i = 0.0
+        for project in projects {
+            delay(i, closure: {
+                self.array.append(project)
+            })
+            i += 0.2
+        }
     }
     
     func setup() {

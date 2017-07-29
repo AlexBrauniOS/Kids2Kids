@@ -22,16 +22,21 @@ class EventsTableViewController: UITableViewController {
         super.viewDidLoad()
         fetchPost()
         setup()
+        getEventsArray()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        arrayCells.removeAll()
+//        arrayCells.removeAll()
         self.tabBarController!.tabBar.barTintColor = UIColor.fundGreenColor
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    func delay(_ delay:Double, closure:@escaping ()->()) {
+        let when = DispatchTime.now() + delay
+        DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
+    }
+    
+    func getEventsArray() {
         var i = 0.0
         for cell in events {
             delay(i, closure: {
@@ -39,11 +44,6 @@ class EventsTableViewController: UITableViewController {
             })
             i += 0.2
         }
-    }
-    
-    func delay(_ delay:Double, closure:@escaping ()->()) {
-        let when = DispatchTime.now() + delay
-        DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
     }
     
     func setup() {
