@@ -23,12 +23,15 @@ class ProjectsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
         setup()
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        array.removeAll()
+        self.tabBarController!.tabBar.barTintColor = UIColor.fundYellowColor
+    }
+
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -41,11 +44,6 @@ class ProjectsTableViewController: UITableViewController {
             }
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        array.removeAll()
-    }
-    
     func delay(_ delay:Double, closure:@escaping ()->()) {
         let when = DispatchTime.now() + delay
         DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
@@ -54,10 +52,11 @@ class ProjectsTableViewController: UITableViewController {
     func setup() {
         self.navigationItem.title = "Проекты"
         self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.fundBlueColor, NSFontAttributeName: UIFont(name: "Co Text Corp", size: 22)!]
+        self.view.backgroundColor = UIColor.fundYellowColor.withAlphaComponent(1.0)
         self.navigationController!.navigationBar.barTintColor = UIColor.fundYellowColor
         self.navigationController!.navigationItem.backBarButtonItem?.tintColor = UIColor.fundBlueColor
         self.tabBarController!.tabBar.tintColor = UIColor.fundBlueColor
-        self.tabBarController!.tabBar.unselectedItemTintColor = UIColor.white
+        self.tabBarController!.tabBar.unselectedItemTintColor = UIColor.darkGray
     }
     
     // MARK: - Table view data source

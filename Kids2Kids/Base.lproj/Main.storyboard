@@ -32,36 +32,32 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="188"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bo2-7v-sj6" id="9QV-XH-kv6">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="187.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="188"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thK-8J-Pm8">
-                                            <rect key="frame" x="8" y="136.5" width="304" height="20"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ko2-Az-j3d">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="187.5"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thK-8J-Pm8">
+                                            <rect key="frame" x="8" y="137" width="304" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                             <fontDescription key="fontDescription" name="CoTextCorp-Regular" family="Co Text Corp" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ko2-Az-j3d">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bb8-LK-srH">
-                                            <rect key="frame" x="8" y="164.5" width="304" height="14"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bb8-LK-srH">
+                                            <rect key="frame" x="8" y="163" width="304" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                             <fontDescription key="fontDescription" name="CoTextCorp-Regular" family="Co Text Corp" pointSize="12"/>
-                                            <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Ko2-Az-j3d" firstAttribute="leading" secondItem="9QV-XH-kv6" secondAttribute="leading" id="6H3-HC-99n"/>
-                                        <constraint firstItem="bb8-LK-srH" firstAttribute="top" secondItem="thK-8J-Pm8" secondAttribute="bottom" constant="8" id="8be-Bq-sm1"/>
-                                        <constraint firstItem="bb8-LK-srH" firstAttribute="trailing" secondItem="9QV-XH-kv6" secondAttribute="trailingMargin" id="8mr-Lf-4bK"/>
-                                        <constraint firstItem="bb8-LK-srH" firstAttribute="leading" secondItem="9QV-XH-kv6" secondAttribute="leadingMargin" id="Byj-bk-aUj"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="bb8-LK-srH" secondAttribute="bottom" constant="1" id="Kuv-2B-yEU"/>
-                                        <constraint firstItem="thK-8J-Pm8" firstAttribute="top" secondItem="Ko2-Az-j3d" secondAttribute="bottom" constant="8" id="Mko-eh-ARG"/>
-                                        <constraint firstAttribute="trailing" secondItem="Ko2-Az-j3d" secondAttribute="trailing" id="N0s-uR-jRc"/>
-                                        <constraint firstItem="Ko2-Az-j3d" firstAttribute="top" secondItem="9QV-XH-kv6" secondAttribute="top" id="OfY-Ye-67H"/>
-                                        <constraint firstItem="thK-8J-Pm8" firstAttribute="trailing" secondItem="9QV-XH-kv6" secondAttribute="trailingMargin" id="Xjz-5x-X9d"/>
-                                        <constraint firstItem="thK-8J-Pm8" firstAttribute="leading" secondItem="9QV-XH-kv6" secondAttribute="leadingMargin" id="dvm-UD-4qE"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ko2-Az-j3d" secondAttribute="bottom" id="JJS-UY-PtJ"/>
+                                        <constraint firstItem="Ko2-Az-j3d" firstAttribute="top" secondItem="9QV-XH-kv6" secondAttribute="top" id="MXa-EX-BqN"/>
+                                        <constraint firstItem="Ko2-Az-j3d" firstAttribute="leading" secondItem="9QV-XH-kv6" secondAttribute="leading" id="jbA-SH-DM4"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ko2-Az-j3d" secondAttribute="trailing" id="uwU-SL-EAH"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -430,7 +426,7 @@
         <scene sceneID="wz9-Vy-YB3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qn9-jL-fNP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Проекты" id="uzh-2G-iWA"/>
+                    <tabBarItem key="tabBarItem" title="Проекты" image="icons8-project" id="uzh-2G-iWA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LyI-4A-rkN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -449,7 +445,7 @@
         <scene sceneID="rIV-A6-T56">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="os6-OT-zWZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Мероприятия" id="1GN-Al-vhF"/>
+                    <tabBarItem key="tabBarItem" title="Мероприятия" image="icons8-tear_off_calendar" id="1GN-Al-vhF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="e26-jF-PPy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -491,9 +487,11 @@
         <image name="icons8-facebook" width="24" height="24"/>
         <image name="icons8-info" width="25" height="25"/>
         <image name="icons8-instagram_new" width="24" height="24"/>
+        <image name="icons8-project" width="25" height="25"/>
+        <image name="icons8-tear_off_calendar" width="25" height="25"/>
         <image name="icons8-youtube" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="A5z-kk-Ewz"/>
+        <segue reference="pan-La-vq0"/>
     </inferredMetricsTieBreakers>
 </document>

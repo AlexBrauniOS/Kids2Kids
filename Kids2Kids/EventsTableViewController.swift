@@ -12,17 +12,44 @@ import Parse
 class EventsTableViewController: UITableViewController {
     
     var events = [PFObject]()
-    
+    var arrayCells: [PFObject] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchPost()
         setup()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        arrayCells.removeAll()
+        self.tabBarController!.tabBar.barTintColor = UIColor.fundGreenColor
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        var i = 0.0
+        for cell in events {
+            delay(i, closure: {
+                self.arrayCells.append(cell)
+            })
+            i += 0.2
+        }
+    }
+    
+    func delay(_ delay:Double, closure:@escaping ()->()) {
+        let when = DispatchTime.now() + delay
+        DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
+    }
+    
     func setup() {
         navigationItem.title = "Мероприятия"
         self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.fundBlueColor, NSFontAttributeName: UIFont(name: "Co Text Corp", size: 22)!]
-        
+        self.view.backgroundColor = UIColor.fundGreenColor.withAlphaComponent(1.0)
         self.navigationController!.navigationBar.barTintColor = UIColor.fundGreenColor
         self.navigationController!.navigationItem.backBarButtonItem?.tintColor = UIColor.fundBlueColor
         self.tabBarController!.tabBar.tintColor = UIColor.fundBlueColor
@@ -41,13 +68,13 @@ class EventsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return events.count
+        return arrayCells.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath) as! EventTableViewCell
 
-        let event = events[indexPath.row]
+        let event = arrayCells[indexPath.row]
         cell.nameEventLAbel.text = event["name"] as? String
         cell.dateEventLabel.text = event["date"] as? String
         let imageEventFile = event["image"] as? PFFile
@@ -60,7 +87,20 @@ class EventsTableViewController: UITableViewController {
             }
         })
         
+        if (indexPath.row == (self.tableView.numberOfRows(inSection: 0) - 1)) {
+            cell.contentView.alpha = 0
+        }
+        
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        if (indexPath.row == (self.tableView.numberOfRows(inSection: 0) - 1)) {
+            UIView.animate(withDuration: 0.2, animations: {
+                cell.contentView.alpha = 1.0
+            })
+        }
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
