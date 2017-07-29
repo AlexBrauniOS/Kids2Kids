@@ -11,7 +11,11 @@ import Parse
 
 class EventsTableViewController: UITableViewController {
     
-    var events = [PFObject]()
+    var events = [PFObject]() {
+        didSet {
+            getEventsArray()
+        }
+    }
     var arrayCells: [PFObject] = [] {
         didSet {
             tableView.reloadData()
@@ -22,12 +26,10 @@ class EventsTableViewController: UITableViewController {
         super.viewDidLoad()
         fetchPost()
         setup()
-        getEventsArray()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        arrayCells.removeAll()
         self.tabBarController!.tabBar.barTintColor = UIColor.fundGreenColor
     }
     
