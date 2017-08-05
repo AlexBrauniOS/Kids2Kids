@@ -26,11 +26,9 @@ class EventDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         fetchPost()
-        
         setupController()
+        setupBG()
     }
     
     func fetchPost() {
@@ -42,7 +40,6 @@ class EventDetailsViewController: UIViewController {
                 
             }
         }
-        
     }
     
     func setupEvent() {
@@ -63,11 +60,18 @@ class EventDetailsViewController: UIViewController {
     
     func setupController() {
         navigationItem.title = nameEvent
-        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.fundBlueColor, NSFontAttributeName: UIFont(name: "Co Text Corp", size: 17)!]
 
-        self.navigationController!.navigationBar.barTintColor = UIColor.fundGreenColor
         self.navigationController!.navigationItem.backBarButtonItem?.tintColor = UIColor.fundBlueColor
         self.tabBarController!.tabBar.tintColor = UIColor.fundBlueColor
+        
+        descriptionEventDetailsTextView.backgroundColor = UIColor.white.withAlphaComponent(0.9)
+    }
+    
+    func setupBG() {
+        let background = UIImage(named: "Background")
+        self.view.clipsToBounds = true
+        self.view.contentMode = UIViewContentMode.scaleAspectFill
+        self.view.backgroundColor = UIColor(patternImage: background!)
     }
     
 }

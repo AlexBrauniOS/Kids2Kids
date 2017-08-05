@@ -88,7 +88,7 @@ class ContactsViewController: UIViewController {
     
     private func showAlertController(title: String, message: String, accessTitle: String, completion: @escaping ()->()) {
         let showAlert : UIAlertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-        showAlert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+        showAlert.addAction(UIAlertAction(title: "Отмена", style: UIAlertActionStyle.cancel, handler: nil))
         showAlert.addAction(UIAlertAction(title: accessTitle, style: UIAlertActionStyle.default, handler: { action in completion()}))
         self.present(showAlert, animated: true, completion: nil)
     }
@@ -102,7 +102,7 @@ class ContactsViewController: UIViewController {
             sendEmail()
     }
     @IBAction func phoneButton(_ sender: UIButton) {
-        showAlertController(title: "Calling to Kids2Kids-Fund", message: "+38 (050) 471-30-30", accessTitle: "Call") {
+        showAlertController(title: "Позвонить в Фонд ДетиДетям?", message: "+38 (050) 471-30-30", accessTitle: "Позвонить") {
             self.callNumber(phoneNumber: "+380504713030")
         }
     }

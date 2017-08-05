@@ -17,15 +17,22 @@ class ProjectDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        setupBG()
+    }
+    
+    func setupBG() {
+        let background = UIImage(named: "Background")
+        self.view.clipsToBounds = true
+        self.view.contentMode = UIViewContentMode.scaleAspectFill
+        self.view.backgroundColor = UIColor(patternImage: background!)
     }
 
     func setup() {
         navigationItem.title = projects.projectName
-        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.fundBlueColor, NSFontAttributeName: UIFont(name: "Co Text Corp", size: 17)!]
         projectInDetailsImageView.image = projects.projectImage
         projectInDetailsTextView.text = projects.projectDescription
-        self.navigationController!.navigationBar.barTintColor = UIColor.fundYellowColor
-        self.navigationController!.navigationItem.backBarButtonItem?.tintColor = UIColor.fundBlueColor
+        projectInDetailsTextView.backgroundColor = UIColor.white.withAlphaComponent(0.9)
+        
         self.tabBarController!.tabBar.tintColor = UIColor.fundBlueColor
     }
     

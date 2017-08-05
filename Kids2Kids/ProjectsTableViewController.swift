@@ -27,10 +27,10 @@ class ProjectsTableViewController: UITableViewController {
         getProjectsArray()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.tabBarController!.tabBar.barTintColor = UIColor.fundYellowColor
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+////        self.tabBarController!.tabBar.barTintColor = UIColor.fundYellowColor
+//    }
 
     func delay(_ delay:Double, closure:@escaping ()->()) {
         let when = DispatchTime.now() + delay
@@ -49,10 +49,17 @@ class ProjectsTableViewController: UITableViewController {
     
     func setup() {
         self.navigationItem.title = "Проекты"
-        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.fundBlueColor, NSFontAttributeName: UIFont(name: "Co Text Corp", size: 22)!]
-        self.view.backgroundColor = UIColor.fundYellowColor.withAlphaComponent(1.0)
-        self.navigationController!.navigationBar.barTintColor = UIColor.fundYellowColor
-        self.navigationController!.navigationItem.backBarButtonItem?.tintColor = UIColor.fundBlueColor
+        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.fundBlueColor, NSFontAttributeName: UIFont(name: "Co Text Corp", size: 19)!]
+        
+        let background = UIImage(named: "Background")
+        let imageView: UIImageView!
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background!
+        self.tableView.backgroundView = imageView
+        
+        self.navigationController!.navigationBar.tintColor = UIColor.fundBlueColor
         self.tabBarController!.tabBar.tintColor = UIColor.fundBlueColor
         self.tabBarController!.tabBar.unselectedItemTintColor = UIColor.darkGray
     }
