@@ -60,14 +60,9 @@ class EventDetailsViewController: UIViewController {
     
     func setupController() {
         navigationItem.title = nameEvent
-        
-        descriptionEventDetailsLabel.sizeToFit()
-        descriptionEventDetailsLabel.layoutIfNeeded()
-        
         self.navigationController!.navigationItem.backBarButtonItem?.tintColor = UIColor.fundBlueColor
         self.tabBarController!.tabBar.tintColor = UIColor.fundBlueColor
-        
-        descriptionEventDetailsLabel.backgroundColor = UIColor.white.withAlphaComponent(0.9)
+
     }
     
     func setupBG() {

@@ -10,7 +10,7 @@ import UIKit
 
 class ProjectDetailsViewController: UIViewController {
     @IBOutlet weak var projectInDetailsImageView: UIImageView!
-    @IBOutlet weak var projectInDetailsTextView: UITextView!
+    @IBOutlet weak var projectInDetailsLabel: UILabel!
 
     var projects: Project!
     
@@ -30,8 +30,7 @@ class ProjectDetailsViewController: UIViewController {
     func setup() {
         navigationItem.title = projects.projectName
         projectInDetailsImageView.image = projects.projectImage
-        projectInDetailsTextView.text = projects.projectDescription
-        projectInDetailsTextView.backgroundColor = UIColor.white.withAlphaComponent(0.9)
+        projectInDetailsLabel.text = projects.projectDescription
         
         self.tabBarController!.tabBar.tintColor = UIColor.fundBlueColor
     }
