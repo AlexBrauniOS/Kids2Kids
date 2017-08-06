@@ -14,7 +14,7 @@ class EventDetailsViewController: UIViewController {
     @IBOutlet weak var imageEventDetailsImageView: UIImageView!
     @IBOutlet weak var dateEventDetailsLabel: UILabel!
     @IBOutlet weak var placeEventDetailsLabel: UILabel!
-    @IBOutlet weak var descriptionEventDetailsTextView: UITextView!
+    @IBOutlet weak var descriptionEventDetailsLabel: UILabel!
     
     var eventsDetails: [PFObject]? {
         didSet{
@@ -45,7 +45,7 @@ class EventDetailsViewController: UIViewController {
     func setupEvent() {
         dateEventDetailsLabel.text = eventsDetails?.first?["date"] as? String
         placeEventDetailsLabel.text = eventsDetails?.first?["place"] as? String
-        descriptionEventDetailsTextView.text = eventsDetails?.first?["description"] as? String
+        descriptionEventDetailsLabel.text = eventsDetails?.first?["description"] as? String
 
         let imageEventDetailsFile = eventsDetails?.first?["image"] as? PFFile
         imageEventDetailsFile?.getDataInBackground(block: { (imageData, error) in
@@ -60,11 +60,14 @@ class EventDetailsViewController: UIViewController {
     
     func setupController() {
         navigationItem.title = nameEvent
-
+        
+        descriptionEventDetailsLabel.sizeToFit()
+        descriptionEventDetailsLabel.layoutIfNeeded()
+        
         self.navigationController!.navigationItem.backBarButtonItem?.tintColor = UIColor.fundBlueColor
         self.tabBarController!.tabBar.tintColor = UIColor.fundBlueColor
         
-        descriptionEventDetailsTextView.backgroundColor = UIColor.white.withAlphaComponent(0.9)
+        descriptionEventDetailsLabel.backgroundColor = UIColor.white.withAlphaComponent(0.9)
     }
     
     func setupBG() {
