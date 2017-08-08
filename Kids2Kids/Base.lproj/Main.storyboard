@@ -138,7 +138,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pm-hu-3Gz">
-                                        <rect key="frame" x="8" y="197" width="304" height="250"/>
+                                        <rect key="frame" x="8" y="197" width="304" height="22"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                                         <color key="textColor" red="0.071529380980000001" green="0.4060901999" blue="0.64166378970000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -149,8 +149,8 @@
                                     <constraint firstItem="pPA-W0-BYx" firstAttribute="centerX" secondItem="M9z-qD-Ee5" secondAttribute="centerX" id="1Rh-C7-Wry"/>
                                     <constraint firstItem="M9z-qD-Ee5" firstAttribute="trailing" secondItem="3pm-hu-3Gz" secondAttribute="trailing" id="25A-Xx-6hg"/>
                                     <constraint firstItem="3pm-hu-3Gz" firstAttribute="top" secondItem="M9z-qD-Ee5" secondAttribute="bottom" constant="8" symbolic="YES" id="5z8-lW-uno"/>
-                                    <constraint firstItem="3pm-hu-3Gz" firstAttribute="height" relation="greaterThanOrEqual" secondItem="dfP-0Q-FhU" secondAttribute="height" constant="-205" id="JRJ-w3-hfr"/>
-                                    <constraint firstItem="3pm-hu-3Gz" firstAttribute="bottom" secondItem="dfP-0Q-FhU" secondAttribute="bottomMargin" id="UOa-a5-Pzh"/>
+                                    <constraint firstItem="3pm-hu-3Gz" firstAttribute="height" relation="greaterThanOrEqual" secondItem="dfP-0Q-FhU" secondAttribute="height" constant="-433" id="JRJ-w3-hfr"/>
+                                    <constraint firstItem="3pm-hu-3Gz" firstAttribute="bottom" secondItem="dfP-0Q-FhU" secondAttribute="bottomMargin" constant="-228" id="UOa-a5-Pzh"/>
                                     <constraint firstItem="pPA-W0-BYx" firstAttribute="top" secondItem="dfP-0Q-FhU" secondAttribute="top" id="WW1-fI-gTP"/>
                                     <constraint firstItem="M9z-qD-Ee5" firstAttribute="leading" secondItem="dfP-0Q-FhU" secondAttribute="leadingMargin" id="alZ-dJ-aUd"/>
                                     <constraint firstItem="3pm-hu-3Gz" firstAttribute="width" secondItem="dfP-0Q-FhU" secondAttribute="width" constant="-16" id="dxF-Gx-nZN"/>
@@ -262,7 +262,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPq-oD-rT9">
-                                        <rect key="frame" x="8" y="136" width="304" height="311"/>
+                                        <rect key="frame" x="8" y="136" width="304" height="26"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                                         <color key="textColor" red="0.071529380980000001" green="0.4060901999" blue="0.64166378970000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -276,7 +276,7 @@
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="aPq-oD-rT9" firstAttribute="height" relation="greaterThanOrEqual" secondItem="DVb-3J-pLh" secondAttribute="height" constant="-144" id="10N-Q9-4tI"/>
+                                    <constraint firstItem="aPq-oD-rT9" firstAttribute="height" relation="greaterThanOrEqual" secondItem="DVb-3J-pLh" secondAttribute="height" constant="-429" id="10N-Q9-4tI"/>
                                     <constraint firstItem="eqV-Cr-P2h" firstAttribute="leading" secondItem="DVb-3J-pLh" secondAttribute="leading" id="1Xh-a9-b4t"/>
                                     <constraint firstAttribute="trailing" secondItem="aPq-oD-rT9" secondAttribute="trailing" constant="8" id="5nJ-Nc-XOx"/>
                                     <constraint firstAttribute="trailing" secondItem="eqV-Cr-P2h" secondAttribute="trailing" id="Iex-0t-Y2h"/>
@@ -284,7 +284,7 @@
                                     <constraint firstItem="eqV-Cr-P2h" firstAttribute="top" secondItem="DVb-3J-pLh" secondAttribute="top" id="aDe-Ov-3Dz"/>
                                     <constraint firstItem="aPq-oD-rT9" firstAttribute="leading" secondItem="DVb-3J-pLh" secondAttribute="leading" constant="8" id="gqp-sa-F5Z"/>
                                     <constraint firstItem="aPq-oD-rT9" firstAttribute="top" secondItem="eqV-Cr-P2h" secondAttribute="bottom" constant="8" symbolic="YES" id="mol-d4-wCX"/>
-                                    <constraint firstItem="aPq-oD-rT9" firstAttribute="bottom" secondItem="DVb-3J-pLh" secondAttribute="bottomMargin" id="okc-Nj-Gc2"/>
+                                    <constraint firstItem="aPq-oD-rT9" firstAttribute="bottom" secondItem="DVb-3J-pLh" secondAttribute="bottomMargin" constant="-285" id="okc-Nj-Gc2"/>
                                     <constraint firstItem="aPq-oD-rT9" firstAttribute="width" relation="greaterThanOrEqual" secondItem="DVb-3J-pLh" secondAttribute="width" constant="-16" id="rWP-er-lNx"/>
                                 </constraints>
                             </scrollView>

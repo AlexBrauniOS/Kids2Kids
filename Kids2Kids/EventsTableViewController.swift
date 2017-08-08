@@ -14,6 +14,7 @@ class EventsTableViewController: UITableViewController {
     var events = [PFObject]() {
         didSet {
             getEventsArray()
+            stopActivityIndicator()
         }
     }
     var arrayCells: [PFObject] = [] {
@@ -21,11 +22,27 @@ class EventsTableViewController: UITableViewController {
             tableView.reloadData()
         }
     }
+    
+    var activityIndicator = UIActivityIndicatorView()
+    
+    func startActivityIndicator() {
+        activityIndicator.center = self.tableView.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        tableView.addSubview(activityIndicator)
+        
+        activityIndicator.startAnimating()
+    }
+
+    func stopActivityIndicator() {
+        activityIndicator.stopAnimating()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchPost()
         setup()
+        startActivityIndicator()
     }
     
     func delay(_ delay:Double, closure:@escaping ()->()) {
@@ -127,3 +144,6 @@ class EventsTableViewController: UITableViewController {
         }
     }
 }
+
+
+

@@ -32,6 +32,7 @@ class ProjectDetailsViewController: UIViewController {
         projectInDetailsImageView.image = projects.projectImage
         projectInDetailsLabel.text = projects.projectDescription
         
+        
         self.tabBarController!.tabBar.tintColor = UIColor.fundBlueColor
     }
     
