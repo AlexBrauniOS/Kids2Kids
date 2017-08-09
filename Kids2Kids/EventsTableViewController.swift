@@ -26,10 +26,10 @@ class EventsTableViewController: UITableViewController {
     var activityIndicator = UIActivityIndicatorView()
     
     func startActivityIndicator() {
-        activityIndicator.center = self.tableView.center
+        activityIndicator.center = self.view.center
         activityIndicator.hidesWhenStopped = true
         activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
-        tableView.addSubview(activityIndicator)
+        view.addSubview(activityIndicator)
         
         activityIndicator.startAnimating()
     }

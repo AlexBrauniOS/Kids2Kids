@@ -31,6 +31,11 @@ class ProjectDetailsViewController: UIViewController {
         navigationItem.title = projects.projectName
         projectInDetailsImageView.image = projects.projectImage
         projectInDetailsLabel.text = projects.projectDescription
+        projectInDetailsLabel.backgroundColor = UIColor.white.withAlphaComponent(0.9)
+        projectInDetailsLabel.layer.cornerRadius = 5
+        projectInDetailsLabel.clipsToBounds = true
+        
+        
         
         
         self.tabBarController!.tabBar.tintColor = UIColor.fundBlueColor

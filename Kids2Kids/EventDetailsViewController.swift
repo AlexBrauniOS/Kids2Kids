@@ -15,6 +15,7 @@ class EventDetailsViewController: UIViewController {
     @IBOutlet weak var dateEventDetailsLabel: UILabel!
     @IBOutlet weak var placeEventDetailsLabel: UILabel!
     @IBOutlet weak var descriptionEventDetailsLabel: UILabel!
+    @IBOutlet weak var labelBGView: UIView!
     
     var eventsDetails: [PFObject]? {
         didSet{
@@ -56,6 +57,13 @@ class EventDetailsViewController: UIViewController {
                 }
             }
         })
+        
+        labelBGView.backgroundColor = UIColor.white.withAlphaComponent(0.9)
+        labelBGView.layer.cornerRadius = 5
+        labelBGView.clipsToBounds = true
+        descriptionEventDetailsLabel.backgroundColor = UIColor.white.withAlphaComponent(0.9)
+        descriptionEventDetailsLabel.layer.cornerRadius = 5
+        descriptionEventDetailsLabel.clipsToBounds = true
     }
     
     func setupController() {
