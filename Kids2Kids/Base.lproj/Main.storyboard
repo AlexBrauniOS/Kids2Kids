@@ -505,7 +505,7 @@
         <scene sceneID="6QB-UU-QSi">
             <objects>
                 <tableViewController id="79Z-kT-CGC" customClass="HelpTableViewController" customModule="Kids2Kids" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="YWQ-Od-3lF">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="YWQ-Od-3lF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -534,16 +534,48 @@
                                             <color key="backgroundColor" red="0.8520255685" green="0.1281391382" blue="0.265986681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dFw-E1-Vxx">
-                                        <rect key="frame" x="0.0" y="60" width="320" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="558" id="dFw-E1-Vxx">
+                                        <rect key="frame" x="0.0" y="60" width="320" height="558"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dFw-E1-Vxx" id="hLS-VF-1AE">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="558"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjP-WL-cn4">
+                                                    <rect key="frame" x="8" y="8" width="304" height="498.5"/>
+                                                    <mutableString key="text">Станьте нашим Ангелом-хранителем, подключив ежемесячные пожертвования на проект «Щастя в кожну родину»!
+
+Команда фонда Дети Детям регулярно получает просьбы о помощи от семей с тяжелобольными детьми. Наша команда встречается с родителями таких детей и принимает решение о включении семьи в программу фонда. Составляется список и бюджет ежемесячных нужд, который финансируются благодаря регулярным пожертвованиям друзей фонда и наших партнеров.  
+
+Ваши ежемесячные пожертвования смогут облегчить жизнь большему количеству детей с тяжелыми заболеваниями!
+
+Чтобы присоединиться к проекту звоните нам по телефону:</mutableString>
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                                    <color key="textColor" red="0.071529380980000001" green="0.4060901999" blue="0.64166378970000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkp-lf-bqC">
+                                                    <rect key="frame" x="8" y="513.5" width="304" height="36.5"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                                    <state key="normal" title="+38 (050) 471-30-30"/>
+                                                    <connections>
+                                                        <action selector="phoneCall:" destination="79Z-kT-CGC" eventType="touchUpInside" id="Rat-Xe-BzY"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gkp-lf-bqC" firstAttribute="top" secondItem="GjP-WL-cn4" secondAttribute="bottom" constant="7" id="5rA-j0-r6b"/>
+                                                <constraint firstItem="GjP-WL-cn4" firstAttribute="top" secondItem="hLS-VF-1AE" secondAttribute="topMargin" id="RYv-O1-zjb"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="gkp-lf-bqC" secondAttribute="bottom" id="Tuz-k5-nS1"/>
+                                                <constraint firstItem="gkp-lf-bqC" firstAttribute="trailing" secondItem="hLS-VF-1AE" secondAttribute="trailingMargin" id="dMx-G5-2e8"/>
+                                                <constraint firstItem="gkp-lf-bqC" firstAttribute="leading" secondItem="hLS-VF-1AE" secondAttribute="leadingMargin" id="lUL-xa-pHP"/>
+                                                <constraint firstItem="GjP-WL-cn4" firstAttribute="leading" secondItem="hLS-VF-1AE" secondAttribute="leadingMargin" id="qSs-bZ-UGe"/>
+                                                <constraint firstItem="GjP-WL-cn4" firstAttribute="trailing" secondItem="hLS-VF-1AE" secondAttribute="trailingMargin" id="qu6-xf-ufL"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="uJd-h8-j7u">
-                                        <rect key="frame" x="0.0" y="104" width="320" height="60"/>
+                                        <rect key="frame" x="0.0" y="618" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uJd-h8-j7u" id="rSx-d9-OYx">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
@@ -564,16 +596,52 @@
                                             <color key="backgroundColor" red="0.071529380980000001" green="0.4060901999" blue="0.64166378970000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ml1-pD-glm">
-                                        <rect key="frame" x="0.0" y="164" width="320" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="496" id="ml1-pD-glm">
+                                        <rect key="frame" x="0.0" y="678" width="320" height="496"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ml1-pD-glm" id="VRi-kU-ND1">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="496"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mkq-Pc-d0c">
+                                                    <rect key="frame" x="8" y="8" width="304" height="438.5"/>
+                                                    <mutableString key="text">У вас остались почти новые вещи и обувь, чистые и исправные, они могут еще кому-то послужить? 
+Дети из детских домов и школ-интернатов примут их с радостью. Видя чистые, выглаженные и аккуратно сложенные в пакет вещи, дети почувствуют вашу заботу и будут благодарны за подарок!
+
+Самые актуальные нужды:
+- одежда всех сезонов и разных размеров;
+- обувь всех сезонов, назначений и размеров (тапочки, спортивные кеды и кроссовки, др.);
+- спортивная одежда;
+- шапки, варежки, шарфы;
+- постельное белье, одеяла, пледы, подушки;
+- средства личной гигиены;
+- памперсы, одноразовые пеленки.</mutableString>
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                                    <color key="textColor" red="0.071529380980000001" green="0.4060901999" blue="0.64166378970000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQd-8O-te4">
+                                                    <rect key="frame" x="8" y="456.5" width="304" height="23.5"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                                    <state key="normal" title="+38 (050) 471-30-30"/>
+                                                    <connections>
+                                                        <action selector="phoneCall:" destination="79Z-kT-CGC" eventType="touchUpInside" id="WmV-MC-H4D"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xQd-8O-te4" firstAttribute="trailing" secondItem="VRi-kU-ND1" secondAttribute="trailingMargin" id="81B-97-X1V"/>
+                                                <constraint firstItem="xQd-8O-te4" firstAttribute="top" secondItem="Mkq-Pc-d0c" secondAttribute="bottom" constant="10" id="9L9-yj-KkN"/>
+                                                <constraint firstItem="Mkq-Pc-d0c" firstAttribute="leading" secondItem="VRi-kU-ND1" secondAttribute="leadingMargin" id="HTb-5q-CSf"/>
+                                                <constraint firstItem="Mkq-Pc-d0c" firstAttribute="trailing" secondItem="VRi-kU-ND1" secondAttribute="trailingMargin" id="HZu-83-TEl"/>
+                                                <constraint firstItem="Mkq-Pc-d0c" firstAttribute="top" secondItem="VRi-kU-ND1" secondAttribute="topMargin" id="ImS-v0-YsY"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="xQd-8O-te4" secondAttribute="bottom" constant="8" id="Mh1-PP-mvI"/>
+                                                <constraint firstItem="xQd-8O-te4" firstAttribute="leading" secondItem="VRi-kU-ND1" secondAttribute="leadingMargin" id="NuU-2u-5KK"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="LAr-su-bge">
-                                        <rect key="frame" x="0.0" y="208" width="320" height="60"/>
+                                        <rect key="frame" x="0.0" y="1174" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LAr-su-bge" id="w9H-GG-gDE">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
@@ -594,16 +662,47 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.99238818880000002" green="0.81040543320000002" blue="0.0037979013290000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="P1H-PY-IuL">
-                                        <rect key="frame" x="0.0" y="268" width="320" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="541" id="P1H-PY-IuL">
+                                        <rect key="frame" x="0.0" y="1234" width="320" height="541"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P1H-PY-IuL" id="d6B-V0-TXu">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="541"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVH-9q-GtQ">
+                                                    <rect key="frame" x="8" y="8" width="304" height="478.5"/>
+                                                    <mutableString key="text">Волонтер  –  это человек, который бесплатно и добровольно делает что-то для других людей. У волонтера есть своя жизнь, семья, работа и, как у всех остальных людей, есть свободное время. Это время он тратит не только на отдых и развлечения, но и на то, чтобы помочь тем, кому сейчас грустно и трудно.
+
+Работа волонтера в фонде «Дети Детям» включает в себя: помощь в проведении проектов фонда,
+закупка и развозка нужд в подопечные фонду детдома, школы-интернаты и семьи.
+
+Вы можете предложить ваши компетенции для программы профориентирования будущих выпускников проекта «Дорога в жизнь», а так же предложить нам свои идеи, написав на</mutableString>
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                                    <color key="textColor" red="0.071529380980000001" green="0.4060901999" blue="0.64166378970000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Iy-tV-3lx">
+                                                    <rect key="frame" x="8" y="494.5" width="304" height="38.5"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                                    <state key="normal" title="web@kids2kids-fund.com"/>
+                                                    <connections>
+                                                        <action selector="email:" destination="79Z-kT-CGC" eventType="touchUpInside" id="5xE-FY-XSi"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="8Iy-tV-3lx" secondAttribute="bottom" id="0N7-yh-wY4"/>
+                                                <constraint firstItem="8Iy-tV-3lx" firstAttribute="leading" secondItem="d6B-V0-TXu" secondAttribute="leadingMargin" id="GR5-ep-Gnn"/>
+                                                <constraint firstItem="8Iy-tV-3lx" firstAttribute="trailing" secondItem="d6B-V0-TXu" secondAttribute="trailingMargin" id="eVY-dA-qtF"/>
+                                                <constraint firstItem="cVH-9q-GtQ" firstAttribute="leading" secondItem="d6B-V0-TXu" secondAttribute="leadingMargin" id="gXe-vP-gYx"/>
+                                                <constraint firstItem="8Iy-tV-3lx" firstAttribute="top" secondItem="cVH-9q-GtQ" secondAttribute="bottom" constant="8" id="nfn-kL-n11"/>
+                                                <constraint firstItem="cVH-9q-GtQ" firstAttribute="top" secondItem="d6B-V0-TXu" secondAttribute="topMargin" id="tfB-dz-PCC"/>
+                                                <constraint firstItem="cVH-9q-GtQ" firstAttribute="trailing" secondItem="d6B-V0-TXu" secondAttribute="trailingMargin" id="yBz-ck-kye"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="lma-oU-11r">
-                                        <rect key="frame" x="0.0" y="312" width="320" height="60"/>
+                                        <rect key="frame" x="0.0" y="1775" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lma-oU-11r" id="8oB-JI-Ftc">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
@@ -624,12 +723,32 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.42703676219999998" green="0.75189828869999997" blue="0.2885013521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="qCy-gV-c6o">
-                                        <rect key="frame" x="0.0" y="372" width="320" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="245" id="qCy-gV-c6o">
+                                        <rect key="frame" x="0.0" y="1835" width="320" height="245"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qCy-gV-c6o" id="xO0-do-j0K">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="245"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sol-Y7-MHP">
+                                                    <rect key="frame" x="8" y="8" width="304" height="187"/>
+                                                    <string key="text">Приглашаем компании поддержать наши проекты помощи детдомам, школам-интернатам, реабилитационным центрам:
+
+- отправка детей в детские лагеря;
+- покупка мебели;
+- оплата ремонтных работ;
+- покупка бытовой техники.</string>
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                                    <color key="textColor" red="0.071529380980000001" green="0.4060901999" blue="0.64166378970000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="sol-Y7-MHP" firstAttribute="top" secondItem="xO0-do-j0K" secondAttribute="topMargin" id="cYd-Hx-M91"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="sol-Y7-MHP" secondAttribute="bottom" constant="42" id="hJG-ln-X3S"/>
+                                                <constraint firstItem="sol-Y7-MHP" firstAttribute="leading" secondItem="xO0-do-j0K" secondAttribute="leadingMargin" id="kMH-tk-I60"/>
+                                                <constraint firstItem="sol-Y7-MHP" firstAttribute="trailing" secondItem="xO0-do-j0K" secondAttribute="trailingMargin" id="u6K-nt-l7l"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -708,6 +827,6 @@
         <image name="star" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="A5z-kk-Ewz"/>
+        <segue reference="0PD-6d-KYl"/>
     </inferredMetricsTieBreakers>
 </document>
