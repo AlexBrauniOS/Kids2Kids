@@ -13,10 +13,12 @@ class Project {
     
     let projectName: String
     let projectImage: UIImage
+    let projectIcon: UIImage
     let projectDescription: String
-    init(projectName: String, projectImage: UIImage, projectDescription: String){
+    init(projectName: String, projectImage: UIImage, projectIcon: UIImage, projectDescription: String){
         self.projectName = projectName
         self.projectImage = projectImage
+        self.projectIcon = projectIcon
         self.projectDescription = projectDescription
     }
 }

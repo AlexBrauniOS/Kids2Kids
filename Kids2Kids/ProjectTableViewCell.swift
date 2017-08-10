@@ -12,6 +12,7 @@ class ProjectTableViewCell: UITableViewCell {
 
     @IBOutlet weak var projectInCellImage: UIImageView!
     @IBOutlet weak var projectInCellLabel: UILabel!
+    @IBOutlet weak var projectInCellIcon: UIImageView!
     
     
     override func awakeFromNib() {
