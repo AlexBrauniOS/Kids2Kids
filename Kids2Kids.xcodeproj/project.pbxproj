@@ -16,7 +16,6 @@
 		D20F59EA1F22116900A47E8E /* ProjectDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20F59E91F22116900A47E8E /* ProjectDetailsViewController.swift */; };
 		D20F59EC1F2211D300A47E8E /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20F59EB1F2211D300A47E8E /* Project.swift */; };
 		D21942B01F2B548500A86844 /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D21942AF1F2B548500A86844 /* Roboto.ttf */; };
-		D22077231F3B3ABC00C1C1D0 /* HelpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22077221F3B3ABC00C1C1D0 /* HelpTableViewController.swift */; };
 		D22331581F264D8000E90EE6 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22331571F264D8000E90EE6 /* EventsTableViewController.swift */; };
 		D223315A1F27365A00E90EE6 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22331591F27365A00E90EE6 /* EventTableViewCell.swift */; };
 		D223315E1F28FB0A00E90EE6 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D223315D1F28FB0A00E90EE6 /* EventDetailsViewController.swift */; };
@@ -28,6 +27,10 @@
 		D25A6C941F1E8FE4005FAD33 /* Kids2KidsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25A6C931F1E8FE4005FAD33 /* Kids2KidsTests.swift */; };
 		D25A6C9F1F1E8FE4005FAD33 /* Kids2KidsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25A6C9E1F1E8FE4005FAD33 /* Kids2KidsUITests.swift */; };
 		D25A6CB91F1EA680005FAD33 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25A6CB81F1EA680005FAD33 /* ContactsViewController.swift */; };
+		D2BF3EBA1F62956500DCB30B /* HelpDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BF3EB91F62956500DCB30B /* HelpDetailsViewController.swift */; };
+		D2FF4BFC1F61618D00B5525A /* HelpCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FF4BFB1F61618D00B5525A /* HelpCollectionViewCell.swift */; };
+		D2FF4C081F61624500B5525A /* HelpCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FF4C071F61624500B5525A /* HelpCollectionViewController.swift */; };
+		D2FF4C0A1F61664500B5525A /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FF4C091F61664500B5525A /* Help.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +63,6 @@
 		D20F59E91F22116900A47E8E /* ProjectDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailsViewController.swift; sourceTree = "<group>"; };
 		D20F59EB1F2211D300A47E8E /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		D21942AF1F2B548500A86844 /* Roboto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Roboto.ttf; sourceTree = "<group>"; };
-		D22077221F3B3ABC00C1C1D0 /* HelpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpTableViewController.swift; sourceTree = "<group>"; };
 		D22331571F264D8000E90EE6 /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		D22331591F27365A00E90EE6 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		D223315D1F28FB0A00E90EE6 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,10 @@
 		D25A6C9E1F1E8FE4005FAD33 /* Kids2KidsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kids2KidsUITests.swift; sourceTree = "<group>"; };
 		D25A6CA01F1E8FE4005FAD33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D25A6CB81F1EA680005FAD33 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		D2BF3EB91F62956500DCB30B /* HelpDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpDetailsViewController.swift; sourceTree = "<group>"; };
+		D2FF4BFB1F61618D00B5525A /* HelpCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCollectionViewCell.swift; sourceTree = "<group>"; };
+		D2FF4C071F61624500B5525A /* HelpCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCollectionViewController.swift; sourceTree = "<group>"; };
+		D2FF4C091F61664500B5525A /* Help.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
 		E54B3BBD717D5AD5EE9DBAAA /* Pods-Kids2Kids.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids2Kids.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kids2Kids/Pods-Kids2Kids.debug.xcconfig"; sourceTree = "<group>"; };
 		E6A70C77DE9D00E2ED141E2B /* Pods-Kids2KidsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kids2KidsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kids2KidsTests/Pods-Kids2KidsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FAC6DAF304405BE7A84C0D06 /* Pods_Kids2Kids.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kids2Kids.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				D20F59EB1F2211D300A47E8E /* Project.swift */,
+				D2FF4C091F61664500B5525A /* Help.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -156,6 +163,7 @@
 			children = (
 				D20F59E71F22113500A47E8E /* ProjectTableViewCell.swift */,
 				D22331591F27365A00E90EE6 /* EventTableViewCell.swift */,
+				D2FF4BFB1F61618D00B5525A /* HelpCollectionViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -167,7 +175,8 @@
 				D20F59E91F22116900A47E8E /* ProjectDetailsViewController.swift */,
 				D22331571F264D8000E90EE6 /* EventsTableViewController.swift */,
 				D223315D1F28FB0A00E90EE6 /* EventDetailsViewController.swift */,
-				D22077221F3B3ABC00C1C1D0 /* HelpTableViewController.swift */,
+				D2FF4C071F61624500B5525A /* HelpCollectionViewController.swift */,
+				D2BF3EB91F62956500DCB30B /* HelpDetailsViewController.swift */,
 				D25A6CB81F1EA680005FAD33 /* ContactsViewController.swift */,
 			);
 			name = Controllers;
@@ -302,23 +311,31 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Oleksii Liubarets";
 				TargetAttributes = {
 					D25A6C7A1F1E8FE4005FAD33 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 9QQKN39F5V;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 					D25A6C8E1F1E8FE4005FAD33 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 9QQKN39F5V;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = D25A6C7A1F1E8FE4005FAD33;
 					};
 					D25A6C991F1E8FE4005FAD33 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 9QQKN39F5V;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = D25A6C7A1F1E8FE4005FAD33;
 					};
@@ -516,16 +533,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2BF3EBA1F62956500DCB30B /* HelpDetailsViewController.swift in Sources */,
 				D22331621F2B2D2100E90EE6 /* CustomColors.swift in Sources */,
 				D223315A1F27365A00E90EE6 /* EventTableViewCell.swift in Sources */,
 				D20F59E61F2210F700A47E8E /* ProjectsTableViewController.swift in Sources */,
 				D20F59EC1F2211D300A47E8E /* Project.swift in Sources */,
 				D20F59E81F22113500A47E8E /* ProjectTableViewCell.swift in Sources */,
 				D20F59EA1F22116900A47E8E /* ProjectDetailsViewController.swift in Sources */,
-				D22077231F3B3ABC00C1C1D0 /* HelpTableViewController.swift in Sources */,
 				D25A6CB91F1EA680005FAD33 /* ContactsViewController.swift in Sources */,
 				D223315E1F28FB0A00E90EE6 /* EventDetailsViewController.swift in Sources */,
 				D22331581F264D8000E90EE6 /* EventsTableViewController.swift in Sources */,
+				D2FF4C0A1F61664500B5525A /* Help.swift in Sources */,
+				D2FF4C081F61624500B5525A /* HelpCollectionViewController.swift in Sources */,
+				D2FF4BFC1F61618D00B5525A /* HelpCollectionViewCell.swift in Sources */,
 				D25A6C7F1F1E8FE4005FAD33 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -591,7 +611,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -599,7 +621,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -642,7 +668,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -650,7 +678,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -681,12 +713,15 @@
 			baseConfigurationReference = E54B3BBD717D5AD5EE9DBAAA /* Pods-Kids2Kids.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 9QQKN39F5V;
 				INFOPLIST_FILE = Kids2Kids/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AlexBraun.Kids2Kids;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -696,12 +731,14 @@
 			baseConfigurationReference = 7C699D6A023E96F1B235A20E /* Pods-Kids2Kids.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 9QQKN39F5V;
 				INFOPLIST_FILE = Kids2Kids/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AlexBraun.Kids2Kids;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -717,6 +754,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AlexBraun.Kids2KidsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kids2Kids.app/Kids2Kids";
 			};
@@ -733,6 +771,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AlexBraun.Kids2KidsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kids2Kids.app/Kids2Kids";
 			};
@@ -748,6 +787,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AlexBraun.Kids2KidsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Kids2Kids;
 			};
@@ -763,6 +803,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AlexBraun.Kids2KidsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Kids2Kids;
 			};

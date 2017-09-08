@@ -26,11 +26,6 @@ class ProjectsTableViewController: UITableViewController {
         setup()
         getProjectsArray()
     }
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-////        self.tabBarController!.tabBar.barTintColor = UIColor.fundYellowColor
-//    }
 
     func delay(_ delay:Double, closure:@escaping ()->()) {
         let when = DispatchTime.now() + delay
@@ -104,9 +99,7 @@ class ProjectsTableViewController: UITableViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        if segue.identifier == "ProjectDetailsViewController" {
+            if segue.identifier == "ProjectDetailsViewController" {
             if let controller = segue.destination as? ProjectDetailsViewController,
                 let projectModel = sender as? Project {
             

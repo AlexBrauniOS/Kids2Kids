@@ -58,10 +58,10 @@ class EventDetailsViewController: UIViewController {
             }
         })
         
-        labelBGView.backgroundColor = UIColor.white.withAlphaComponent(0.9)
+        labelBGView.backgroundColor = UIColor.white.withAlphaComponent(0.95)
         labelBGView.layer.cornerRadius = 5
         labelBGView.clipsToBounds = true
-        descriptionEventDetailsLabel.backgroundColor = UIColor.white.withAlphaComponent(0.9)
+        descriptionEventDetailsLabel.backgroundColor = UIColor.white.withAlphaComponent(0.95)
         descriptionEventDetailsLabel.layer.cornerRadius = 5
         descriptionEventDetailsLabel.clipsToBounds = true
     }

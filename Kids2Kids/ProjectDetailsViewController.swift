@@ -31,7 +31,7 @@ class ProjectDetailsViewController: UIViewController {
         navigationItem.title = projects.projectName
         projectInDetailsImageView.image = projects.projectImage
         projectInDetailsLabel.text = projects.projectDescription
-        projectInDetailsLabel.backgroundColor = UIColor.white.withAlphaComponent(0.9)
+        projectInDetailsLabel.backgroundColor = UIColor.white.withAlphaComponent(0.95)
         projectInDetailsLabel.layer.cornerRadius = 5
         projectInDetailsLabel.clipsToBounds = true
         
