@@ -7,6 +7,7 @@
 		<string>youtube</string>
 		<string>instagram</string>
 		<string>fb</string>
+		<string>comgooglemaps</string>
 	</array>
 	<key>LSApplicationCategoryType</key>
 	<string></string>

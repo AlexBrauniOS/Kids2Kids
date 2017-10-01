@@ -18,6 +18,13 @@ class ContactsViewController: UIViewController {
         checkAvailableMailServices()
     }
     
+    // MARK: Website
+    
+    private func openWebsite() {
+        let url = URL(string: "http://www.kids2kids-fund.com")
+        UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+    }
+    
     // MARK: Call number
     
     private func callNumber(phoneNumber: String) {
@@ -31,11 +38,24 @@ class ContactsViewController: UIViewController {
         }
     }
     
-    // MARK: Website
+    // MARK: Location
     
-    private func openWebsite() {
-        let url = URL(string: "http://www.kids2kids-fund.com")
-        UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+    private func openGoogleMaps() {
+        let googleMapsUID = "comgooglemaps://"
+        let coordinates = "50.438723,30.539256" //"50.438588,30.538564"
+        let search = "%D0%9A%D0%BB%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9+%D1%83%D0%B7%D0%B2%D1%96%D0%B7,+7%D0%90,+%D0%9A%D0%B8%D1%97%D0%B2,+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0,+02000" // Кловський узвіз, 7А, Київ, Украина, 02000
+        let gmURLWeb = NSURL(string: "https://goo.gl/maps/Fn9NZEcCp272")!
+        let gmURLID = NSURL(string: "\(googleMapsUID)?center=\(coordinates)&zoom=14&q=\(search)")!
+        
+        if UIApplication.shared.canOpenURL(gmURLID as URL) {
+            // GoogleMaps installed
+            UIApplication.shared.open(gmURLID as URL)
+            //(gmURLID as URL)
+        } else {
+            // GM is not installed, open in safari
+            UIApplication.shared.open(gmURLWeb as URL)
+        }
+        
     }
     
     // MARK: Facebook
@@ -106,6 +126,13 @@ class ContactsViewController: UIViewController {
             self.callNumber(phoneNumber: "+380504713030")
         }
     }
+    @IBAction func googleMapsButton(_ sender: UIButton) {
+        openGoogleMaps()
+        
+    }
+    
+    // MARK: Social Media buttons
+    
     @IBAction func facebookButton(_ sender: UIButton) {
         openFacebookPage()
     }
