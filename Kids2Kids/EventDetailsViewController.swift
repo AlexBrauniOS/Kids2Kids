@@ -19,6 +19,7 @@ class EventDetailsViewController: UIViewController {
     
     var eventsDetails: [PFObject]? {
         didSet{
+            stopActivityIndicator()
             setupEvent()
         }
     }
@@ -27,9 +28,25 @@ class EventDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        startActivityIndicator()
         fetchPost()
         setupController()
         setupBG()
+    }
+    
+    var activityIndicator = UIActivityIndicatorView()
+    
+    func startActivityIndicator() {
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        view.addSubview(activityIndicator)
+        
+        activityIndicator.startAnimating()
+    }
+    
+    func stopActivityIndicator() {
+        activityIndicator.stopAnimating()
     }
     
     func fetchPost() {

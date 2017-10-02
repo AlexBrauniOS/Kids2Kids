@@ -13,7 +13,7 @@ private let reuseIdentifier = "Cell"
 
 class EventsCollectionViewController: UICollectionViewController {
 
-    var events = [PFObject]() {
+    var events: [PFObject] = [] {
         didSet {
             getEventsArray()
             stopActivityIndicator()
@@ -21,7 +21,10 @@ class EventsCollectionViewController: UICollectionViewController {
     }
     var arrayCells: [PFObject] = [] {
         didSet {
-            collectionView?.reloadData()
+            
+            if let collectionView = collectionView {
+                collectionView.reloadData()
+            }
         }
     }
     

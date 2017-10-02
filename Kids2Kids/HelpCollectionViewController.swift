@@ -12,11 +12,11 @@ private let reuseIdentifier = "Cell"
 
 class HelpCollectionViewController: UICollectionViewController {
     
-    var helpArray: [Help] = [Help(name: "Финансовая помощь", image: #imageLiteral(resourceName: "talkHeart"), description: "Вы можете оказать финансовую помощь по следующим реквизитам: ", color: .fundGreenColor),
-                             Help(name: "Конкретному ребёнку", image: #imageLiteral(resourceName: "heart"), description: "Помогать конкретному ребёнку можно, подключив ежемесячное пожертвование в рамках проекта Щастя в кожну родину", color: .fundRedColor),
-                             Help(name: "Передать вещи", image: #imageLiteral(resourceName: "star"), description: "У Вас остались почти новые обувь и вещи? Дети из детских домов и школ-интернатов примут их с радостью.", color: .fundBlueColor),
-                             Help(name: "Стать волонтёром", image: #imageLiteral(resourceName: "angel"), description: "Помогать в проведении мероприятий, участвовать в программе профориентации будущих выпускников.", color: .fundYellowColor),
-                             Help(name: "Организациям", image: #imageLiteral(resourceName: "cloud"), description: "Предлагаем компаниям поддержать наши проекты помощь детдомам, школам-интернатам, реабилитационным центрам.", color: .fundGreenColor)]
+    var helpArray: [Help] = [Help(name: "Финансовая помощь", image: #imageLiteral(resourceName: "talkHeart"), description: "Благотворительный фонд «Дети Детям» будет благодарен любой помощи. \nФинансовую помощь фонду Вы можете оказать по следующим реквизитам: \nПриватБанк \nр/с 26000056127077 \nМФО 380775 \nЕДРПО 41350891 \n\nНазначение платежа: \n«Благотворительный взнос»", color: .fundGreenColor),
+                             Help(name: "Конкретному ребёнку", image: #imageLiteral(resourceName: "heart"), description: "Помогать конкретному ребёнку можно, подключив ежемесячное пожертвование в рамках проекта «Щастя в кожну родину». \n\nКоманда благотворительного фонда «Дети Детям» регулярно получает просьбы о помощи от семей с тяжелобольными детьми. \n\nКак работает проект: \n1.Мы встречаемся с родителями детей и принимаем решение о включении семьи в программу фонда; \n2.Составляем список и бюджет ежемесячных нужд отдельно для каждой семьи c тяжелобольным ребенком; \n3.Регулярно финансируем семьи благодаря пожертвованиям друзей фонда и наших партнеров. \n\nПрисоединяйтесь к проекту! \nВаши ежемесячные пожертвования могут помочь тяжелобольным детям!", color: .fundRedColor),
+                             Help(name: "Передать вещи", image: #imageLiteral(resourceName: "star"), description: "У Вас остались почти новые обувь и вещи? Чистые и исправные вещи еще могут послужить! \n\nДети из детских домов и школ-интернатов примут их с радостью. Видя чистые, выглаженные и аккуратно сложенные в пакет вещи, дети почувствуют вашу заботу и будут благодарны за подарок! \n\n Самые актуальные нужды: \n - одежда всех сезонов и разных размеров; \n - обувь всех сезонов, назначений и размеров (тапочки, спортивные кеды и кроссовки, др.); \n - спортивная одежда; \n - шапки, варежки, шарфы; \n - постельное белье, одеяла, пледы, подушки; \n - средства личной гигиены; \n - памперсы, одноразовые пеленки. \n\nЕсли у вас есть эти сокровища, то несите их к нам!", color: .fundBlueColor),
+                             Help(name: "Стать волонтёром", image: #imageLiteral(resourceName: "angel"), description: "Волонтеры - это люди, без которых сложно представить полноценную работу фонда! \n\nПомогать в проведении мероприятий, участвовать в программе профориентации будущих выпускников. \n\nЧем Вы можете помочь фонду «Дети Детям»: \n - закупать и развозить нужды в детдома, школы-интернаты, семьи; \n - помогать проводить мероприятия; \n - оказывать психологическую помощь детям и родителям тяжело-больных детей; \n - проводить обучение в рамках программы профориентации (проект «Дорога в жизнь»). \n\nЕсли у Вас есть время, а главное желание помочь: \nзвоните нам \n+38 050 594 89 35 \n+38 050 471 30 30 \nили пишите \nweb@kids2kids-fund.com.", color: .fundYellowColor),
+                             Help(name: "Организациям", image: #imageLiteral(resourceName: "cloud"), description: "Приглашаем компании поддержать наши проекты помощи детдомам, школам-интернатам, реабилитационным центрам: \n - отправка детей в детские лагеря; \n - покупка мебели; \n - оплата ремонтных работ; \n - покупка бытовой техники", color: .fundGreenColor)]
     
     var array: [Help] = [] {
         didSet {
@@ -60,16 +60,6 @@ class HelpCollectionViewController: UICollectionViewController {
         imageView.image = background!
         self.collectionView?.backgroundView = imageView
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     // MARK: UICollectionViewDataSource
 
