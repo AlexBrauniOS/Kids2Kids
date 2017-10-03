@@ -78,6 +78,14 @@ class EventsCollectionViewController: UICollectionViewController {
         imageView.image = background!
         self.collectionView?.backgroundView = imageView
         
+        if #available(iOS 11.0, *) {
+            self.navigationController?.navigationBar.prefersLargeTitles = true
+            self.navigationController?.navigationBar.largeTitleTextAttributes = [NSForegroundColorAttributeName: UIColor.fundBlueColor, NSFontAttributeName: UIFont(name: "Co Text Corp", size: 33)!]
+            
+        } else {
+            // Fallback on earlier versions
+        }
+        
         self.navigationController!.navigationBar.tintColor = UIColor.fundBlueColor
         self.navigationController!.navigationItem.backBarButtonItem?.tintColor = UIColor.fundBlueColor
         self.tabBarController!.tabBar.tintColor = UIColor.fundBlueColor

@@ -16,15 +16,17 @@ class ProjectDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
         setupBG()
+        setup()
     }
     
     func setupBG() {
-        let background = UIImage(named: "Background")
-        self.view.clipsToBounds = true
-        self.view.contentMode = UIViewContentMode.scaleAspectFill
-        self.view.backgroundColor = UIColor(patternImage: background!)
+
+        let background = UIImageView(frame: UIScreen.main.bounds)
+        background.image = UIImage(named: "Background")
+        background.contentMode = .scaleAspectFill
+        self.view.insertSubview(background, at: 0)
+ 
     }
 
     func setup() {
@@ -35,8 +37,11 @@ class ProjectDetailsViewController: UIViewController {
         projectInDetailsLabel.layer.cornerRadius = 5
         projectInDetailsLabel.clipsToBounds = true
         
-        
-        
+        if #available(iOS 11.0, *) {
+            self.navigationItem.largeTitleDisplayMode = .never
+        } else {
+            // Fallback on earlier versions
+        }
         
         self.tabBarController!.tabBar.tintColor = UIColor.fundBlueColor
     }

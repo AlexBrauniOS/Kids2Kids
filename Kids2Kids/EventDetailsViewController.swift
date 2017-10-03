@@ -88,13 +88,18 @@ class EventDetailsViewController: UIViewController {
         self.navigationController!.navigationItem.backBarButtonItem?.tintColor = UIColor.fundBlueColor
         self.tabBarController!.tabBar.tintColor = UIColor.fundBlueColor
 
+        if #available(iOS 11.0, *) {
+            self.navigationItem.largeTitleDisplayMode = .never
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
     func setupBG() {
-        let background = UIImage(named: "Background")
-        self.view.clipsToBounds = true
-        self.view.contentMode = UIViewContentMode.scaleAspectFill
-        self.view.backgroundColor = UIColor(patternImage: background!)
+        let background = UIImageView(frame: UIScreen.main.bounds)
+        background.image = UIImage(named: "Background")
+        background.contentMode = .scaleAspectFill
+        self.view.insertSubview(background, at: 0)
     }
     
 }
