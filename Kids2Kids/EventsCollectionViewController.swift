@@ -34,6 +34,8 @@ class EventsCollectionViewController: UICollectionViewController {
         activityIndicator.center = self.view.center
         activityIndicator.hidesWhenStopped = true
         activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        activityIndicator.color = .fundBlueColor
+        
         view.addSubview(activityIndicator)
         
         activityIndicator.startAnimating()
@@ -68,7 +70,6 @@ class EventsCollectionViewController: UICollectionViewController {
     
     func setup() {
         navigationItem.title = "Мероприятия"
-        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.fundBlueColor, NSFontAttributeName: UIFont(name: "Co Text Corp", size: 19)!]
         
         let background = UIImage(named: "Background")
         let imageView: UIImageView!
@@ -77,18 +78,6 @@ class EventsCollectionViewController: UICollectionViewController {
         imageView.clipsToBounds = true
         imageView.image = background!
         self.collectionView?.backgroundView = imageView
-        
-        if #available(iOS 11.0, *) {
-            self.navigationController?.navigationBar.prefersLargeTitles = true
-            self.navigationController?.navigationBar.largeTitleTextAttributes = [NSForegroundColorAttributeName: UIColor.fundBlueColor, NSFontAttributeName: UIFont(name: "Co Text Corp", size: 33)!]
-            
-        } else {
-            // Fallback on earlier versions
-        }
-        
-        self.navigationController!.navigationBar.tintColor = UIColor.fundBlueColor
-        self.navigationController!.navigationItem.backBarButtonItem?.tintColor = UIColor.fundBlueColor
-        self.tabBarController!.tabBar.tintColor = UIColor.fundBlueColor
     }
     
     func fetchPost() {
@@ -96,7 +85,6 @@ class EventsCollectionViewController: UICollectionViewController {
         query.findObjectsInBackground { (objects, error) in
             if let objects = objects {
                 self.events = objects
-//                self.collectionView?.reloadData()
             }
         }
     }

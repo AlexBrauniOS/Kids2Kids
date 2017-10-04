@@ -31,6 +31,7 @@ class ProjectDetailsViewController: UIViewController {
 
     func setup() {
         navigationItem.title = projects.projectName
+        
         projectInDetailsImageView.image = projects.projectImage
         projectInDetailsLabel.text = projects.projectDescription
         projectInDetailsLabel.backgroundColor = UIColor.white.withAlphaComponent(0.95)
@@ -42,8 +43,5 @@ class ProjectDetailsViewController: UIViewController {
         } else {
             // Fallback on earlier versions
         }
-        
-        self.tabBarController!.tabBar.tintColor = UIColor.fundBlueColor
     }
-    
 }

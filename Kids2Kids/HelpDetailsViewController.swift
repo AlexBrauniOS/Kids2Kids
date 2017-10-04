@@ -21,8 +21,8 @@ class HelpDetailsViewController: UIViewController {
     }
     
     func setup() {
-        
         navigationItem.title = help.name
+        
         helpDescriptionTextView.text = help.description
         helpDescriptionTextView.backgroundColor = UIColor.white.withAlphaComponent(0.95)
         helpDescriptionTextView.layer.cornerRadius = 5
@@ -41,5 +41,4 @@ class HelpDetailsViewController: UIViewController {
         background.contentMode = .scaleAspectFill
         self.view.insertSubview(background, at: 0)
     }
-
 }

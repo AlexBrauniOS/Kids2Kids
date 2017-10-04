@@ -11,12 +11,6 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class ProjectsCollectionViewController: UICollectionViewController {
-    
-    /*
-     
-     
-     
-     */
 
     let projects: [Project] = [Project(projectName: "Дорога в жизнь", projectImage: #imageLiteral(resourceName: "DorogaVZhizn"), projectIcon: #imageLiteral(resourceName: "sun"), projectDescription: "«Дорога в Жизнь» — благотворительный проект в поддержку выпускников детдомов и школ-интернатов Украины. \n\nОкончание школы — это самая ответственная пора для ребят. На протяжении года наш проект стремится подготовить их к этому периоду психологически, духовно и практически. Проводятся семинары по профориентации, в которых принимают участие специалисты разных видов прикладных профессий. \n\nЗавершающим этапом является благотворительное мероприятие «Дорога в Жизнь». Партнеры проекта собирают вещи со всем необходимым, что может пригодиться выпускникам в самостоятельной жизни. Каждому желающему участвовать в проекте, команда фонда передает письмо от конкретного выпускника, где тот описывает свои желания и цели в жизни. Благодаря такому личному участию образуется связь с ребенком, которому мы помогаем и искренне желаем успеха в его взрослой жизни. Многие наши участники не только готовят сумки, но и пишут ответные письма с важными напутственными советами, а также предоставляют помощь в трудоустройстве и проживании выпускников на новом месте. \n\nВ 2017 году проект охватил 86 детей из 9 детдомов и школ-интернатов Украины. Благодаря нашим гостям они получили не только самые необходимые вещи для самостоятельной жизни, но и красивые выпускные платья, рубашки, галстуки и обувь."),
                                Project(projectName: "Рождественский ангел", projectImage: #imageLiteral(resourceName: "RozhdestvenskiyAngel"), projectIcon: #imageLiteral(resourceName: "angel"), projectDescription: "«Рождественский ангел» — ежегодное благотворительное мероприятие, которое объединяет сотни семей в преддверии Нового Года и дает им возможность начать следующий год с того, чтобы подарить радость детям сиротам и нуждающимся семьям. \n\nКаждый год к Рождеству мы получаем сотни писем от детей из детдомов и интернатов, в которых они открывают свое заветное желание. \n\nЭти желания исполняют «Рождественские Ангелы» — партнеры проекта вместе со своими детьми. Они не только дарят подарки, о которых дети мечтали весь год, но и так же пишут ответные письма. Это дает возможность ребёнку в детдоме поверить в чудо — что есть Бог и Его Ангелы, которые слышат их просьбы и всегда выполняют, только нужно верить. \n\nЭто также дает возможность ребенку из полноценной семьи проявить сострадание и протянуть руку помощи другому ребенку, который уже испытал, что значит жить в этом мире без родителей."),
@@ -52,15 +46,7 @@ class ProjectsCollectionViewController: UICollectionViewController {
     
     func setup() {
         
-        self.navigationItem.title = "Проекты"
-        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.fundBlueColor, NSFontAttributeName: UIFont(name: "Co Text Corp", size: 19)!]
-        if #available(iOS 11.0, *) {
-            self.navigationController?.navigationBar.prefersLargeTitles = true
-            self.navigationController?.navigationBar.largeTitleTextAttributes = [NSForegroundColorAttributeName: UIColor.fundBlueColor, NSFontAttributeName: UIFont(name: "Co Text Corp", size: 33)!]
-            
-        } else {
-            // Fallback on earlier versions
-        }
+        navigationItem.title = "Проекты"
         
         let background = UIImage(named: "Background")
         let imageView: UIImageView!
@@ -70,9 +56,6 @@ class ProjectsCollectionViewController: UICollectionViewController {
         imageView.image = background!
         self.collectionView?.backgroundView = imageView
         
-        self.navigationController!.navigationBar.tintColor = UIColor.fundBlueColor
-        self.tabBarController!.tabBar.tintColor = UIColor.fundBlueColor
-        self.tabBarController!.tabBar.unselectedItemTintColor = UIColor.darkGray
     }
 
     // MARK: - Navigation
@@ -130,38 +113,6 @@ class ProjectsCollectionViewController: UICollectionViewController {
         
         performSegue(withIdentifier: "ProjectDetailsViewController", sender: project)
     }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
-
 }
 
 extension ProjectsCollectionViewController: UICollectionViewDelegateFlowLayout {

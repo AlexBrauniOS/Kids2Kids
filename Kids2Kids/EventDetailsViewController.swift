@@ -85,8 +85,6 @@ class EventDetailsViewController: UIViewController {
     
     func setupController() {
         navigationItem.title = nameEvent
-        self.navigationController!.navigationItem.backBarButtonItem?.tintColor = UIColor.fundBlueColor
-        self.tabBarController!.tabBar.tintColor = UIColor.fundBlueColor
 
         if #available(iOS 11.0, *) {
             self.navigationItem.largeTitleDisplayMode = .never

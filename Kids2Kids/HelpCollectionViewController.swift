@@ -50,15 +50,6 @@ class HelpCollectionViewController: UICollectionViewController {
     func setup() {
         
         navigationItem.title = "Помощь"
-        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.fundBlueColor, NSFontAttributeName: UIFont(name: "Co Text Corp", size: 19)!]
-        
-        if #available(iOS 11.0, *) {
-            self.navigationController?.navigationBar.prefersLargeTitles = true
-            self.navigationController?.navigationBar.largeTitleTextAttributes = [NSForegroundColorAttributeName: UIColor.fundBlueColor, NSFontAttributeName: UIFont(name: "Co Text Corp", size: 33)!]
-            
-        } else {
-            // Fallback on earlier versions
-        }
         
         let background = UIImage(named: "Background")
         let imageView: UIImageView!

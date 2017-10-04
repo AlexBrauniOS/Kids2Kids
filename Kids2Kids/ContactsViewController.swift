@@ -50,12 +50,10 @@ class ContactsViewController: UIViewController {
         if UIApplication.shared.canOpenURL(gmURLID as URL) {
             // GoogleMaps installed
             UIApplication.shared.open(gmURLID as URL)
-            //(gmURLID as URL)
         } else {
             // GM is not installed, open in safari
             UIApplication.shared.open(gmURLWeb as URL)
         }
-        
     }
     
     // MARK: Facebook
@@ -68,7 +66,6 @@ class ContactsViewController: UIViewController {
         if UIApplication.shared.canOpenURL(fbURLID as URL) {
             // FB installed
             UIApplication.shared.open(fbURLID as URL)
-            //(fbURLID as URL)
         } else {
             // FB is not installed, open in safari
             UIApplication.shared.open(fbURLWeb as URL)
@@ -83,10 +80,10 @@ class ContactsViewController: UIViewController {
         let instagramUrlID = NSURL(string: "instagram://user?username=\(instagramUID)")!
         if UIApplication.shared.canOpenURL(instagramUrlID as URL)
         {
+            // Instagram installed
             UIApplication.shared.open(instagramUrlID as URL)
-            
         } else {
-            //redirect to safari because the user doesn't have Instagram
+            // Instagram is not installed, open in safari
             UIApplication.shared.open(instagramUrlWeb as URL)
         }
     }
@@ -148,7 +145,6 @@ class ContactsViewController: UIViewController {
     @IBAction func hideContactPageButton(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-
 }
 
 extension ContactsViewController: MFMailComposeViewControllerDelegate {
@@ -167,8 +163,6 @@ extension ContactsViewController: MFMailComposeViewControllerDelegate {
         composeVC.mailComposeDelegate = self
         // Configure the fields of the interface.
         composeVC.setToRecipients(["web@kids2kids-fund.com"])
-//        composeVC.setSubject("")
-//        composeVC.setMessageBody("", isHTML: false)
         // Present the view controller modally.
         self.present(composeVC, animated: true, completion: nil)
     }

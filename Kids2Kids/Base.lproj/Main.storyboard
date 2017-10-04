@@ -408,7 +408,7 @@
         <!--Проекты-->
         <scene sceneID="wz9-Vy-YB3">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qn9-jL-fNP" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qn9-jL-fNP" customClass="NavigationController" customModule="Kids2Kids" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Проекты" image="icons8-project" id="uzh-2G-iWA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LyI-4A-rkN">
@@ -427,7 +427,7 @@
         <!--Мероприятия-->
         <scene sceneID="rIV-A6-T56">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="os6-OT-zWZ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="os6-OT-zWZ" customClass="NavigationController" customModule="Kids2Kids" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Мероприятия" image="icons8-tear_off_calendar" id="1GN-Al-vhF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="e26-jF-PPy">
@@ -446,7 +446,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="w7J-8C-RN6">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="HRb-9K-eJu" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="HRb-9K-eJu" customClass="TabBarController" customModule="Kids2Kids" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="nPv-Li-6Oa">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -466,7 +466,7 @@
         <!--Помощь-->
         <scene sceneID="RxS-ne-ngd">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mvE-bd-LHj" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mvE-bd-LHj" customClass="NavigationController" customModule="Kids2Kids" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Помощь" image="icons8-volunteering" id="DdU-1b-V2Y"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mYg-sR-yyB">
@@ -538,7 +538,6 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="i1m-5O-7yx">
-                        <barButtonItem key="backBarButtonItem" title=" " id="0ZK-6X-L2k"/>
                         <barButtonItem key="rightBarButtonItem" image="icons8-info" id="eKE-ek-Ci8">
                             <connections>
                                 <segue destination="n1x-aK-bm0" kind="presentation" id="XQD-va-3uS"/>
@@ -669,7 +668,6 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="Jci-xt-4W5">
-                        <barButtonItem key="backBarButtonItem" title=" " id="6rl-ge-IJC"/>
                         <barButtonItem key="rightBarButtonItem" image="icons8-info" id="Hq4-ea-FKW">
                             <connections>
                                 <segue destination="n1x-aK-bm0" kind="presentation" id="5ws-fL-bwH"/>
@@ -697,6 +695,6 @@
         <image name="icons8-youtube" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZUr-c8-kog"/>
+        <segue reference="XQD-va-3uS"/>
     </inferredMetricsTieBreakers>
 </document>

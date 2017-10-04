@@ -18,6 +18,8 @@
 		D21EA09D1F770FDF00AC66F7 /* ProjectsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21EA09C1F770FDF00AC66F7 /* ProjectsCollectionViewController.swift */; };
 		D21EA09F1F770FF800AC66F7 /* EventsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21EA09E1F770FF800AC66F7 /* EventsCollectionViewController.swift */; };
 		D21EA0A11F77100500AC66F7 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21EA0A01F77100500AC66F7 /* EventCollectionViewCell.swift */; };
+		D2219A5A1F8534FD00DB5CCA /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2219A591F8534FA00DB5CCA /* NavigationController.swift */; };
+		D2219A5D1F85357200DB5CCA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2219A5C1F85357200DB5CCA /* TabBarController.swift */; };
 		D223315E1F28FB0A00E90EE6 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D223315D1F28FB0A00E90EE6 /* EventDetailsViewController.swift */; };
 		D22331621F2B2D2100E90EE6 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22331611F2B2D2100E90EE6 /* CustomColors.swift */; };
 		D25A6C7F1F1E8FE4005FAD33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25A6C7E1F1E8FE4005FAD33 /* AppDelegate.swift */; };
@@ -65,6 +67,8 @@
 		D21EA09C1F770FDF00AC66F7 /* ProjectsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsCollectionViewController.swift; sourceTree = "<group>"; };
 		D21EA09E1F770FF800AC66F7 /* EventsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCollectionViewController.swift; sourceTree = "<group>"; };
 		D21EA0A01F77100500AC66F7 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
+		D2219A591F8534FA00DB5CCA /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NavigationController.swift; path = Navigation/NavigationController.swift; sourceTree = "<group>"; };
+		D2219A5C1F85357200DB5CCA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D223315D1F28FB0A00E90EE6 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		D22331611F2B2D2100E90EE6 /* CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		D25A6C7B1F1E8FE4005FAD33 /* Kids2Kids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kids2Kids.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +186,15 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		D2219A5B1F85351700DB5CCA /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				D2219A591F8534FA00DB5CCA /* NavigationController.swift */,
+				D2219A5C1F85357200DB5CCA /* TabBarController.swift */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
 		D25A6C721F1E8FE4005FAD33 = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +226,7 @@
 				D20F59EF1F22130D00A47E8E /* Controllers */,
 				D20F59EE1F2212EE00A47E8E /* Cells */,
 				D20F59ED1F2212D600A47E8E /* Models */,
+				D2219A5B1F85351700DB5CCA /* Navigation */,
 				D25A6C851F1E8FE4005FAD33 /* Assets.xcassets */,
 				D20562CD1F2253AE001B527B /* Fonts */,
 				D25A6C871F1E8FE4005FAD33 /* LaunchScreen.storyboard */,
@@ -534,12 +548,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2BF3EBA1F62956500DCB30B /* HelpDetailsViewController.swift in Sources */,
+				D2219A5D1F85357200DB5CCA /* TabBarController.swift in Sources */,
 				D21EA0A11F77100500AC66F7 /* EventCollectionViewCell.swift in Sources */,
 				D22331621F2B2D2100E90EE6 /* CustomColors.swift in Sources */,
 				D20F59EC1F2211D300A47E8E /* Project.swift in Sources */,
 				D21EA09B1F770FD600AC66F7 /* ProjectCollectionViewCell.swift in Sources */,
 				D21EA09D1F770FDF00AC66F7 /* ProjectsCollectionViewController.swift in Sources */,
 				D20F59EA1F22116900A47E8E /* ProjectDetailsViewController.swift in Sources */,
+				D2219A5A1F8534FD00DB5CCA /* NavigationController.swift in Sources */,
 				D25A6CB91F1EA680005FAD33 /* ContactsViewController.swift in Sources */,
 				D223315E1F28FB0A00E90EE6 /* EventDetailsViewController.swift in Sources */,
 				D21EA09F1F770FF800AC66F7 /* EventsCollectionViewController.swift in Sources */,
