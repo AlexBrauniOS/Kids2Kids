@@ -17,63 +17,21 @@ class EventDetailsViewController: UIViewController {
     @IBOutlet weak var descriptionEventDetailsLabel: UILabel!
     @IBOutlet weak var labelBGView: UIView!
     
-    var eventsDetails: [PFObject]? {
-        didSet{
-            stopActivityIndicator()
-            setupEvent()
-        }
-    }
-    var nameEvent: String = ""
+    var event: Event!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        startActivityIndicator()
-        fetchPost()
         setupController()
         setupBG()
-    }
-    
-    var activityIndicator = UIActivityIndicatorView()
-    
-    func startActivityIndicator() {
-        activityIndicator.center = self.view.center
-        activityIndicator.hidesWhenStopped = true
-        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
-        view.addSubview(activityIndicator)
-        
-        activityIndicator.startAnimating()
-    }
-    
-    func stopActivityIndicator() {
-        activityIndicator.stopAnimating()
-    }
-    
-    func fetchPost() {
-        let query = PFQuery(className: "Event")
-        query.whereKey("name", equalTo: nameEvent)
-        query.findObjectsInBackground { (objects, error) in
-            if let objects = objects {
-                self.eventsDetails = objects
-                
-            }
-        }
+        setupEvent()
     }
     
     func setupEvent() {
-        dateEventDetailsLabel.text = eventsDetails?.first?["date"] as? String
-        placeEventDetailsLabel.text = eventsDetails?.first?["place"] as? String
-        descriptionEventDetailsLabel.text = eventsDetails?.first?["description"] as? String
-
-        let imageEventDetailsFile = eventsDetails?.first?["image"] as? PFFile
-        imageEventDetailsFile?.getDataInBackground(block: { (imageData, error) in
-            if error == nil {
-                if let imageData = imageData {
-                    let image = UIImage(data: imageData)
-                    self.imageEventDetailsImageView.image = image
-                }
-            }
-        })
+        dateEventDetailsLabel.text = event.nameOfEvent
+        placeEventDetailsLabel.text = event.placeOfEvent
+        descriptionEventDetailsLabel.text = event.descriptionOfEvent
+        imageEventDetailsImageView.image = event.imageOfEvent
         
         labelBGView.backgroundColor = UIColor.white.withAlphaComponent(0.95)
         labelBGView.layer.cornerRadius = 5
@@ -84,7 +42,7 @@ class EventDetailsViewController: UIViewController {
     }
     
     func setupController() {
-        navigationItem.title = nameEvent
+        navigationItem.title = event.nameOfEvent
 
         if #available(iOS 11.0, *) {
             self.navigationItem.largeTitleDisplayMode = .never

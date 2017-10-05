@@ -19,7 +19,9 @@ class ProjectsCollectionViewController: UICollectionViewController {
     
     var array: [Project] = [] {
         didSet {
-            collectionView?.reloadData()
+            if let collectionView = collectionView {
+                collectionView.reloadData()
+            }
         }
     }
     
@@ -40,7 +42,7 @@ class ProjectsCollectionViewController: UICollectionViewController {
             delay(i, closure: {
                 self.array.append(project)
             })
-            i += 0.2
+            i += 0.3
         }
     }
     
@@ -88,12 +90,12 @@ class ProjectsCollectionViewController: UICollectionViewController {
         cell.projectInCellLabel.text = project.projectName
         cell.projectInCellIcon.image = project.projectIcon
         
-        cell.layer.cornerRadius = 10
-        cell.clipsToBounds = true
-        
         if (indexPath.row == ((self.collectionView?.numberOfItems(inSection: 0))! - 1)) {
             cell.contentView.alpha = 0
         }
+        
+        cell.layer.cornerRadius = 10
+        cell.clipsToBounds = true
         
         return cell
     }
@@ -101,7 +103,7 @@ class ProjectsCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         
         if (indexPath.row == ((self.collectionView?.numberOfItems(inSection: 0))! - 1)) {
-            UIView.animate(withDuration: 0.2, animations: {
+            UIView.animate(withDuration: 0.3, animations: {
                 cell.contentView.alpha = 1.0
             })
         }

@@ -14,15 +14,4 @@ class ProjectCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var projectInCellLabel: UILabel!
     @IBOutlet weak var projectInCellIcon: UIImageView!
     
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setup()
-        
-    }
-    
-    func setup() {
-        projectInCellLabel.font = UIFont(name: "Co Text Corp", size: 18.0)
-    }
-    
 }

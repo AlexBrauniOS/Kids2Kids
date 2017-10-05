@@ -29,6 +29,7 @@
 		D25A6C941F1E8FE4005FAD33 /* Kids2KidsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25A6C931F1E8FE4005FAD33 /* Kids2KidsTests.swift */; };
 		D25A6C9F1F1E8FE4005FAD33 /* Kids2KidsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25A6C9E1F1E8FE4005FAD33 /* Kids2KidsUITests.swift */; };
 		D25A6CB91F1EA680005FAD33 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25A6CB81F1EA680005FAD33 /* ContactsViewController.swift */; };
+		D29F99DF1F858324007AE58D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29F99DE1F858324007AE58D /* Event.swift */; };
 		D2BF3EBA1F62956500DCB30B /* HelpDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BF3EB91F62956500DCB30B /* HelpDetailsViewController.swift */; };
 		D2FF4BFC1F61618D00B5525A /* HelpCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FF4BFB1F61618D00B5525A /* HelpCollectionViewCell.swift */; };
 		D2FF4C081F61624500B5525A /* HelpCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FF4C071F61624500B5525A /* HelpCollectionViewController.swift */; };
@@ -84,6 +85,7 @@
 		D25A6C9E1F1E8FE4005FAD33 /* Kids2KidsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kids2KidsUITests.swift; sourceTree = "<group>"; };
 		D25A6CA01F1E8FE4005FAD33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D25A6CB81F1EA680005FAD33 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		D29F99DE1F858324007AE58D /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		D2BF3EB91F62956500DCB30B /* HelpDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpDetailsViewController.swift; sourceTree = "<group>"; };
 		D2FF4BFB1F61618D00B5525A /* HelpCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCollectionViewCell.swift; sourceTree = "<group>"; };
 		D2FF4C071F61624500B5525A /* HelpCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCollectionViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				D20F59EB1F2211D300A47E8E /* Project.swift */,
+				D29F99DE1F858324007AE58D /* Event.swift */,
 				D2FF4C091F61664500B5525A /* Help.swift */,
 			);
 			name = Models;
@@ -555,6 +558,7 @@
 				D21EA09B1F770FD600AC66F7 /* ProjectCollectionViewCell.swift in Sources */,
 				D21EA09D1F770FDF00AC66F7 /* ProjectsCollectionViewController.swift in Sources */,
 				D20F59EA1F22116900A47E8E /* ProjectDetailsViewController.swift in Sources */,
+				D29F99DF1F858324007AE58D /* Event.swift in Sources */,
 				D2219A5A1F8534FD00DB5CCA /* NavigationController.swift in Sources */,
 				D25A6CB91F1EA680005FAD33 /* ContactsViewController.swift in Sources */,
 				D223315E1F28FB0A00E90EE6 /* EventDetailsViewController.swift in Sources */,

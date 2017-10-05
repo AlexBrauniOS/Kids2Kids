@@ -13,20 +13,99 @@ private let reuseIdentifier = "Cell"
 
 class EventsCollectionViewController: UICollectionViewController {
 
+    // get data from parse server
     var events: [PFObject] = [] {
         didSet {
-            getEventsArray()
+            getModelArray()
+        }
+    }
+    
+    // convert data to model
+    var modelArray: [Event] = [] {
+        didSet{
             stopActivityIndicator()
         }
     }
-    var arrayCells: [PFObject] = [] {
+    
+    // convert array to display
+    var arrayCells: [Event] = [] {
         didSet {
-            
             if let collectionView = collectionView {
                 collectionView.reloadData()
             }
         }
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setup()
+        fetchPost()
+        startActivityIndicator()
+    }
+    
+    func setup() {
+        navigationItem.title = "Мероприятия"
+        
+        let background = UIImage(named: "Background")
+        let imageView: UIImageView!
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background!
+        self.collectionView?.backgroundView = imageView
+    }
+    
+    func fetchPost() {
+        let query = PFQuery(className: "Event")
+        query.order(byAscending: "updatedAt")
+        query.findObjectsInBackground { (objects, error) in
+            if let objects = objects {
+                self.events = objects
+            }
+        }
+    }
+    
+    func getModelArray() {
+        for event in events {
+            
+            let modelEvent = Event(nameOfEvent: "", dateOfEvent: "", placeOfEvent: "", descriptionOfEvent: "", imageOfEvent: #imageLiteral(resourceName: "heart"))
+            
+            modelEvent.nameOfEvent = event["name"] as! String
+            modelEvent.dateOfEvent = event["date"] as! String
+            modelEvent.placeOfEvent = event["place"] as! String
+            modelEvent.descriptionOfEvent = event["description"] as! String
+            let imageEventFile = event["image"] as? PFFile
+            imageEventFile?.getDataInBackground(block: { (imageData, error) in
+                if error == nil {
+                    if let imageData = imageData {
+                        let image = UIImage(data: imageData)
+                        modelEvent.imageOfEvent = image!
+                    }
+                }
+            })
+            modelArray.append(modelEvent)
+        }
+        modelArray = modelArray.reversed()
+        getEventsArray()
+    }
+    
+    func delay(_ delay:Double, closure:@escaping ()->()) {
+        let when = DispatchTime.now() + delay
+        DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
+    }
+    
+    func getEventsArray() {
+        var i = 0.0
+        for cell in modelArray {
+            delay(i, closure: {
+                self.arrayCells.append(cell)
+            })
+            i += 0.3
+        }
+    }
+    
+    //MARK: Activity Indicator
     
     var activityIndicator = UIActivityIndicatorView()
     
@@ -44,58 +123,14 @@ class EventsCollectionViewController: UICollectionViewController {
     func stopActivityIndicator() {
         activityIndicator.stopAnimating()
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        fetchPost()
-        setup()
-        startActivityIndicator()
-    }
-    
-    func delay(_ delay:Double, closure:@escaping ()->()) {
-        let when = DispatchTime.now() + delay
-        DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
-    }
-    
-    func getEventsArray() {
-        var i = 0.0
-        for cell in events {
-            delay(i, closure: {
-                self.arrayCells.append(cell)
-            })
-            i += 0.2
-        }
-    }
-    
-    func setup() {
-        navigationItem.title = "Мероприятия"
-        
-        let background = UIImage(named: "Background")
-        let imageView: UIImageView!
-        imageView = UIImageView(frame: view.bounds)
-        imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.image = background!
-        self.collectionView?.backgroundView = imageView
-    }
-    
-    func fetchPost() {
-        let query = PFQuery(className: "Event")
-        query.findObjectsInBackground { (objects, error) in
-            if let objects = objects {
-                self.events = objects
-            }
-        }
-    }
 
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "EventDetailsViewController" {
             if let controller = segue.destination as? EventDetailsViewController,
-                let name = sender as? String {
-                controller.nameEvent = name
+                let eventModel = sender as? Event {
+                controller.event = eventModel
             }
         }
     }
@@ -114,17 +149,9 @@ class EventsCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! EventCollectionViewCell
     
         let event = arrayCells[indexPath.row]
-        cell.nameEventLAbel.text = event["name"] as? String
-        cell.dateEventLabel.text = event["date"] as? String
-        let imageEventFile = event["image"] as? PFFile
-        imageEventFile?.getDataInBackground(block: { (imageData, error) in
-            if error == nil {
-                if let imageData = imageData {
-                    let image = UIImage(data: imageData)
-                    cell.imageEventImageView.image = image
-                }
-            }
-        })
+        cell.nameEventLAbel.text = event.nameOfEvent
+        cell.dateEventLabel.text = event.dateOfEvent
+        cell.imageEventImageView.image = event.imageOfEvent
         
         if (indexPath.row == ((self.collectionView?.numberOfItems(inSection: 0))! - 1)) {
             cell.contentView.alpha = 0
@@ -135,20 +162,20 @@ class EventsCollectionViewController: UICollectionViewController {
     
         return cell
     }
-    
+
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        
+
         if (indexPath.row == ((self.collectionView?.numberOfItems(inSection: 0))! - 1)) {
-            UIView.animate(withDuration: 0.2, animations: {
+            UIView.animate(withDuration: 0.3, animations: {
                 cell.contentView.alpha = 1.0
             })
         }
     }
-    
+
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let event = events[indexPath.row]
-        let name = event["name"] as? String
-        performSegue(withIdentifier: "EventDetailsViewController", sender: name)
+        let event = arrayCells[indexPath.row]
+        
+        performSegue(withIdentifier: "EventDetailsViewController", sender: event)
     }
 }
 

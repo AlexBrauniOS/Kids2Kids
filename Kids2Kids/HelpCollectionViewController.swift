@@ -29,7 +29,6 @@ class HelpCollectionViewController: UICollectionViewController {
 
         setup()
         getHelpArray()
-        
     }
     
     func delay(_ delay:Double, closure:@escaping ()->()) {
@@ -43,7 +42,7 @@ class HelpCollectionViewController: UICollectionViewController {
             delay(i, closure: {
                 self.array.append(help)
             })
-            i += 0.2
+            i += 0.3
         }
     }
     
@@ -80,8 +79,6 @@ class HelpCollectionViewController: UICollectionViewController {
         
         cell.layer.cornerRadius = 10
         cell.clipsToBounds = true
-        cell.helpNameLabel.textColor = .white
-        cell.helpNameLabel.font = cell.helpNameLabel.font.withSize(20)
         
         return cell
     }
@@ -90,7 +87,7 @@ class HelpCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if (indexPath.row == ((self.collectionView?.numberOfItems(inSection: 0))! - 1)) {
-            UIView.animate(withDuration: 0.2, animations: {
+            UIView.animate(withDuration: 0.3, animations: {
                 cell.contentView.alpha = 1.0
             })
         }
@@ -109,6 +106,7 @@ class HelpCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         let help = array[indexPath.row]
         
         performSegue(withIdentifier: "HelpDetailsViewController", sender: help)
