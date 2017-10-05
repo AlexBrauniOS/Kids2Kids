@@ -33,12 +33,24 @@ class EventsCollectionViewController: UICollectionViewController {
             if let collectionView = collectionView {
                 collectionView.reloadData()
             }
+            UIApplication.shared.applicationIconBadgeNumber = 0
+        }
+    }
+    
+    func clearBadge() {
+        let currentInstallation = PFInstallation.current()
+        if let currentInstallation = currentInstallation {
+            if currentInstallation.badge != 0 {
+                currentInstallation.badge = 0
+                currentInstallation.saveEventually()
+            }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        clearBadge()
         setup()
         fetchPost()
         startActivityIndicator()
