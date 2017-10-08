@@ -72,6 +72,7 @@
 		D2219A5C1F85357200DB5CCA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D223315D1F28FB0A00E90EE6 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		D22331611F2B2D2100E90EE6 /* CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
+		D223DABF1F8A55D1002CCDC3 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		D25A6C7B1F1E8FE4005FAD33 /* Kids2Kids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kids2Kids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25A6C7E1F1E8FE4005FAD33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D25A6C831F1E8FE4005FAD33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -127,6 +128,7 @@
 		491B9037D852DC34E08345C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D223DABF1F8A55D1002CCDC3 /* libsqlite3.tbd */,
 				FAC6DAF304405BE7A84C0D06 /* Pods_Kids2Kids.framework */,
 				373316AF46FAB58B87F62C3E /* Pods_Kids2KidsTests.framework */,
 				5C4309FE34BC69692954969C /* Pods_Kids2KidsUITests.framework */,

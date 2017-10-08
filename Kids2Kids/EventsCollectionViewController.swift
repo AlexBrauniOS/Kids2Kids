@@ -67,10 +67,11 @@ class EventsCollectionViewController: UICollectionViewController {
         imageView.image = background!
         self.collectionView?.backgroundView = imageView
     }
-    
+
     func fetchPost() {
         let query = PFQuery(className: "Event")
         query.order(byAscending: "updatedAt")
+        query.cachePolicy = .networkElseCache
         query.findObjectsInBackground { (objects, error) in
             if let objects = objects {
                 self.events = objects
