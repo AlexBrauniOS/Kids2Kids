@@ -68,12 +68,13 @@ class EventsCollectionViewController: UICollectionViewController {
     func getModelArray() {
         for event in events {
             
-            let modelEvent = Event(nameOfEvent: "", dateOfEvent: "", placeOfEvent: "", descriptionOfEvent: "", imageOfEvent: #imageLiteral(resourceName: "heart"))
+            let modelEvent = Event(nameOfEvent: "", dateOfEvent: "", placeOfEvent: "", descriptionOfEvent: "", imageOfEvent: #imageLiteral(resourceName: "heart"), fblinkOfEvent: "")
             
             modelEvent.nameOfEvent = event["name"] as! String
             modelEvent.dateOfEvent = event["date"] as! String
             modelEvent.placeOfEvent = event["place"] as! String
             modelEvent.descriptionOfEvent = event["description"] as! String
+            modelEvent.fblinkOfEvent = event["fblink"] as! String
             let imageEventFile = event["image"] as? PFFile
             imageEventFile?.getDataInBackground(block: { (imageData, error) in
                 if error == nil {
@@ -85,7 +86,7 @@ class EventsCollectionViewController: UICollectionViewController {
             })
             modelArray.append(modelEvent)
         }
-        modelArray = modelArray.reversed()
+//        modelArray = modelArray.reversed()
     }
     
     func delay(closure:@escaping ()->()) {

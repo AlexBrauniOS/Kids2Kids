@@ -16,6 +16,7 @@ class EventDetailsViewController: UIViewController {
     @IBOutlet weak var placeEventDetailsLabel: UILabel!
     @IBOutlet weak var descriptionEventDetailsLabel: UILabel!
     @IBOutlet weak var labelBGView: UIView!
+    @IBOutlet weak var addToEventButton: UIButton!
     
     var event: Event!
     
@@ -44,6 +45,10 @@ class EventDetailsViewController: UIViewController {
     func setupController() {
         navigationItem.title = event.nameOfEvent
 
+        addToEventButton.backgroundColor = UIColor.fundGreenColor
+        addToEventButton.layer.cornerRadius = 10
+        addToEventButton.clipsToBounds = true
+        
         if #available(iOS 11.0, *) {
             self.navigationItem.largeTitleDisplayMode = .never
         } else {
@@ -59,6 +64,32 @@ class EventDetailsViewController: UIViewController {
         self.view.insertSubview(background, at: 0)
     }
     
+    /*
+     let facebookURL = NSURL(string: "fb://event/1743847059178738")!
+     if UIApplication.sharedApplication().canOpenURL(facebookURL) {
+     UIApplication.sharedApplication().openURL(facebookURL)
+     } else {
+     UIApplication.sharedApplication().openURL(NSURL(string: "https://www.facebook.com/events/1743847059178738")!)
+     }
+ */
+    
+    private func openFacebookPage(fblink: String) {
+        let facebookUID = fblink
+        let fbURLWeb = NSURL(string: "https://www.facebook.com/events/\(facebookUID)")!
+        let fbURLID = NSURL(string: "fb://event?id=\(facebookUID)")!
+        
+        if UIApplication.shared.canOpenURL(fbURLID as URL) {
+            // FB installed
+            UIApplication.shared.open(fbURLID as URL)
+        } else {
+            // FB is not installed, open in safari
+            UIApplication.shared.open(fbURLWeb as URL)
+        }
+    }
+    
+    @IBAction func addToEventButtonPressed(_ sender: UIButton) {
+        openFacebookPage(fblink: event.fblinkOfEvent)
+    }
 }
 
 

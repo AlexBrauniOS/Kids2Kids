@@ -16,11 +16,13 @@ class Event {
     var placeOfEvent: String
     var descriptionOfEvent: String
     var imageOfEvent: UIImage
-    init(nameOfEvent: String, dateOfEvent: String, placeOfEvent: String, descriptionOfEvent: String, imageOfEvent: UIImage) {
+    var fblinkOfEvent: String
+    init(nameOfEvent: String, dateOfEvent: String, placeOfEvent: String, descriptionOfEvent: String, imageOfEvent: UIImage, fblinkOfEvent: String) {
         self.nameOfEvent = nameOfEvent
         self.dateOfEvent = dateOfEvent
         self.placeOfEvent = placeOfEvent
         self.descriptionOfEvent = descriptionOfEvent
         self.imageOfEvent = imageOfEvent
+        self.fblinkOfEvent = fblinkOfEvent
     }
 }
