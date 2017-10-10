@@ -28,7 +28,7 @@ class EventDetailsViewController: UIViewController {
     }
     
     func setupEvent() {
-        dateEventDetailsLabel.text = event.nameOfEvent
+        dateEventDetailsLabel.text = event.dateOfEvent
         placeEventDetailsLabel.text = event.placeOfEvent
         descriptionEventDetailsLabel.text = event.descriptionOfEvent
         imageEventDetailsImageView.image = event.imageOfEvent
@@ -55,6 +55,7 @@ class EventDetailsViewController: UIViewController {
         let background = UIImageView(frame: UIScreen.main.bounds)
         background.image = UIImage(named: "Background")
         background.contentMode = .scaleAspectFill
+        background.clipsToBounds = true
         self.view.insertSubview(background, at: 0)
     }
     

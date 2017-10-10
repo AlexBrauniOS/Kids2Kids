@@ -18,32 +18,10 @@ class HelpCollectionViewController: UICollectionViewController {
                              Help(name: "Стать волонтёром", image: #imageLiteral(resourceName: "angel"), description: "Волонтеры - это люди, без которых сложно представить полноценную работу фонда! \n\nПомогать в проведении мероприятий, участвовать в программе профориентации будущих выпускников. \n\nЧем Вы можете помочь фонду «Дети Детям»: \n - закупать и развозить нужды в детдома, школы-интернаты, семьи; \n - помогать проводить мероприятия; \n - оказывать психологическую помощь детям и родителям тяжело-больных детей; \n - проводить обучение в рамках программы профориентации (проект «Дорога в жизнь»). \n\nЕсли у Вас есть время, а главное желание помочь: \nзвоните нам \n+38 050 594 89 35 \n+38 050 471 30 30 \nили пишите \nweb@kids2kids-fund.com.", color: .fundYellowColor),
                              Help(name: "Организациям", image: #imageLiteral(resourceName: "cloud"), description: "Приглашаем компании поддержать наши проекты помощи детдомам, школам-интернатам, реабилитационным центрам: \n - отправка детей в детские лагеря; \n - покупка мебели; \n - оплата ремонтных работ; \n - покупка бытовой техники", color: .fundGreenColor)]
     
-    var array: [Help] = [] {
-        didSet {
-            collectionView!.reloadData()
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setup()
-        getHelpArray()
-    }
-    
-    func delay(_ delay:Double, closure:@escaping ()->()) {
-        let when = DispatchTime.now() + delay
-        DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
-    }
-    
-    func getHelpArray() {
-        var i = 0.0
-        for help in helpArray {
-            delay(i, closure: {
-                self.array.append(help)
-            })
-            i += 0.3
-        }
     }
     
     func setup() {
@@ -66,13 +44,13 @@ class HelpCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return array.count
+        return helpArray.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! HelpCollectionViewCell
     
-        let help = array[indexPath.row]
+        let help = helpArray[indexPath.row]
         cell.helpImageView.image = help.image
         cell.helpNameLabel.text = help.name
         cell.backgroundColor = help.color
@@ -86,11 +64,12 @@ class HelpCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDelegate
 
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if (indexPath.row == ((self.collectionView?.numberOfItems(inSection: 0))! - 1)) {
-            UIView.animate(withDuration: 0.3, animations: {
-                cell.contentView.alpha = 1.0
-            })
-        }
+        
+        let translationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 400, 0)
+        cell.layer.transform = translationTransform
+        UIView.animate(withDuration: 1, delay: 0.2 * Double(indexPath.row), options: .curveEaseOut, animations: {
+            cell.layer.transform = CATransform3DIdentity
+        })
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -107,7 +86,7 @@ class HelpCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let help = array[indexPath.row]
+        let help = helpArray[indexPath.row]
         
         performSegue(withIdentifier: "HelpDetailsViewController", sender: help)
     }

@@ -23,26 +23,12 @@ class EventsCollectionViewController: UICollectionViewController {
     // convert data to model
     var modelArray: [Event] = [] {
         didSet{
-            stopActivityIndicator()
-        }
-    }
-    
-    // convert array to display
-    var arrayCells: [Event] = [] {
-        didSet {
-            if let collectionView = collectionView {
-                collectionView.reloadData()
-            }
             UIApplication.shared.applicationIconBadgeNumber = 0
-        }
-    }
-    
-    func clearBadge() {
-        let currentInstallation = PFInstallation.current()
-        if let currentInstallation = currentInstallation {
-            if currentInstallation.badge != 0 {
-                currentInstallation.badge = 0
-                currentInstallation.saveEventually()
+            delay() {
+                if let collectionView = self.collectionView {
+                    self.stopActivityIndicator()
+                    collectionView.reloadData()
+                }
             }
         }
     }
@@ -67,7 +53,7 @@ class EventsCollectionViewController: UICollectionViewController {
         imageView.image = background!
         self.collectionView?.backgroundView = imageView
     }
-
+    
     func fetchPost() {
         let query = PFQuery(className: "Event")
         query.order(byAscending: "updatedAt")
@@ -100,22 +86,11 @@ class EventsCollectionViewController: UICollectionViewController {
             modelArray.append(modelEvent)
         }
         modelArray = modelArray.reversed()
-        getEventsArray()
     }
     
-    func delay(_ delay:Double, closure:@escaping ()->()) {
-        let when = DispatchTime.now() + delay
+    func delay(closure:@escaping ()->()) {
+        let when = DispatchTime.now() + 0.01
         DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
-    }
-    
-    func getEventsArray() {
-        var i = 0.0
-        for cell in modelArray {
-            delay(i, closure: {
-                self.arrayCells.append(cell)
-            })
-            i += 0.3
-        }
     }
     
     //MARK: Activity Indicator
@@ -136,9 +111,19 @@ class EventsCollectionViewController: UICollectionViewController {
     func stopActivityIndicator() {
         activityIndicator.stopAnimating()
     }
-
+    
+    // MARK: App Icon Badge
+    func clearBadge() {
+        let currentInstallation = PFInstallation.current()
+        if let currentInstallation = currentInstallation {
+            if currentInstallation.badge != 0 {
+                currentInstallation.badge = 0
+                currentInstallation.saveEventually()
+            }
+        }
+    }
+    
     // MARK: - Navigation
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "EventDetailsViewController" {
             if let controller = segue.destination as? EventDetailsViewController,
@@ -147,46 +132,42 @@ class EventsCollectionViewController: UICollectionViewController {
             }
         }
     }
-
+    
     // MARK: UICollectionViewDataSource
     
     fileprivate let itemsPerRow: CGFloat = 1
     fileprivate let sectionInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
-
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return arrayCells.count
+        return modelArray.count
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! EventCollectionViewCell
-    
-        let event = arrayCells[indexPath.row]
+        
+        let event = modelArray[indexPath.row]
         cell.nameEventLAbel.text = event.nameOfEvent
         cell.dateEventLabel.text = event.dateOfEvent
         cell.imageEventImageView.image = event.imageOfEvent
         
-        if (indexPath.row == ((self.collectionView?.numberOfItems(inSection: 0))! - 1)) {
-            cell.contentView.alpha = 0
-        }
-        
         cell.layer.cornerRadius = 10
         cell.clipsToBounds = true
-    
+        
         return cell
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
 
-        if (indexPath.row == ((self.collectionView?.numberOfItems(inSection: 0))! - 1)) {
-            UIView.animate(withDuration: 0.3, animations: {
-                cell.contentView.alpha = 1.0
-            })
-        }
+        let translationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 400, 0)
+        cell.layer.transform = translationTransform
+        UIView.animate(withDuration: 1, delay: 0.2 * Double(indexPath.row), options: .curveEaseOut, animations: {
+            cell.layer.transform = CATransform3DIdentity
+        })
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let event = arrayCells[indexPath.row]
+        let event = modelArray[indexPath.row]
         
         performSegue(withIdentifier: "EventDetailsViewController", sender: event)
     }

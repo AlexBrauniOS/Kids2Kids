@@ -25,6 +25,7 @@ class ProjectDetailsViewController: UIViewController {
         let background = UIImageView(frame: UIScreen.main.bounds)
         background.image = UIImage(named: "Background")
         background.contentMode = .scaleAspectFill
+        background.clipsToBounds = true
         self.view.insertSubview(background, at: 0)
  
     }

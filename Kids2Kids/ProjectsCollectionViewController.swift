@@ -17,33 +17,9 @@ class ProjectsCollectionViewController: UICollectionViewController {
                                Project(projectName: "Открытые сердца", projectImage: #imageLiteral(resourceName: "OtkrytyeSerdca"), projectIcon: #imageLiteral(resourceName: "talkHeart"), projectDescription: "«Открытые сердца» — это ежегодное благотворительное мероприятие фонда Дети Детям, направленное на сбор средств на конкретные нужды детей из детдомов, школ-интернатов и реабилитационных центров. В рамках мероприятия мы так же собираем средства на лечение тяжелобольных детей, которые нуждаются в экстренной помощи. \n\nДети, которые приходят с родителями на этот праздник делают своими руками сердца и посылают их деткам в детдома. Сотни сердец из керамики, ткани, гипса, бумаги, разрисованные красками и мелками, отправляются с любовью в разные уголки Украины. В свою очередь дети из детдомов и интернатов отправляют на праздник свои подарки, приготовленные заранее. \n\nПроект «Открытые сердца» объединяет сотни детей по всей Украине, показывая тем самым, как важно открывать свои сердца навстречу друг другу."),
                                Project(projectName: "Щастя в кожну родину", projectImage: #imageLiteral(resourceName: "SchastieVKozhnuRodynu"), projectIcon: #imageLiteral(resourceName: "star"), projectDescription: "«Щастя в кожну родину» — проект нашего фонда, который стартовал в 2015 году с нескольких семей и расширяется с каждым днем. \n\nЭто адресная помощь семьям с детьми, прикованными к постели страшными недугами. \n\nКаждый месяц мы приезжаем в эти семьи и привозим лекарства, памперсы и вещи, которые помогают нам приобрести партнеры этого проекта. Такая помощь для семей является очень большой поддержкой и главное — осознанием того, что этот мир не отвернулся от них. Что есть люди, которые своим вкладом стремятся разделить тяжесть, которая выпала на плечи родителей. Учитывая тот факт, что мамы круглосуточно находятся при больном ребенке, каждый человек, который переступает порог является для них большой поддержкой. Этот проект еще одна возможность проявить христианскую любовь к тем семьям, которые вынуждены сражаться за жизнь своих детей каждый день. Каждый наш приезд всегда ждут с нетерпением. \n\nС каждым новым днем мы получаем все больше просьб о помощи. Мамы и их дети находятся в бедственном положении, так как мизерной помощи, выделяемой государством не хватает ни на что. Эти дети как будто проверяют мир на доброту. На наши жертвенные сердца. Истории некоторых семей вы можете найти на нашем сайте. \n\nПриглашаем всех, кто хотел бы поддерживать семьи материально, стать частью этого проекта. Ведь по настоящему счастлив тот человек, который делает счастливыми других, а в этом проекте вы сможете сделать счастливой целую семью.")]
     
-    var array: [Project] = [] {
-        didSet {
-            if let collectionView = collectionView {
-                collectionView.reloadData()
-            }
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        getProjectsArray()
-    }
-    
-    func delay(_ delay:Double, closure:@escaping ()->()) {
-        let when = DispatchTime.now() + delay
-        DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
-    }
-    
-    func getProjectsArray() {
-        var i = 0.0
-        for project in projects {
-            delay(i, closure: {
-                self.array.append(project)
-            })
-            i += 0.3
-        }
     }
     
     func setup() {
@@ -79,20 +55,16 @@ class ProjectsCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return array.count
+        return projects.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ProjectCollectionViewCell
         
-        let project = array[indexPath.row]
+        let project = projects[indexPath.row]
         cell.projectInCellImage.image = project.projectImage
         cell.projectInCellLabel.text = project.projectName
         cell.projectInCellIcon.image = project.projectIcon
-        
-        if (indexPath.row == ((self.collectionView?.numberOfItems(inSection: 0))! - 1)) {
-            cell.contentView.alpha = 0
-        }
         
         cell.layer.cornerRadius = 10
         cell.clipsToBounds = true
@@ -102,16 +74,16 @@ class ProjectsCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         
-        if (indexPath.row == ((self.collectionView?.numberOfItems(inSection: 0))! - 1)) {
-            UIView.animate(withDuration: 0.3, animations: {
-                cell.contentView.alpha = 1.0
-            })
-        }
+        let translationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 400, 0)
+        cell.layer.transform = translationTransform
+        UIView.animate(withDuration: 1, delay: 0.2 * Double(indexPath.row), options: .curveEaseOut, animations: {
+            cell.layer.transform = CATransform3DIdentity
+        })
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let project = array[indexPath.row]
+        let project = projects[indexPath.row]
         
         performSegue(withIdentifier: "ProjectDetailsViewController", sender: project)
     }
