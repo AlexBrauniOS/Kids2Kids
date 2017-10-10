@@ -64,15 +64,6 @@ class EventDetailsViewController: UIViewController {
         self.view.insertSubview(background, at: 0)
     }
     
-    /*
-     let facebookURL = NSURL(string: "fb://event/1743847059178738")!
-     if UIApplication.sharedApplication().canOpenURL(facebookURL) {
-     UIApplication.sharedApplication().openURL(facebookURL)
-     } else {
-     UIApplication.sharedApplication().openURL(NSURL(string: "https://www.facebook.com/events/1743847059178738")!)
-     }
- */
-    
     private func openFacebookPage(fblink: String) {
         let facebookUID = fblink
         let fbURLWeb = NSURL(string: "https://www.facebook.com/events/\(facebookUID)")!
