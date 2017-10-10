@@ -86,7 +86,6 @@ class EventsCollectionViewController: UICollectionViewController {
             })
             modelArray.append(modelEvent)
         }
-//        modelArray = modelArray.reversed()
     }
     
     func delay(closure:@escaping ()->()) {
