@@ -36,6 +36,7 @@ class EventsCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        checkDeviceLanguage()
         clearBadge()
         setup()
         fetchPost()
@@ -52,6 +53,21 @@ class EventsCollectionViewController: UICollectionViewController {
         imageView.clipsToBounds = true
         imageView.image = background!
         self.collectionView?.backgroundView = imageView
+    }
+    
+    let preferredLanguage = Locale.preferredLanguages.first
+    
+    func checkDeviceLanguage() {
+        if let preferredLanguage = preferredLanguage {
+            if preferredLanguage.hasPrefix("uk") {
+                print("its Ukrainian")
+            } else if preferredLanguage.hasPrefix("ru") {
+                print("its Russian")
+            } else {
+                print("else language")
+                print(preferredLanguage)
+            }
+        }
     }
     
     func fetchPost() {
