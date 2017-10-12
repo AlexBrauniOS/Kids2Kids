@@ -39,7 +39,7 @@ class EventsCollectionViewController: UICollectionViewController {
         checkDeviceLanguage()
         clearBadge()
         setup()
-        fetchPost()
+//        fetchPost(className: "Event")
         startActivityIndicator()
     }
     
@@ -60,18 +60,21 @@ class EventsCollectionViewController: UICollectionViewController {
     func checkDeviceLanguage() {
         if let preferredLanguage = preferredLanguage {
             if preferredLanguage.hasPrefix("uk") {
+                fetchPost(className: "Eventua")
                 print("its Ukrainian")
             } else if preferredLanguage.hasPrefix("ru") {
+                fetchPost(className: "Event")
                 print("its Russian")
             } else {
+                fetchPost(className: "Eventen")
                 print("else language")
                 print(preferredLanguage)
             }
         }
     }
     
-    func fetchPost() {
-        let query = PFQuery(className: "Event")
+    func fetchPost(className: String) {
+        let query = PFQuery(className: className)
         query.order(byAscending: "updatedAt")
         query.cachePolicy = .networkElseCache
         query.findObjectsInBackground { (objects, error) in
@@ -104,7 +107,7 @@ class EventsCollectionViewController: UICollectionViewController {
     }
     
     func delay(closure:@escaping ()->()) {
-        let when = DispatchTime.now() + 0.25
+        let when = DispatchTime.now() + 0.3
         DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
     }
     
