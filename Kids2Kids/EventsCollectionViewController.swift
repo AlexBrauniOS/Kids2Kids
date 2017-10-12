@@ -77,19 +77,18 @@ class EventsCollectionViewController: UICollectionViewController {
             modelEvent.fblinkOfEvent = event["fblink"] as! String
             let imageEventFile = event["image"] as? PFFile
             imageEventFile?.getDataInBackground(block: { (imageData, error) in
-                if error == nil {
-                    if let imageData = imageData {
-                        let image = UIImage(data: imageData)
-                        modelEvent.imageOfEvent = image!
-                    }
+                if let imageData = imageData {
+                    let image = UIImage(data: imageData)
+                    modelEvent.imageOfEvent = image!
                 }
             })
             modelArray.append(modelEvent)
         }
+        modelArray = modelArray.reversed()
     }
     
     func delay(closure:@escaping ()->()) {
-        let when = DispatchTime.now() + 0.01
+        let when = DispatchTime.now() + 0.25
         DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
     }
     
@@ -153,6 +152,13 @@ class EventsCollectionViewController: UICollectionViewController {
         
         cell.layer.cornerRadius = 10
         cell.clipsToBounds = true
+        
+        cell.nameEventLAbel.backgroundColor = UIColor.fundBlueColor.withAlphaComponent(0.75)
+        cell.dateEventLabel.backgroundColor = UIColor.fundBlueColor.withAlphaComponent(0.75)
+        cell.nameEventLAbel.layer.cornerRadius = 3
+        cell.nameEventLAbel.clipsToBounds = true
+        cell.dateEventLabel.layer.cornerRadius = 3
+        cell.dateEventLabel.clipsToBounds = true
         
         return cell
     }

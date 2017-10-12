@@ -682,7 +682,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="280" height="160"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4L-hZ-d4m">
-                                            <rect key="frame" x="10" y="104" width="260" height="21"/>
+                                            <rect key="frame" x="10" y="112" width="45.5" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="OON-pe-g7M"/>
                                             </constraints>
@@ -691,7 +691,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hab-pD-Afm">
-                                            <rect key="frame" x="18" y="128" width="244" height="14"/>
+                                            <rect key="frame" x="10" y="136" width="32.5" height="14"/>
                                             <fontDescription key="fontDescription" name="CoTextCorp-Regular" family="Co Text Corp" pointSize="12"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -699,15 +699,15 @@
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="R4L-hZ-d4m" secondAttribute="trailing" constant="10" id="3Cu-a8-ToP"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="R4L-hZ-d4m" secondAttribute="trailing" constant="10" id="3Cu-a8-ToP"/>
                                     <constraint firstItem="XcU-qi-d07" firstAttribute="top" secondItem="bqn-Jq-Mc4" secondAttribute="top" id="4sL-OC-iY8"/>
-                                    <constraint firstItem="Hab-pD-Afm" firstAttribute="leading" secondItem="bqn-Jq-Mc4" secondAttribute="leadingMargin" constant="10" id="USV-T9-Jev"/>
+                                    <constraint firstItem="Hab-pD-Afm" firstAttribute="leading" secondItem="bqn-Jq-Mc4" secondAttribute="leading" constant="10" id="USV-T9-Jev"/>
                                     <constraint firstItem="R4L-hZ-d4m" firstAttribute="leading" secondItem="bqn-Jq-Mc4" secondAttribute="leading" constant="10" id="cWE-e5-ff0"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="Hab-pD-Afm" secondAttribute="trailing" constant="10" id="cjM-Xj-PwZ"/>
+                                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Hab-pD-Afm" secondAttribute="trailing" constant="10" id="cjM-Xj-PwZ"/>
                                     <constraint firstAttribute="trailing" secondItem="XcU-qi-d07" secondAttribute="trailing" id="g7O-7B-HBq"/>
                                     <constraint firstItem="Hab-pD-Afm" firstAttribute="top" secondItem="R4L-hZ-d4m" secondAttribute="bottom" constant="3" id="kGB-sU-W7X"/>
                                     <constraint firstItem="XcU-qi-d07" firstAttribute="leading" secondItem="bqn-Jq-Mc4" secondAttribute="leading" id="mhG-UX-Mfx"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="Hab-pD-Afm" secondAttribute="bottom" constant="10" id="r4U-nx-Dxb"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hab-pD-Afm" secondAttribute="bottom" constant="10" id="r4U-nx-Dxb"/>
                                     <constraint firstAttribute="bottom" secondItem="XcU-qi-d07" secondAttribute="bottom" id="rz8-n5-BKj"/>
                                 </constraints>
                                 <connections>
@@ -752,6 +752,6 @@
         <image name="icons8-youtube" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZUr-c8-kog"/>
+        <segue reference="5ws-fL-bwH"/>
     </inferredMetricsTieBreakers>
 </document>
