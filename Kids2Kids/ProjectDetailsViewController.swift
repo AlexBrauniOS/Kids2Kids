@@ -16,33 +16,25 @@ class ProjectDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupBG()
-        setup()
-    }
-    
-    func setupBG() {
-
-        let background = UIImageView(frame: UIScreen.main.bounds)
-        background.image = UIImage(named: "Background")
-        background.contentMode = .scaleAspectFill
-        background.clipsToBounds = true
-        self.view.insertSubview(background, at: 0)
- 
+        
+        setupController()
+        Setup.shared.backgroundSetupOnViewController(view: self.view)
+        Setup.shared.navigationControllerSizeInIosElevenSetup(navigationItem: self.navigationItem)
+        setupProject()
     }
 
-    func setup() {
+    func setupController() {
         navigationItem.title = projects.projectName
         
-        projectInDetailsImageView.image = projects.projectImage
-        projectInDetailsLabel.text = projects.projectDescription
         projectInDetailsLabel.backgroundColor = UIColor.white.withAlphaComponent(0.95)
         projectInDetailsLabel.layer.cornerRadius = 5
         projectInDetailsLabel.clipsToBounds = true
-        
-        if #available(iOS 11.0, *) {
-            self.navigationItem.largeTitleDisplayMode = .never
-        } else {
-            // Fallback on earlier versions
-        }
+        projectInDetailsImageView.clipsToBounds = true
     }
+    
+    func setupProject() {
+        projectInDetailsImageView.image = projects.projectImage
+        projectInDetailsLabel.text = projects.projectDescription
+    }
+    
 }

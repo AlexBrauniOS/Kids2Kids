@@ -12,10 +12,17 @@ import MessageUI
 
 class ContactsViewController: UIViewController {
     
+    @IBOutlet weak var contactLogo: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupController()
         checkAvailableMailServices()
+    }
+    
+    func setupController() {
+        contactLogo.image = UIImage(named: NSLocalizedString("LogoEnCont", comment: "Logo on contact VC"))
     }
     
     // MARK: Website
@@ -105,7 +112,7 @@ class ContactsViewController: UIViewController {
     
     private func showAlertController(title: String, message: String, accessTitle: String, completion: @escaping ()->()) {
         let showAlert : UIAlertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-        showAlert.addAction(UIAlertAction(title: "Отмена", style: UIAlertActionStyle.cancel, handler: nil))
+        showAlert.addAction(UIAlertAction(title: NSLocalizedString("Отмена", comment: "alertController"), style: UIAlertActionStyle.cancel, handler: nil))
         showAlert.addAction(UIAlertAction(title: accessTitle, style: UIAlertActionStyle.default, handler: { action in completion()}))
         self.present(showAlert, animated: true, completion: nil)
     }
@@ -116,16 +123,15 @@ class ContactsViewController: UIViewController {
         openWebsite()
     }
     @IBAction func emailButton(_ sender: UIButton) {
-            sendEmail()
+        sendEmail()
     }
     @IBAction func phoneButton(_ sender: UIButton) {
-        showAlertController(title: "Позвонить в Фонд ДетиДетям?", message: "+38 (050) 471-30-30", accessTitle: "Позвонить") {
+        showAlertController(title: NSLocalizedString("Позвонить в Фонд ДетиДетям?", comment: "Call to fund"), message: "+38 (050) 471-30-30", accessTitle: NSLocalizedString("Позвонить", comment: "Call")) {
             self.callNumber(phoneNumber: "+380504713030")
         }
     }
     @IBAction func googleMapsButton(_ sender: UIButton) {
         openGoogleMaps()
-        
     }
     
     // MARK: Social Media buttons
@@ -137,6 +143,7 @@ class ContactsViewController: UIViewController {
         openInstagram()
     }
     @IBAction func youtubeButton(_ sender: UIButton) {
+
         openYoutube()
     }
     

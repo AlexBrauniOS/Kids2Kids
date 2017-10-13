@@ -24,15 +24,17 @@ class EventDetailsViewController: UIViewController {
         super.viewDidLoad()
         
         setupController()
-        setupBG()
+        Setup.shared.backgroundSetupOnViewController(view: self.view)
+        Setup.shared.navigationControllerSizeInIosElevenSetup(navigationItem: self.navigationItem)
         setupEvent()
     }
     
-    func setupEvent() {
-        dateEventDetailsLabel.text = event.dateOfEvent
-        placeEventDetailsLabel.text = event.placeOfEvent
-        descriptionEventDetailsLabel.text = event.descriptionOfEvent
-        imageEventDetailsImageView.image = event.imageOfEvent
+    func setupController() {
+        navigationItem.title = event.nameOfEvent
+        
+        addToEventButton.backgroundColor = UIColor.fundGreenColor
+        addToEventButton.layer.cornerRadius = 10
+        addToEventButton.clipsToBounds = true
         
         labelBGView.backgroundColor = UIColor.white.withAlphaComponent(0.95)
         labelBGView.layer.cornerRadius = 5
@@ -40,28 +42,14 @@ class EventDetailsViewController: UIViewController {
         descriptionEventDetailsLabel.backgroundColor = UIColor.white.withAlphaComponent(0.95)
         descriptionEventDetailsLabel.layer.cornerRadius = 5
         descriptionEventDetailsLabel.clipsToBounds = true
+        imageEventDetailsImageView.clipsToBounds = true
     }
     
-    func setupController() {
-        navigationItem.title = event.nameOfEvent
-
-        addToEventButton.backgroundColor = UIColor.fundGreenColor
-        addToEventButton.layer.cornerRadius = 10
-        addToEventButton.clipsToBounds = true
-        
-        if #available(iOS 11.0, *) {
-            self.navigationItem.largeTitleDisplayMode = .never
-        } else {
-            // Fallback on earlier versions
-        }
-    }
-    
-    func setupBG() {
-        let background = UIImageView(frame: UIScreen.main.bounds)
-        background.image = UIImage(named: "Background")
-        background.contentMode = .scaleAspectFill
-        background.clipsToBounds = true
-        self.view.insertSubview(background, at: 0)
+    func setupEvent() {
+        dateEventDetailsLabel.text = event.dateOfEvent
+        placeEventDetailsLabel.text = event.placeOfEvent
+        descriptionEventDetailsLabel.text = event.descriptionOfEvent
+        imageEventDetailsImageView.image = event.imageOfEvent
     }
     
     private func openFacebookPage(fblink: String) {

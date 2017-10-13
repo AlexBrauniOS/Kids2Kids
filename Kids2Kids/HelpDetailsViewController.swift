@@ -19,11 +19,13 @@ class HelpDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
-        setupBG()
+        
+        setupController()
+        Setup.shared.backgroundSetupOnViewController(view: self.view)
+        Setup.shared.navigationControllerSizeInIosElevenSetup(navigationItem: self.navigationItem)
     }
     
-    func setup() {
+    func setupController() {
         navigationItem.title = help.name
         
         helpDescriptionTextView.text = help.description
@@ -35,20 +37,6 @@ class HelpDetailsViewController: UIViewController {
         phoneCallButton.clipsToBounds = true
         emailButton.layer.cornerRadius = emailButton.frame.height/2
         emailButton.clipsToBounds = true
-        
-        if #available(iOS 11.0, *) {
-            self.navigationItem.largeTitleDisplayMode = .never
-        } else {
-            // Fallback on earlier versions
-        }
-    }
-    
-    func setupBG() {
-        let background = UIImageView(frame: UIScreen.main.bounds)
-        background.image = UIImage(named: "Background")
-        background.contentMode = .scaleAspectFill
-        background.clipsToBounds = true
-        self.view.insertSubview(background, at: 0)
     }
     
     // MARK: Call number
@@ -68,13 +56,13 @@ class HelpDetailsViewController: UIViewController {
     
     private func showAlertController(title: String, message: String, accessTitle: String, completion: @escaping ()->()) {
         let showAlert : UIAlertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-        showAlert.addAction(UIAlertAction(title: "Отмена", style: UIAlertActionStyle.cancel, handler: nil))
+        showAlert.addAction(UIAlertAction(title: NSLocalizedString("Отмена", comment: "cancel"), style: UIAlertActionStyle.cancel, handler: nil))
         showAlert.addAction(UIAlertAction(title: accessTitle, style: UIAlertActionStyle.default, handler: { action in completion()}))
         self.present(showAlert, animated: true, completion: nil)
     }
     
     @IBAction func phoneCallButtonPressed(_ sender: UIButton) {
-        showAlertController(title: "Позвонить в Фонд ДетиДетям?", message: "+38 (050) 471-30-30", accessTitle: "Позвонить") {
+        showAlertController(title: NSLocalizedString("Позвонить в Фонд ДетиДетям?", comment: "call to fund"), message: "+38 (050) 471-30-30", accessTitle: NSLocalizedString("Позвонить", comment: "call")) {
             self.callNumber(phoneNumber: "+380504713030")
         }
     }

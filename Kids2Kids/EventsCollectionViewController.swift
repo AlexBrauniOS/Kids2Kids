@@ -12,7 +12,7 @@ import Parse
 private let reuseIdentifier = "Cell"
 
 class EventsCollectionViewController: UICollectionViewController {
-
+    
     // get data from parse server
     var events: [PFObject] = [] {
         didSet {
@@ -36,45 +36,19 @@ class EventsCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        checkDeviceLanguage()
+        setupController()
+        Setup.shared.backgroundSetupOnCollectionViewController(view: self.view, collectionView: self.collectionView!)
+        fetchPost()
         clearBadge()
-        setup()
-//        fetchPost(className: "Event")
         startActivityIndicator()
     }
     
-    func setup() {
-        navigationItem.title = "Мероприятия"
-        
-        let background = UIImage(named: "Background")
-        let imageView: UIImageView!
-        imageView = UIImageView(frame: view.bounds)
-        imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.image = background!
-        self.collectionView?.backgroundView = imageView
+    func setupController() {
+        navigationItem.title = NSLocalizedString("Мероприятия", comment: "Events")
     }
     
-    let preferredLanguage = Locale.preferredLanguages.first
-    
-    func checkDeviceLanguage() {
-        if let preferredLanguage = preferredLanguage {
-            if preferredLanguage.hasPrefix("uk") {
-                fetchPost(className: "Eventua")
-                print("its Ukrainian")
-            } else if preferredLanguage.hasPrefix("ru") {
-                fetchPost(className: "Event")
-                print("its Russian")
-            } else {
-                fetchPost(className: "Eventen")
-                print("else language")
-                print(preferredLanguage)
-            }
-        }
-    }
-    
-    func fetchPost(className: String) {
-        let query = PFQuery(className: className)
+    func fetchPost() {
+        let query = PFQuery(className: NSLocalizedString("Eventen", comment: "fetch events from parse"))
         query.order(byAscending: "updatedAt")
         query.cachePolicy = .networkElseCache
         query.findObjectsInBackground { (objects, error) in
@@ -107,7 +81,7 @@ class EventsCollectionViewController: UICollectionViewController {
     }
     
     func delay(closure:@escaping ()->()) {
-        let when = DispatchTime.now() + 0.3
+        let when = DispatchTime.now() + 0.5
         DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
     }
     
@@ -175,8 +149,8 @@ class EventsCollectionViewController: UICollectionViewController {
         cell.nameEventLAbel.backgroundColor = UIColor.fundBlueColor.withAlphaComponent(0.75)
         cell.dateEventLabel.backgroundColor = UIColor.fundBlueColor.withAlphaComponent(0.75)
         cell.nameEventLAbel.layer.cornerRadius = 3
-        cell.nameEventLAbel.clipsToBounds = true
         cell.dateEventLabel.layer.cornerRadius = 3
+        cell.nameEventLAbel.clipsToBounds = true
         cell.dateEventLabel.clipsToBounds = true
         
         return cell
