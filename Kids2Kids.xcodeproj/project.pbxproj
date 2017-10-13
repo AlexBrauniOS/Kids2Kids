@@ -20,6 +20,7 @@
 		D21EA0A11F77100500AC66F7 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21EA0A01F77100500AC66F7 /* EventCollectionViewCell.swift */; };
 		D21F554D1F90B14100BF9F9A /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21F554C1F90B14100BF9F9A /* Setup.swift */; };
 		D21F55611F911A0700BF9F9A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D21F55631F911A0700BF9F9A /* InfoPlist.strings */; };
+		D21F55671F91362300BF9F9A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D21F55691F91362300BF9F9A /* Localizable.strings */; };
 		D2219A5A1F8534FD00DB5CCA /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2219A591F8534FA00DB5CCA /* NavigationController.swift */; };
 		D2219A5D1F85357200DB5CCA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2219A5C1F85357200DB5CCA /* TabBarController.swift */; };
 		D223315E1F28FB0A00E90EE6 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D223315D1F28FB0A00E90EE6 /* EventDetailsViewController.swift */; };
@@ -74,6 +75,10 @@
 		D21F555D1F9117B100BF9F9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D21F55621F911A0700BF9F9A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D21F55641F911A0A00BF9F9A /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D21F55681F91362300BF9F9A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D21F556A1F91362300BF9F9A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		D21F556B1F91363100BF9F9A /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D21F556C1F91363100BF9F9A /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		D2219A591F8534FA00DB5CCA /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NavigationController.swift; path = Navigation/NavigationController.swift; sourceTree = "<group>"; };
 		D2219A5C1F85357200DB5CCA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D223315D1F28FB0A00E90EE6 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
@@ -233,6 +238,7 @@
 		D25A6C7D1F1E8FE4005FAD33 /* Kids2Kids */ = {
 			isa = PBXGroup;
 			children = (
+				D21F55691F91362300BF9F9A /* Localizable.strings */,
 				D25A6C821F1E8FE4005FAD33 /* Main.storyboard */,
 				D25A6C7E1F1E8FE4005FAD33 /* AppDelegate.swift */,
 				D21F554C1F90B14100BF9F9A /* Setup.swift */,
@@ -400,6 +406,7 @@
 				D21942B01F2B548500A86844 /* Roboto.ttf in Resources */,
 				D21F55611F911A0700BF9F9A /* InfoPlist.strings in Resources */,
 				D25A6C891F1E8FE4005FAD33 /* LaunchScreen.storyboard in Resources */,
+				D21F55671F91362300BF9F9A /* Localizable.strings in Resources */,
 				D25A6C861F1E8FE4005FAD33 /* Assets.xcassets in Resources */,
 				D25A6C841F1E8FE4005FAD33 /* Main.storyboard in Resources */,
 				D20562CF1F2253C2001B527B /* Co Text Corp.ttf in Resources */,
@@ -627,6 +634,15 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
+		D21F55691F91362300BF9F9A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D21F55681F91362300BF9F9A /* ru */,
+				D21F556B1F91363100BF9F9A /* uk */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		D25A6C821F1E8FE4005FAD33 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -641,6 +657,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				D25A6C881F1E8FE4005FAD33 /* Base */,
+				D21F556A1F91362300BF9F9A /* ru */,
+				D21F556C1F91363100BF9F9A /* uk */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

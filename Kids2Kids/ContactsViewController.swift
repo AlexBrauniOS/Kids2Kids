@@ -13,6 +13,7 @@ import MessageUI
 class ContactsViewController: UIViewController {
     
     @IBOutlet weak var contactLogo: UIImageView!
+    @IBOutlet weak var googleMapsButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,7 @@ class ContactsViewController: UIViewController {
     
     func setupController() {
         contactLogo.image = UIImage(named: NSLocalizedString("LogoEnCont", comment: "Logo on contact VC"))
+        googleMapsButton.contentHorizontalAlignment = .center
     }
     
     // MARK: Website
@@ -112,7 +114,7 @@ class ContactsViewController: UIViewController {
     
     private func showAlertController(title: String, message: String, accessTitle: String, completion: @escaping ()->()) {
         let showAlert : UIAlertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-        showAlert.addAction(UIAlertAction(title: NSLocalizedString("Отмена", comment: "alertController"), style: UIAlertActionStyle.cancel, handler: nil))
+        showAlert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: "alertController"), style: UIAlertActionStyle.cancel, handler: nil))
         showAlert.addAction(UIAlertAction(title: accessTitle, style: UIAlertActionStyle.default, handler: { action in completion()}))
         self.present(showAlert, animated: true, completion: nil)
     }
@@ -126,7 +128,7 @@ class ContactsViewController: UIViewController {
         sendEmail()
     }
     @IBAction func phoneButton(_ sender: UIButton) {
-        showAlertController(title: NSLocalizedString("Позвонить в Фонд ДетиДетям?", comment: "Call to fund"), message: "+38 (050) 471-30-30", accessTitle: NSLocalizedString("Позвонить", comment: "Call")) {
+        showAlertController(title: NSLocalizedString("Call to the Kids2Kids fund?", comment: "Call to fund"), message: "+38 (050) 471-30-30", accessTitle: NSLocalizedString("Call", comment: "Call")) {
             self.callNumber(phoneNumber: "+380504713030")
         }
     }

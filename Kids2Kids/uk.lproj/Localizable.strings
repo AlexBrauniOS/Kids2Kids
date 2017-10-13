@@ -1,0 +1,81 @@
+/* volunteer */
+"Becomе volunteer" = "Стати волонтером";
+
+/* Call
+   call */
+"Call" = "Подзвонити";
+
+/* Call to fund
+   call to fund */
+"Call to the Kids2Kids fund?" = "Подзвонити до фонду \"Діти Дітям\"?";
+
+/* alertController
+   cancel */
+"Cancel" = "Відміна";
+
+/* financial help desc */
+"Charitable Fund «Kids to Kids» will be grateful for any help. \n\nFinancial assistance to the fund\nYou can provide by the following details: \nPrivatBank \nAccount 26000056127077 \nMFI 380775 \nEDRPO 41350891 \n\nPurpose of payment:\n«Charitable contribution»" = "Благодійний фонд \"Діти Дітям\" буде вдячний будь-якої допомоги.\n            \nФінансову допомогу фонду\nВи можете надати за наступними реквізитами:\nПриватБанк\nр/с 26000056127077\nМФО 380775\nЄДРПО 41350891\n\nПризначення платежу:\n«Благодійний внесок»";
+
+/* christmas angel */
+"Christmas angel" = "Різдвяний янгол";
+
+/* companies */
+"Companies" = "Компаніям";
+
+/* for child desc */
+"Connect  monthly donation to the project HAPPINESS FOR EVERY FAMILY. \n\nTeam of charity fund «Kids to Kids» regularly receives requests for help from families with seriously ill children. \n\nHow the project works: \n1.We meet with parents of children and decide to include the family in the fund's program; \n2.We make a list and budget of monthly needs separately for each family with a seriously ill child; \n3.Regularly we finance families due to donations of fund's friends and our partners. \n\nJoin the project! Your monthly donation can help seriously ill children!" = "Підключіть щомісячну пожертву на проект ЩАСТЯ В КОЖНУ РОДИНУ.\n            \nКоманда благодійного фонду \"Діти Дітям\" регулярно отримує прохання про допомогу від сімей з важкохворими дітьми.\n\nЯк працює проект:\n1.Ми зустрічаємося з батьками дітей і приймаємо рішення про включення сім'ї в програму фонду;\n2.Складаємо перелік та бюджет щомісячних потреб окремо для кожної родини c тяжкохворою дитиною.\n3.Регулярно фінансуємо сім'ї завдяки пожертвам друзів фонду і наших партнерів.\n\nПриєднуйтесь до проекту!\nВаші щомісячні пожертви можуть допомогти важкохворим дітям!";
+
+/* clothes desc */
+"Do you have almost new clothes, shoes, other things for children? Clean and serviceable things can still serve! \n\nChildren from orphanages and boarding schools will accept them with joy! Seeing clean, ironed and neatly stacked things in the bag, children will feel your care and will be grateful for the gift! \n\nThe most urgent needs: \n - clothes of all seasons and different sizes; \n - shoes of all seasons, purposes and sizes (slippers, sports shoes and sneakers, etc.); \n - sportswear; \n - caps, mittens, scarves; \n - bed linen, blankets, pillows; \n - means of personal hygiene; \n - pampers, disposable napkins. \n\nIf you have these treasures, bring them to us!" = "У вас залишилися майже нові одяг, взуття, інші дитячі речі? Чисті і справні речі ще можуть послужити!\n            \nДіти з дитячих будинків та шкіл-інтернатів візьмуть їх з радістю! Побачивши чисті, випрасувані і акуратно складені в пакет речі, діти відчують вашу турботу і будуть вдячні за подарунок!\n\nНайактуальніші потреби:\n- одяг всіх сезонів і різних розмірів;\n- взуття всіх сезонів, призначень і розмірів (капці, спортивні кеди і кросівки, ін.);\n- спортивний одяг;\n- шапки, рукавиці, шарфи;\n- постільна білизна, ковдри, пледи, подушки;\n- засоби особистої гігієни;\n- памперси, одноразові пелюшки.\n\nЯкщо у вас є ці скарби, то несіть їх до нас!";
+
+/* clothes */
+"Donate things" = "Передати речі";
+
+/* financial help */
+"Donate to the fund" = "Фінансова допомога";
+
+/* fetch events from parse */
+"Eventen" = "Eventua";
+
+/* Events */
+"Events" = "Заходи";
+
+/* for child */
+"For child’s treatment" = "Дитині на лікування";
+
+/* happiness in every family */
+"Happiness for every family" = "Щастя в кожну родину";
+
+/* help */
+"Help" = "Допомога";
+
+/* Logo on contact VC */
+"LogoEnCont" = "LogoUaCont";
+
+/* open heart */
+"Open hearts" = "Відкриті серця";
+
+/* projects */
+"Projects" = "Проекти";
+
+/* road to life */
+"Road to life" = "Дорога в життя";
+
+/* volunteer desc */
+"Volunteers are people, without which it is difficult to imagine a completed work of the fund! \n\nHow can you help the «Kids to Kids»: \n - to purchase and deliver the needs to the orphanage, boarding schools, families; \n - help in carrying out activities; \n - to provide psychological assistance to children and parents of seriously ill children; \n - to conduct training within the program of vocational guidance (project «The Road to Life»)." = "Волонтери - це люди, без яких важко уявити повноцінну роботу фонду!\n            \nЧим Ви можете допомогти фонду «Діти Дітям»:\n- закуповувати і розвозити потреби в дитбудинки, школи-інтернати, сім'ї;\n- допомагати проводити заходи;\n- надавати психологічну допомогу дітям і батькам важко-хворих дітей;\n- проводити навчання в рамках програми профорієнтації (проект \"Дорога в життя\").";
+
+/* companies desc */
+"We invite the companies to support our projects of assistance to orphanages, boarding schools, rehabilitation centers: \n - send children to children’s camps; \n - buy furniture; \n - pay for repairs; \n - buy household appliances." = "Запрошуємо компанії підтримати наші проекти допомоги дитбудинкам, школам-інтернатам, реабілітаційним центрам:\n- відправка дітей в дитячі табори;\n- покупка меблів;\n- оплата ремонтних робіт;\n- покупка побутової техніки.";
+
+/* christmas angel desc */
+"«Christmas angel» is an annual charity event that unites hundreds of families on the eve of the New Year and gives them the opportunity to start the next year from giving joy to orphans and families in need. \n\nEvery year, by Christmas, we receive hundreds of letters from children from orphanages and rehabilitation centers, in which they share their cherished desires. \n\nThese desires are fulfilled by the “Christmas angels” – the partners of the project together with their children. They not only give gifts, which children dreamed of all year, but also write back letters. This makes it possible for a child in an orphanage to believe in a miracle – that there is a God and His Angels who hear his requests and always fulfill them, only need to believe. \n\nIt also enables the child from a full-fledged family to show compassion and extend a helping hand to another child who has already experienced what it means to live in this world without parents." = "«Різдвяний янгол» – щорічне благодійний захід, який об’єднує сотні сімей напередодні Нового Року та дає їм можливість почати наступний рік з того, щоб подарувати радість дітям сиротам і нужденним сім’ям.\n            \nЩороку на Різдво ми отримуємо сотні листів від дітей з дитбудинків та інтернатів, в яких вони відкривають своє заповітне бажання.\n\nЦі бажання виконують «різдвяні янголи» – партнери проекту разом зі своїми дітьми. Вони не тільки дарують подарунки, про які діти мріяли весь рік, але так само пишуть листи-відповіді. Це дає можливість дитині в дитбудинку повірити в чудо – що є Бог і Його Ангели, які чують їхні прохання і завжди виконують, тільки потрібно вірити.\n\nЦе також дає можливість дитині з повноцінної родини проявити співчуття і протягнути руку допомоги іншій дитині, який вже випробував, що значить жити в цьому світі без батьків.";
+
+/* happiness in every family desc */
+"«Happiness for every family» — the project of our foundation, which started in 2015 from several families and is now expanding every day. \n\nThe project is a targeted assistance to families with children bedridden with terrible ailments. \n\nEvery month we come to these families and bring medicines, diapers and other necessary things thanks to financial support of our donors and partners. Such help for families is a very big support and most importantly – understanding of the fact that this world has not turned away from them. That there are people who are ready  to make their contribution to share the burden that has fallen on the shoulders of these parents.  \n\nWe receive more and more requests for help every day. Moms and their children are in distress, since the poor aid allocated by the state is not enough for anything. These children seem to check the world for kindness. On our sacrificial hearts. Stories of some children can be found on our web-site. \n\nWe invite everyone who would like to support families financially, to become a part of this project. After all, the really happy person is the one who makes others happy, and in this project you can make happy not only one child but the whole family." = "«Щастя в кожну родину» – проект нашого фонду, який стартував у 2015 році з кількох сімей і розширюється з кожним днем.\n            \nЦе адресна допомога сім’ям з дітьми, прикутими до ліжка страшними недугами.\n\nЩомісяця ми приїжджаємо в ці сім’ї і привозимо ліки, памперси і речі, які допомагають нам придбати партнери цього проекту. Така допомога для сімей є дуже великою підтримкою і головне – усвідомленням того, що цей світ не відвернувся від них. Що є люди, які своїм внеском прагнуть розділити тягар, яка випала на плечі батьків. Кожен наш приїзд завжди чекають з нетерпінням.\n\nЗ кожним новим днем ми отримуємо все більше прохань про допомогу. Мами і їх діти знаходяться в тяжкому становищі, так як мізерною допомоги, що виділяється державою не вистачає ні на що. Ці діти начебто перевіряють світ на доброту. На наші жертовні серця. Історії деяких дітей ви знайдете на нашому сайті.\n\nЗапрошуємо всіх, хто хотів би підтримувати сім’ї матеріально, стати частиною цього проекту. Адже по справжньому щаслива та людина, який робить щасливими інших, а в цьому проекті ви зможете зробити щасливою цілу сім’ю.";
+
+/* open heart desc */
+"«Open hearts» is an annual charitable event of the Children’s Children Foundation, aimed at raising funds for the specific needs of children from orphanages and rehabilitation centers. As part of the event, we also raise funds for the treatment of seriously ill children who need emergency care. \n\nChildren who come with their parents to this charity event make their own hand-made hearts and send them to children from orphanages. Hundreds of hearts from ceramics, fabrics, plaster, paper, painted with colors and crayons are sent with love to different parts of Ukraine. In turn, children from orphanages send their gifts back to make this symbolic exchange. \n\nThe “Open hearts” project unites hundreds of children throughout Ukraine, thus showing how important it is to open our hearts to each other." = "«Відкриті серця» – це щорічне благодійний захід фонду Діти Дітям, спрямоване на збір коштів на конкретні потреби дітей з дитбудинків, шкіл-інтернатів та реабілітаційних центрів. В рамках заходу ми так само збираємо кошти на лікування важкохворих дітей, які потребують екстреної допомоги.\n            \nДіти, які приходять з батьками на це свято роблять своїми руками серця і посилають їх діткам в дитбудинку. Сотні сердець з кераміки, тканини, гіпсу, паперу, розмальовані фарбами і крейдою, відправляються з любов’ю в різні куточки України. У свою чергу діти з дитбудинків та інтернатів відправляють на свято свої подарунки, приготовані заздалегідь.\n\nПроект «Відкриті серця» об’єднує сотні дітей по всій Україні, показуючи тим самим, як важливо відкривати свої серця назустріч один одному.»";
+
+/* road to life desc */
+"«Road to life» is a charitable project in support of graduates of orphanages in Ukraine. \n\nGraduation is the most important time for children. Throughout the year, our project strives to prepare children for graduation period psychologically, spiritually and practically.  Fund organizes seminars and career orientation programs with support of representatives of different types of applied professions. \n\nThe final stage of the project is the annual charity event “Road to Life”. Partners of the project collect bags with everything necessary and useful for graduates in their independent life. Everyone who want to participate in the project can apply to us and the fund team will send a letter from a particular graduate, where he or she describe their desires and goals in life. Thanks to such personal participation, a connection is formed with the child whom we are helping and sincerely wish success in his adult life. Many of our partners not only prepare bags, but also write back letters with important advice, some of them also provide assistance in finding a job and housing graduates in a new city. \n\nIn 2017, the project covered 86 children from 9 orphanages and boarding schools in Ukraine. Thanks to our guests, they received not only the most necessary things for independent living, but also beautiful prom dresses, shirts, ties and shoes." = "«Дорога в життя» – благодійний проект на підтримку випускників дитбудинків та шкіл-інтернатів України.\n            \nЗакінчення школи – це найвідповідальніша пора для хлопців. Протягом року, наш проект прагнути підготувати їх до цього періоду психологічно, духовно і практично. Проводяться семінари з профорієнтації, в яких беруть участь фахівці різних видів прикладних професій.\n\nЗавершальним етапом є благодійний захід «Дорога в життя». Партнери проекту збирають речі з усім необхідним, що може стати в нагоді випускникам у самостійному житті. Кожному бажаючому брати участь в проекті, команда фонду передає лист від конкретного випускника, де той описує свої бажання і цілі в житті. Завдяки такому особистій участі утворюється зв’язок з дитиною, якій ми допомагаємо і щиро бажаємо успіху в його дорослому житті. Багато наших учасники не тільки готують сумки, але і пишуть листи-відповіді з важливими напутніми порадами, а також надають допомогу в працевлаштуванні та проживанні випускників на новому місці.\n\nУ 2017 році проект охопив 86 дітей з 9 дитбудинків та шкіл-інтернатів України. Завдяки нашим гостям вони отримали не тільки найнеобхідніші речі для самостійного життя, але і красиві випускні сукні сорочки, краватки і взуття.";
+

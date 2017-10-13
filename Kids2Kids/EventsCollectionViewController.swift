@@ -44,7 +44,7 @@ class EventsCollectionViewController: UICollectionViewController {
     }
     
     func setupController() {
-        navigationItem.title = NSLocalizedString("Мероприятия", comment: "Events")
+        navigationItem.title = NSLocalizedString("Events", comment: "Events")
     }
     
     func fetchPost() {

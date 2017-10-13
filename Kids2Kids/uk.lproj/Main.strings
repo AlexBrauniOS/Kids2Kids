@@ -1,6 +1,5 @@
-
-/* Class = "UITabBarItem"; title = "Мероприятия"; ObjectID = "1GN-Al-vhF"; */
-"1GN-Al-vhF.title" = "Мероприятия";
+/* Class = "UITabBarItem"; title = "Events"; ObjectID = "1GN-Al-vhF"; */
+"1GN-Al-vhF.title" = "Заходи";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "6xF-V3-ZnX"; */
 "6xF-V3-ZnX.text" = "Label";
@@ -8,8 +7,8 @@
 /* Class = "UIButton"; normalTitle = "web@kids2kids-fund.com"; ObjectID = "965-js-yQs"; */
 "965-js-yQs.normalTitle" = "web@kids2kids-fund.com";
 
-/* Class = "UITabBarItem"; title = "Помощь"; ObjectID = "DdU-1b-V2Y"; */
-"DdU-1b-V2Y.title" = "Помощь";
+/* Class = "UITabBarItem"; title = "Help"; ObjectID = "DdU-1b-V2Y"; */
+"DdU-1b-V2Y.title" = "Допомога";
 
 /* Class = "UIButton"; normalTitle = "+38 (050) 471-30-30"; ObjectID = "HL9-xA-ORT"; */
 "HL9-xA-ORT.normalTitle" = "+38 (050) 471-30-30";
@@ -17,29 +16,32 @@
 /* Class = "UILabel"; text = "Label"; ObjectID = "Hab-pD-Afm"; */
 "Hab-pD-Afm.text" = "Label";
 
-/* Class = "UILabel"; text = "социальные сети"; ObjectID = "Qu2-d3-Kdy"; */
-"Qu2-d3-Kdy.text" = "социальные сети";
+/* Class = "UIButton"; normalTitle = "Ukraine, 01021, Kyiv, \nKlovskiy descent, 7А, office 6"; ObjectID = "I68-ef-gvt"; */
+"I68-ef-gvt.normalTitle" = "Україна, 01021, м.Київ,\nКловський узвіз, 7А, офіс 6";
+
+/* Class = "UILabel"; text = "social networks"; ObjectID = "Qu2-d3-Kdy"; */
+"Qu2-d3-Kdy.text" = "соціальні мережі";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "R4L-hZ-d4m"; */
 "R4L-hZ-d4m.text" = "Label";
 
 /* Class = "UILabel"; text = "All rights reserved"; ObjectID = "SGe-cf-0HC"; */
-"SGe-cf-0HC.text" = "All rights reserved";
+"SGe-cf-0HC.text" = "Усі права захищені";
 
 /* Class = "UIButton"; normalTitle = "www.kids2kids-fund.com"; ObjectID = "cMB-CL-4Fq"; */
 "cMB-CL-4Fq.normalTitle" = "www.kids2kids-fund.com";
 
-/* Class = "UILabel"; text = "телефон"; ObjectID = "gVO-e9-8cC"; */
+/* Class = "UILabel"; text = "phone number"; ObjectID = "gVO-e9-8cC"; */
 "gVO-e9-8cC.text" = "телефон";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "kFJ-bk-gS0"; */
 "kFJ-bk-gS0.text" = "Label";
 
-/* Class = "UILabel"; text = "почта"; ObjectID = "lVi-z7-H7Y"; */
-"lVi-z7-H7Y.text" = "почта";
+/* Class = "UILabel"; text = "mail"; ObjectID = "lVi-z7-H7Y"; */
+"lVi-z7-H7Y.text" = "пошта";
 
-/* Class = "UIButton"; normalTitle = "Присоединиться"; ObjectID = "mVi-sm-FEX"; */
-"mVi-sm-FEX.normalTitle" = "Присоединиться";
+/* Class = "UIButton"; normalTitle = "Join"; ObjectID = "mVi-sm-FEX"; */
+"mVi-sm-FEX.normalTitle" = "Приєднатися";
 
 /* Class = "UILabel"; text = " "; ObjectID = "rdK-4D-5yy"; */
 "rdK-4D-5yy.text" = " ";
@@ -50,11 +52,12 @@
 /* Class = "UILabel"; text = "Label"; ObjectID = "sBZ-mo-YDm"; */
 "sBZ-mo-YDm.text" = "Label";
 
-/* Class = "UILabel"; text = "адрес"; ObjectID = "sEH-OU-pje"; */
-"sEH-OU-pje.text" = "адрес";
+/* Class = "UILabel"; text = "address"; ObjectID = "sEH-OU-pje"; */
+"sEH-OU-pje.text" = "адреса";
 
-/* Class = "UITabBarItem"; title = "Проекты"; ObjectID = "uzh-2G-iWA"; */
-"uzh-2G-iWA.title" = "Проекты";
+/* Class = "UITabBarItem"; title = "Projects"; ObjectID = "uzh-2G-iWA"; */
+"uzh-2G-iWA.title" = "Проекти";
 
-/* Class = "UILabel"; text = "вебсайт"; ObjectID = "zwG-N5-et7"; */
+/* Class = "UILabel"; text = "website"; ObjectID = "zwG-N5-et7"; */
 "zwG-N5-et7.text" = "вебсайт";
+
