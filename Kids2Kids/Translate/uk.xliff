@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="Kids2Kids/Base.lproj/LaunchScreen.storyboard" source-language="en" datatype="plaintext" target-language="uk">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.1" build-num="9B46"/>
+    </header>
+    <body/>
+  </file>
+  <file original="Kids2Kids/Base.lproj/Main.storyboard" source-language="en" datatype="plaintext" target-language="uk">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.1" build-num="9B46"/>
+    </header>
+    <body>
+      <trans-unit id="1GN-Al-vhF.title">
+        <source>Events</source>
+        <target>Заходи</target>
+        <note>Class = "UITabBarItem"; title = "Events"; ObjectID = "1GN-Al-vhF";</note>
+      </trans-unit>
+      <trans-unit id="6xF-V3-ZnX.text">
+        <source>Label</source>
+        <target>Label</target>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "6xF-V3-ZnX";</note>
+      </trans-unit>
+      <trans-unit id="965-js-yQs.normalTitle">
+        <source>web@kids2kids-fund.com</source>
+        <target>web@kids2kids-fund.com</target>
+        <note>Class = "UIButton"; normalTitle = "web@kids2kids-fund.com"; ObjectID = "965-js-yQs";</note>
+      </trans-unit>
+      <trans-unit id="DdU-1b-V2Y.title">
+        <source>Help</source>
+        <target>Допомога</target>
+        <note>Class = "UITabBarItem"; title = "Help"; ObjectID = "DdU-1b-V2Y";</note>
+      </trans-unit>
+      <trans-unit id="HL9-xA-ORT.normalTitle">
+        <source>+38 (050) 471-30-30</source>
+        <target>+38 (050) 471-30-30</target>
+        <note>Class = "UIButton"; normalTitle = "+38 (050) 471-30-30"; ObjectID = "HL9-xA-ORT";</note>
+      </trans-unit>
+      <trans-unit id="Hab-pD-Afm.text">
+        <source>Label</source>
+        <target>Label</target>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "Hab-pD-Afm";</note>
+      </trans-unit>
+      <trans-unit id="I68-ef-gvt.normalTitle">
+        <source>Ukraine, 01021, Kyiv, 
+Klovskiy descent, 7А, office 6</source>
+        <target>Україна, 01021, м.Київ,
+Кловський узвіз, 7А, офіс 6</target>
+        <note>Class = "UIButton"; normalTitle = "Ukraine, 01021, Kyiv, Klovskiy descent, 7А, office 6"; ObjectID = "I68-ef-gvt";</note>
+      </trans-unit>
+      <trans-unit id="Qu2-d3-Kdy.text">
+        <source>social networks</source>
+        <target>соціальні мережі</target>
+        <note>Class = "UILabel"; text = "social networks"; ObjectID = "Qu2-d3-Kdy";</note>
+      </trans-unit>
+      <trans-unit id="R4L-hZ-d4m.text">
+        <source>Label</source>
+        <target>Label</target>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "R4L-hZ-d4m";</note>
+      </trans-unit>
+      <trans-unit id="SGe-cf-0HC.text">
+        <source>All rights reserved</source>
+        <target>Усі права захищені</target>
+        <note>Class = "UILabel"; text = "All rights reserved"; ObjectID = "SGe-cf-0HC";</note>
+      </trans-unit>
+      <trans-unit id="cMB-CL-4Fq.normalTitle">
+        <source>www.kids2kids-fund.com</source>
+        <target>www.kids2kids-fund.com</target>
+        <note>Class = "UIButton"; normalTitle = "www.kids2kids-fund.com"; ObjectID = "cMB-CL-4Fq";</note>
+      </trans-unit>
+      <trans-unit id="gVO-e9-8cC.text">
+        <source>phone number</source>
+        <target>телефон</target>
+        <note>Class = "UILabel"; text = "phone number"; ObjectID = "gVO-e9-8cC";</note>
+      </trans-unit>
+      <trans-unit id="kFJ-bk-gS0.text">
+        <source>Label</source>
+        <target>Label</target>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "kFJ-bk-gS0";</note>
+      </trans-unit>
+      <trans-unit id="lVi-z7-H7Y.text">
+        <source>mail</source>
+        <target>пошта</target>
+        <note>Class = "UILabel"; text = "mail"; ObjectID = "lVi-z7-H7Y";</note>
+      </trans-unit>
+      <trans-unit id="mVi-sm-FEX.normalTitle">
+        <source>Join</source>
+        <target>Приєднатися</target>
+        <note>Class = "UIButton"; normalTitle = "Join"; ObjectID = "mVi-sm-FEX";</note>
+      </trans-unit>
+      <trans-unit id="rdK-4D-5yy.text">
+        <source> </source>
+        <target> </target>
+        <note>Class = "UILabel"; text = " "; ObjectID = "rdK-4D-5yy";</note>
+      </trans-unit>
+      <trans-unit id="rp8-4N-ldD.text">
+        <source> </source>
+        <target> </target>
+        <note>Class = "UILabel"; text = " "; ObjectID = "rp8-4N-ldD";</note>
+      </trans-unit>
+      <trans-unit id="sBZ-mo-YDm.text">
+        <source>Label</source>
+        <target>Label</target>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "sBZ-mo-YDm";</note>
+      </trans-unit>
+      <trans-unit id="sEH-OU-pje.text">
+        <source>address</source>
+        <target>адреса</target>
+        <note>Class = "UILabel"; text = "address"; ObjectID = "sEH-OU-pje";</note>
+      </trans-unit>
+      <trans-unit id="uzh-2G-iWA.title">
+        <source>Projects</source>
+        <target>Проекти</target>
+        <note>Class = "UITabBarItem"; title = "Projects"; ObjectID = "uzh-2G-iWA";</note>
+      </trans-unit>
+      <trans-unit id="zwG-N5-et7.text">
+        <source>website</source>
+        <target>вебсайт</target>
+        <note>Class = "UILabel"; text = "website"; ObjectID = "zwG-N5-et7";</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Kids2Kids/Info.plist" source-language="en" datatype="plaintext" target-language="uk">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.1" build-num="9B46"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+        <target>Діти Дітям</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Kids2Kids/Localizable.strings" source-language="en" datatype="plaintext" target-language="uk">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.1" build-num="9B46"/>
+    </header>
+    <body>
+      <trans-unit id="Becomе volunteer">
+        <source>Becomе volunteer</source>
+        <target>Стати волонтером</target>
+        <note>volunteer</note>
+      </trans-unit>
+      <trans-unit id="Call">
+        <source>Call</source>
+        <target>Подзвонити</target>
+        <note>Call
+   call</note>
+      </trans-unit>
+      <trans-unit id="Call to the Kids2Kids fund?">
+        <source>Call to the Kids2Kids fund?</source>
+        <target>Подзвонити до фонду "Діти Дітям"?</target>
+        <note>Call to fund
+   call to fund</note>
+      </trans-unit>
+      <trans-unit id="Cancel">
+        <source>Cancel</source>
+        <target>Відміна</target>
+        <note>alertController
+   cancel</note>
+      </trans-unit>
+      <trans-unit id="Charitable Fund «Kids to Kids» will be grateful for any help. \n\nFinancial assistance to the fund\nYou can provide by the following details: \nPrivatBank \nAccount 26000056127077 \nMFI 380775 \nEDRPO 41350891 \n\nPurpose of payment:\n«Charitable contribution»">
+        <source>Charitable Fund «Kids to Kids» will be grateful for any help. 
+
+Financial assistance to the fund
+You can provide by the following details: 
+PrivatBank 
+Account 26000056127077 
+MFI 380775 
+EDRPO 41350891 
+
+Purpose of payment:
+«Charitable contribution»</source>
+        <target>Благодійний фонд "Діти Дітям" буде вдячний будь-якої допомоги.
+            
+Фінансову допомогу фонду
+Ви можете надати за наступними реквізитами:
+ПриватБанк
+р/с 26000056127077
+МФО 380775
+ЄДРПО 41350891
+
+Призначення платежу:
+«Благодійний внесок»</target>
+        <note>financial help desc</note>
+      </trans-unit>
+      <trans-unit id="Christmas angel">
+        <source>Christmas angel</source>
+        <target>Різдвяний янгол</target>
+        <note>christmas angel</note>
+      </trans-unit>
+      <trans-unit id="Companies">
+        <source>Companies</source>
+        <target>Компаніям</target>
+        <note>companies</note>
+      </trans-unit>
+      <trans-unit id="Connect  monthly donation to the project HAPPINESS FOR EVERY FAMILY. \n\nTeam of charity fund «Kids to Kids» regularly receives requests for help from families with seriously ill children. \n\nHow the project works: \n1.We meet with parents of children and decide to include the family in the fund's program; \n2.We make a list and budget of monthly needs separately for each family with a seriously ill child; \n3.Regularly we finance families due to donations of fund's friends and our partners. \n\nJoin the project! Your monthly donation can help seriously ill children!">
+        <source>Connect  monthly donation to the project HAPPINESS FOR EVERY FAMILY. 
+
+Team of charity fund «Kids to Kids» regularly receives requests for help from families with seriously ill children. 
+
+How the project works: 
+1.We meet with parents of children and decide to include the family in the fund's program; 
+2.We make a list and budget of monthly needs separately for each family with a seriously ill child; 
+3.Regularly we finance families due to donations of fund's friends and our partners. 
+
+Join the project! Your monthly donation can help seriously ill children!</source>
+        <target>Підключіть щомісячну пожертву на проект ЩАСТЯ В КОЖНУ РОДИНУ.
+            
+Команда благодійного фонду "Діти Дітям" регулярно отримує прохання про допомогу від сімей з важкохворими дітьми.
+
+Як працює проект:
+1.Ми зустрічаємося з батьками дітей і приймаємо рішення про включення сім'ї в програму фонду;
+2.Складаємо перелік та бюджет щомісячних потреб окремо для кожної родини c тяжкохворою дитиною.
+3.Регулярно фінансуємо сім'ї завдяки пожертвам друзів фонду і наших партнерів.
+
+Приєднуйтесь до проекту!
+Ваші щомісячні пожертви можуть допомогти важкохворим дітям!</target>
+        <note>for child desc</note>
+      </trans-unit>
+      <trans-unit id="Do you have almost new clothes, shoes, other things for children? Clean and serviceable things can still serve! \n\nChildren from orphanages and boarding schools will accept them with joy! Seeing clean, ironed and neatly stacked things in the bag, children will feel your care and will be grateful for the gift! \n\nThe most urgent needs: \n - clothes of all seasons and different sizes; \n - shoes of all seasons, purposes and sizes (slippers, sports shoes and sneakers, etc.); \n - sportswear; \n - caps, mittens, scarves; \n - bed linen, blankets, pillows; \n - means of personal hygiene; \n - pampers, disposable napkins. \n\nIf you have these treasures, bring them to us!">
+        <source>Do you have almost new clothes, shoes, other things for children? Clean and serviceable things can still serve! 
+
+Children from orphanages and boarding schools will accept them with joy! Seeing clean, ironed and neatly stacked things in the bag, children will feel your care and will be grateful for the gift! 
+
+The most urgent needs: 
+ - clothes of all seasons and different sizes; 
+ - shoes of all seasons, purposes and sizes (slippers, sports shoes and sneakers, etc.); 
+ - sportswear; 
+ - caps, mittens, scarves; 
+ - bed linen, blankets, pillows; 
+ - means of personal hygiene; 
+ - pampers, disposable napkins. 
+
+If you have these treasures, bring them to us!</source>
+        <target>У вас залишилися майже нові одяг, взуття, інші дитячі речі? Чисті і справні речі ще можуть послужити!
+            
+Діти з дитячих будинків та шкіл-інтернатів візьмуть їх з радістю! Побачивши чисті, випрасувані і акуратно складені в пакет речі, діти відчують вашу турботу і будуть вдячні за подарунок!
+
+Найактуальніші потреби:
+- одяг всіх сезонів і різних розмірів;
+- взуття всіх сезонів, призначень і розмірів (капці, спортивні кеди і кросівки, ін.);
+- спортивний одяг;
+- шапки, рукавиці, шарфи;
+- постільна білизна, ковдри, пледи, подушки;
+- засоби особистої гігієни;
+- памперси, одноразові пелюшки.
+
+Якщо у вас є ці скарби, то несіть їх до нас!</target>
+        <note>clothes desc</note>
+      </trans-unit>
+      <trans-unit id="Donate things">
+        <source>Donate things</source>
+        <target>Передати речі</target>
+        <note>clothes</note>
+      </trans-unit>
+      <trans-unit id="Donate to the fund">
+        <source>Donate to the fund</source>
+        <target>Фінансова допомога</target>
+        <note>financial help</note>
+      </trans-unit>
+      <trans-unit id="Eventen">
+        <source>Eventen</source>
+        <target>Eventua</target>
+        <note>fetch events from parse</note>
+      </trans-unit>
+      <trans-unit id="Events">
+        <source>Events</source>
+        <target>Заходи</target>
+        <note>Events</note>
+      </trans-unit>
+      <trans-unit id="For child’s treatment">
+        <source>For child’s treatment</source>
+        <target>Дитині на лікування</target>
+        <note>for child</note>
+      </trans-unit>
+      <trans-unit id="Happiness for every family">
+        <source>Happiness for every family</source>
+        <target>Щастя в кожну родину</target>
+        <note>happiness in every family</note>
+      </trans-unit>
+      <trans-unit id="Help">
+        <source>Help</source>
+        <target>Допомога</target>
+        <note>help</note>
+      </trans-unit>
+      <trans-unit id="LogoEnCont">
+        <source>LogoEnCont</source>
+        <target>LogoUaCont</target>
+        <note>Logo on contact VC</note>
+      </trans-unit>
+      <trans-unit id="Open hearts">
+        <source>Open hearts</source>
+        <target>Відкриті серця</target>
+        <note>open heart</note>
+      </trans-unit>
+      <trans-unit id="Projects">
+        <source>Projects</source>
+        <target>Проекти</target>
+        <note>projects</note>
+      </trans-unit>
+      <trans-unit id="Road to life">
+        <source>Road to life</source>
+        <target>Дорога в життя</target>
+        <note>road to life</note>
+      </trans-unit>
+      <trans-unit id="Volunteers are people, without which it is difficult to imagine a completed work of the fund! \n\nHow can you help the «Kids to Kids»: \n - to purchase and deliver the needs to the orphanage, boarding schools, families; \n - help in carrying out activities; \n - to provide psychological assistance to children and parents of seriously ill children; \n - to conduct training within the program of vocational guidance (project «The Road to Life»).">
+        <source>Volunteers are people, without which it is difficult to imagine a completed work of the fund! 
+
+How can you help the «Kids to Kids»: 
+ - to purchase and deliver the needs to the orphanage, boarding schools, families; 
+ - help in carrying out activities; 
+ - to provide psychological assistance to children and parents of seriously ill children; 
+ - to conduct training within the program of vocational guidance (project «The Road to Life»).</source>
+        <target>Волонтери - це люди, без яких важко уявити повноцінну роботу фонду!
+            
+Чим Ви можете допомогти фонду «Діти Дітям»:
+- закуповувати і розвозити потреби в дитбудинки, школи-інтернати, сім'ї;
+- допомагати проводити заходи;
+- надавати психологічну допомогу дітям і батькам важко-хворих дітей;
+- проводити навчання в рамках програми профорієнтації (проект "Дорога в життя").</target>
+        <note>volunteer desc</note>
+      </trans-unit>
+      <trans-unit id="We invite the companies to support our projects of assistance to orphanages, boarding schools, rehabilitation centers: \n - send children to children’s camps; \n - buy furniture; \n - pay for repairs; \n - buy household appliances.">
+        <source>We invite the companies to support our projects of assistance to orphanages, boarding schools, rehabilitation centers: 
+ - send children to children’s camps; 
+ - buy furniture; 
+ - pay for repairs; 
+ - buy household appliances.</source>
+        <target>Запрошуємо компанії підтримати наші проекти допомоги дитбудинкам, школам-інтернатам, реабілітаційним центрам:
+- відправка дітей в дитячі табори;
+- покупка меблів;
+- оплата ремонтних робіт;
+- покупка побутової техніки.</target>
+        <note>companies desc</note>
+      </trans-unit>
+      <trans-unit id="«Christmas angel» is an annual charity event that unites hundreds of families on the eve of the New Year and gives them the opportunity to start the next year from giving joy to orphans and families in need. \n\nEvery year, by Christmas, we receive hundreds of letters from children from orphanages and rehabilitation centers, in which they share their cherished desires. \n\nThese desires are fulfilled by the “Christmas angels” – the partners of the project together with their children. They not only give gifts, which children dreamed of all year, but also write back letters. This makes it possible for a child in an orphanage to believe in a miracle – that there is a God and His Angels who hear his requests and always fulfill them, only need to believe. \n\nIt also enables the child from a full-fledged family to show compassion and extend a helping hand to another child who has already experienced what it means to live in this world without parents.">
+        <source>«Christmas angel» is an annual charity event that unites hundreds of families on the eve of the New Year and gives them the opportunity to start the next year from giving joy to orphans and families in need. 
+
+Every year, by Christmas, we receive hundreds of letters from children from orphanages and rehabilitation centers, in which they share their cherished desires. 
+
+These desires are fulfilled by the “Christmas angels” – the partners of the project together with their children. They not only give gifts, which children dreamed of all year, but also write back letters. This makes it possible for a child in an orphanage to believe in a miracle – that there is a God and His Angels who hear his requests and always fulfill them, only need to believe. 
+
+It also enables the child from a full-fledged family to show compassion and extend a helping hand to another child who has already experienced what it means to live in this world without parents.</source>
+        <target>«Різдвяний янгол» – щорічне благодійний захід, який об’єднує сотні сімей напередодні Нового Року та дає їм можливість почати наступний рік з того, щоб подарувати радість дітям сиротам і нужденним сім’ям.
+            
+Щороку на Різдво ми отримуємо сотні листів від дітей з дитбудинків та інтернатів, в яких вони відкривають своє заповітне бажання.
+
+Ці бажання виконують «різдвяні янголи» – партнери проекту разом зі своїми дітьми. Вони не тільки дарують подарунки, про які діти мріяли весь рік, але так само пишуть листи-відповіді. Це дає можливість дитині в дитбудинку повірити в чудо – що є Бог і Його Ангели, які чують їхні прохання і завжди виконують, тільки потрібно вірити.
+
+Це також дає можливість дитині з повноцінної родини проявити співчуття і протягнути руку допомоги іншій дитині, який вже випробував, що значить жити в цьому світі без батьків.</target>
+        <note>christmas angel desc</note>
+      </trans-unit>
+      <trans-unit id="«Happiness for every family» — the project of our foundation, which started in 2015 from several families and is now expanding every day. \n\nThe project is a targeted assistance to families with children bedridden with terrible ailments. \n\nEvery month we come to these families and bring medicines, diapers and other necessary things thanks to financial support of our donors and partners. Such help for families is a very big support and most importantly – understanding of the fact that this world has not turned away from them. That there are people who are ready  to make their contribution to share the burden that has fallen on the shoulders of these parents.  \n\nWe receive more and more requests for help every day. Moms and their children are in distress, since the poor aid allocated by the state is not enough for anything. These children seem to check the world for kindness. On our sacrificial hearts. Stories of some children can be found on our web-site. \n\nWe invite everyone who would like to support families financially, to become a part of this project. After all, the really happy person is the one who makes others happy, and in this project you can make happy not only one child but the whole family.">
+        <source>«Happiness for every family» — the project of our foundation, which started in 2015 from several families and is now expanding every day. 
+
+The project is a targeted assistance to families with children bedridden with terrible ailments. 
+
+Every month we come to these families and bring medicines, diapers and other necessary things thanks to financial support of our donors and partners. Such help for families is a very big support and most importantly – understanding of the fact that this world has not turned away from them. That there are people who are ready  to make their contribution to share the burden that has fallen on the shoulders of these parents.  
+
+We receive more and more requests for help every day. Moms and their children are in distress, since the poor aid allocated by the state is not enough for anything. These children seem to check the world for kindness. On our sacrificial hearts. Stories of some children can be found on our web-site. 
+
+We invite everyone who would like to support families financially, to become a part of this project. After all, the really happy person is the one who makes others happy, and in this project you can make happy not only one child but the whole family.</source>
+        <target>«Щастя в кожну родину» – проект нашого фонду, який стартував у 2015 році з кількох сімей і розширюється з кожним днем.
+            
+Це адресна допомога сім’ям з дітьми, прикутими до ліжка страшними недугами.
+
+Щомісяця ми приїжджаємо в ці сім’ї і привозимо ліки, памперси і речі, які допомагають нам придбати партнери цього проекту. Така допомога для сімей є дуже великою підтримкою і головне – усвідомленням того, що цей світ не відвернувся від них. Що є люди, які своїм внеском прагнуть розділити тягар, яка випала на плечі батьків. Кожен наш приїзд завжди чекають з нетерпінням.
+
+З кожним новим днем ми отримуємо все більше прохань про допомогу. Мами і їх діти знаходяться в тяжкому становищі, так як мізерною допомоги, що виділяється державою не вистачає ні на що. Ці діти начебто перевіряють світ на доброту. На наші жертовні серця. Історії деяких дітей ви знайдете на нашому сайті.
+
+Запрошуємо всіх, хто хотів би підтримувати сім’ї матеріально, стати частиною цього проекту. Адже по справжньому щаслива та людина, який робить щасливими інших, а в цьому проекті ви зможете зробити щасливою цілу сім’ю.</target>
+        <note>happiness in every family desc</note>
+      </trans-unit>
+      <trans-unit id="«Open hearts» is an annual charitable event of the Children’s Children Foundation, aimed at raising funds for the specific needs of children from orphanages and rehabilitation centers. As part of the event, we also raise funds for the treatment of seriously ill children who need emergency care. \n\nChildren who come with their parents to this charity event make their own hand-made hearts and send them to children from orphanages. Hundreds of hearts from ceramics, fabrics, plaster, paper, painted with colors and crayons are sent with love to different parts of Ukraine. In turn, children from orphanages send their gifts back to make this symbolic exchange. \n\nThe “Open hearts” project unites hundreds of children throughout Ukraine, thus showing how important it is to open our hearts to each other.">
+        <source>«Open hearts» is an annual charitable event of the Children’s Children Foundation, aimed at raising funds for the specific needs of children from orphanages and rehabilitation centers. As part of the event, we also raise funds for the treatment of seriously ill children who need emergency care. 
+
+Children who come with their parents to this charity event make their own hand-made hearts and send them to children from orphanages. Hundreds of hearts from ceramics, fabrics, plaster, paper, painted with colors and crayons are sent with love to different parts of Ukraine. In turn, children from orphanages send their gifts back to make this symbolic exchange. 
+
+The “Open hearts” project unites hundreds of children throughout Ukraine, thus showing how important it is to open our hearts to each other.</source>
+        <target>«Відкриті серця» – це щорічне благодійний захід фонду Діти Дітям, спрямоване на збір коштів на конкретні потреби дітей з дитбудинків, шкіл-інтернатів та реабілітаційних центрів. В рамках заходу ми так само збираємо кошти на лікування важкохворих дітей, які потребують екстреної допомоги.
+            
+Діти, які приходять з батьками на це свято роблять своїми руками серця і посилають їх діткам в дитбудинку. Сотні сердець з кераміки, тканини, гіпсу, паперу, розмальовані фарбами і крейдою, відправляються з любов’ю в різні куточки України. У свою чергу діти з дитбудинків та інтернатів відправляють на свято свої подарунки, приготовані заздалегідь.
+
+Проект «Відкриті серця» об’єднує сотні дітей по всій Україні, показуючи тим самим, як важливо відкривати свої серця назустріч один одному.»</target>
+        <note>open heart desc</note>
+      </trans-unit>
+      <trans-unit id="«Road to life» is a charitable project in support of graduates of orphanages in Ukraine. \n\nGraduation is the most important time for children. Throughout the year, our project strives to prepare children for graduation period psychologically, spiritually and practically.  Fund organizes seminars and career orientation programs with support of representatives of different types of applied professions. \n\nThe final stage of the project is the annual charity event “Road to Life”. Partners of the project collect bags with everything necessary and useful for graduates in their independent life. Everyone who want to participate in the project can apply to us and the fund team will send a letter from a particular graduate, where he or she describe their desires and goals in life. Thanks to such personal participation, a connection is formed with the child whom we are helping and sincerely wish success in his adult life. Many of our partners not only prepare bags, but also write back letters with important advice, some of them also provide assistance in finding a job and housing graduates in a new city. \n\nIn 2017, the project covered 86 children from 9 orphanages and boarding schools in Ukraine. Thanks to our guests, they received not only the most necessary things for independent living, but also beautiful prom dresses, shirts, ties and shoes.">
+        <source>«Road to life» is a charitable project in support of graduates of orphanages in Ukraine. 
+
+Graduation is the most important time for children. Throughout the year, our project strives to prepare children for graduation period psychologically, spiritually and practically.  Fund organizes seminars and career orientation programs with support of representatives of different types of applied professions. 
+
+The final stage of the project is the annual charity event “Road to Life”. Partners of the project collect bags with everything necessary and useful for graduates in their independent life. Everyone who want to participate in the project can apply to us and the fund team will send a letter from a particular graduate, where he or she describe their desires and goals in life. Thanks to such personal participation, a connection is formed with the child whom we are helping and sincerely wish success in his adult life. Many of our partners not only prepare bags, but also write back letters with important advice, some of them also provide assistance in finding a job and housing graduates in a new city. 
+
+In 2017, the project covered 86 children from 9 orphanages and boarding schools in Ukraine. Thanks to our guests, they received not only the most necessary things for independent living, but also beautiful prom dresses, shirts, ties and shoes.</source>
+        <target>«Дорога в життя» – благодійний проект на підтримку випускників дитбудинків та шкіл-інтернатів України.
+            
+Закінчення школи – це найвідповідальніша пора для хлопців. Протягом року, наш проект прагнути підготувати їх до цього періоду психологічно, духовно і практично. Проводяться семінари з профорієнтації, в яких беруть участь фахівці різних видів прикладних професій.
+
+Завершальним етапом є благодійний захід «Дорога в життя». Партнери проекту збирають речі з усім необхідним, що може стати в нагоді випускникам у самостійному житті. Кожному бажаючому брати участь в проекті, команда фонду передає лист від конкретного випускника, де той описує свої бажання і цілі в житті. Завдяки такому особистій участі утворюється зв’язок з дитиною, якій ми допомагаємо і щиро бажаємо успіху в його дорослому житті. Багато наших учасники не тільки готують сумки, але і пишуть листи-відповіді з важливими напутніми порадами, а також надають допомогу в працевлаштуванні та проживанні випускників на новому місці.
+
+У 2017 році проект охопив 86 дітей з 9 дитбудинків та шкіл-інтернатів України. Завдяки нашим гостям вони отримали не тільки найнеобхідніші речі для самостійного життя, але і красиві випускні сукні сорочки, краватки і взуття.</target>
+        <note>road to life desc</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
