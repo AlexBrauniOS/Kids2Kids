@@ -32,7 +32,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfP-0Q-FhU">
-                                <rect key="frame" x="0.0" y="68" width="320" height="451"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pPA-W0-BYx">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
@@ -85,7 +85,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pm-hu-3Gz">
-                                        <rect key="frame" x="8" y="239" width="304" height="18"/>
+                                        <rect key="frame" x="8" y="239" width="304" height="22"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                                         <color key="textColor" red="0.071529380980000001" green="0.4060901999" blue="0.64166378970000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -218,10 +218,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DVb-3J-pLh">
-                                <rect key="frame" x="0.0" y="68" width="320" height="451"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPq-oD-rT9">
-                                        <rect key="frame" x="8" y="178" width="304" height="22"/>
+                                        <rect key="frame" x="8" y="178" width="304" height="26"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                         <color key="textColor" red="0.071529380980000001" green="0.4060901999" blue="0.64166378970000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -436,7 +436,7 @@ Klovskiy descent, 7А, office 6</string>
                     <tabBarItem key="tabBarItem" title="Projects" image="icons8-project" id="uzh-2G-iWA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LyI-4A-rkN">
-                        <rect key="frame" x="0.0" y="20" width="320" height="48"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -455,7 +455,7 @@ Klovskiy descent, 7А, office 6</string>
                     <tabBarItem key="tabBarItem" title="Events" image="icons8-tear_off_calendar" id="1GN-Al-vhF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="e26-jF-PPy">
-                        <rect key="frame" x="0.0" y="20" width="320" height="48"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -494,7 +494,7 @@ Klovskiy descent, 7А, office 6</string>
                     <tabBarItem key="tabBarItem" title="Help" image="icons8-volunteering" id="DdU-1b-V2Y"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mYg-sR-yyB">
-                        <rect key="frame" x="0.0" y="20" width="320" height="48"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -588,11 +588,11 @@ Klovskiy descent, 7А, office 6</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView verifyAmbiguity="off" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Seg-mb-Lb1">
-                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                            <scrollView verifyAmbiguity="off" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Seg-mb-Lb1">
+                                <rect key="frame" x="0.0" y="64" width="320" height="339"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBZ-mo-YDm">
-                                        <rect key="frame" x="8" y="20" width="304" height="25"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sBZ-mo-YDm">
+                                        <rect key="frame" x="8" y="20" width="304" height="18"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                                         <color key="textColor" red="0.071529380980000001" green="0.4060901999" blue="0.64166378970000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -600,8 +600,8 @@ Klovskiy descent, 7А, office 6</string>
                                     </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="sBZ-mo-YDm" secondAttribute="bottom" id="5Cl-LA-Lmg"/>
                                     <constraint firstItem="sBZ-mo-YDm" firstAttribute="top" secondItem="Seg-mb-Lb1" secondAttribute="top" constant="20" symbolic="YES" id="iCn-zr-a4k"/>
-                                    <constraint firstAttribute="bottom" secondItem="sBZ-mo-YDm" secondAttribute="bottom" id="okV-gk-ViA"/>
                                 </constraints>
                             </scrollView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="HII-u1-fv2">
@@ -643,12 +643,12 @@ Klovskiy descent, 7А, office 6</string>
                             <constraint firstItem="HII-u1-fv2" firstAttribute="centerX" secondItem="Seg-mb-Lb1" secondAttribute="centerX" id="KrD-pQ-Zgf"/>
                             <constraint firstAttribute="trailing" secondItem="Seg-mb-Lb1" secondAttribute="trailing" id="POt-NC-6at"/>
                             <constraint firstItem="sBZ-mo-YDm" firstAttribute="width" secondItem="uJq-x9-ptI" secondAttribute="width" constant="-16" id="Tai-GR-XLh"/>
-                            <constraint firstItem="VEz-Hh-kb8" firstAttribute="top" secondItem="Seg-mb-Lb1" secondAttribute="bottom" id="YQI-7q-UTy"/>
+                            <constraint firstItem="VEz-Hh-kb8" firstAttribute="top" secondItem="Seg-mb-Lb1" secondAttribute="bottom" constant="116" id="YQI-7q-UTy"/>
                             <constraint firstItem="VEz-Hh-kb8" firstAttribute="top" secondItem="HII-u1-fv2" secondAttribute="bottom" constant="8" id="a5t-jG-h7K"/>
                             <constraint firstItem="Seg-mb-Lb1" firstAttribute="top" secondItem="rJA-ZZ-amq" secondAttribute="bottom" id="gou-vB-Ix1"/>
                             <constraint firstItem="sBZ-mo-YDm" firstAttribute="leading" secondItem="Seg-mb-Lb1" secondAttribute="leading" constant="8" id="mel-SC-3GH"/>
                             <constraint firstItem="Seg-mb-Lb1" firstAttribute="leading" secondItem="uJq-x9-ptI" secondAttribute="leading" id="nao-Ek-Mv6"/>
-                            <constraint firstItem="sBZ-mo-YDm" firstAttribute="height" relation="greaterThanOrEqual" secondItem="Seg-mb-Lb1" secondAttribute="height" constant="-430" id="y8d-8O-bka"/>
+                            <constraint firstItem="sBZ-mo-YDm" firstAttribute="height" relation="greaterThanOrEqual" secondItem="Seg-mb-Lb1" secondAttribute="height" constant="-420" id="y8d-8O-bka"/>
                         </constraints>
                     </view>
                     <connections>
