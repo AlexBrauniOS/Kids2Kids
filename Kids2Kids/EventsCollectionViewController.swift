@@ -24,11 +24,9 @@ class EventsCollectionViewController: UICollectionViewController {
     var modelArray: [Event] = [] {
         didSet{
             UIApplication.shared.applicationIconBadgeNumber = 0
-            delay() {
-                if let collectionView = self.collectionView {
-                    self.stopActivityIndicator()
-                    collectionView.reloadData()
-                }
+            if let collectionView = self.collectionView {
+                self.stopActivityIndicator()
+                collectionView.reloadData()
             }
         }
     }
@@ -59,30 +57,27 @@ class EventsCollectionViewController: UICollectionViewController {
     }
     
     func getModelArray() {
-        for event in events {
+        for event in self.events {
             
-            let modelEvent = Event(nameOfEvent: "", dateOfEvent: "", placeOfEvent: "", descriptionOfEvent: "", imageOfEvent: #imageLiteral(resourceName: "heart"), fblinkOfEvent: "")
+            let modelEvent = Event(nameOfEvent: "", dateOfEvent: "", placeOfEvent: "", descriptionOfEvent: "", imageOfEvent: #imageLiteral(resourceName: "heart"), fblinkOfEvent: "", numberOfEvent: 0)
             
             modelEvent.nameOfEvent = event["name"] as! String
             modelEvent.dateOfEvent = event["date"] as! String
             modelEvent.placeOfEvent = event["place"] as! String
             modelEvent.descriptionOfEvent = event["description"] as! String
             modelEvent.fblinkOfEvent = event["fblink"] as! String
+            modelEvent.numberOfEvent = event["number"] as! Int
+            
             let imageEventFile = event["image"] as? PFFile
             imageEventFile?.getDataInBackground(block: { (imageData, error) in
                 if let imageData = imageData {
                     let image = UIImage(data: imageData)
                     modelEvent.imageOfEvent = image!
                 }
+                self.modelArray.append(modelEvent)
+                self.modelArray = self.modelArray.sorted(by: { $0.numberOfEvent > $1.numberOfEvent })
             })
-            modelArray.append(modelEvent)
         }
-        modelArray = modelArray.reversed()
-    }
-    
-    func delay(closure:@escaping ()->()) {
-        let when = DispatchTime.now() + 0.5
-        DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
     }
     
     //MARK: Activity Indicator
@@ -157,7 +152,7 @@ class EventsCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-
+        
         let translationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 400, 0)
         cell.layer.transform = translationTransform
         UIView.animate(withDuration: 1, delay: 0.2 * Double(indexPath.row), options: .curveEaseOut, animations: {
